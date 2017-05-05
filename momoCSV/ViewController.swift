@@ -10,16 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
+    let csvParse = CSVParse()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let fileString = csvParse.readDataFromFile(file: "2017_05_04")
+        
+        let cleanedRows = csvParse.cleanRows(file: fileString!)
+  
+        textView.text = csvParse.printData(of: cleanedRows)
+        
+        print("The Titles: \(csvParse.data[0])")
+        
+        print("Row 1: \(csvParse.data[1])")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
