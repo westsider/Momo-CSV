@@ -34,6 +34,7 @@ class CSVParse: NSObject {
         var cleanFile = file
         cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
+        //cleanFile = cleanFile.replacingOccurrences(of: "5c", with: "")
         return cleanFile
     }
     
