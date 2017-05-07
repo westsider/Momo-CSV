@@ -23,7 +23,7 @@ class PositionSize: NSObject {
         
         let otherResults = otherRealm.objects(FilteredSymbolsData.self)
         
-        var result = ""
+        var result = "\nTicker\tClose\tWeight\tShares\tCost\n"
         
         var confirmCash = 0.0
         
@@ -35,7 +35,33 @@ class PositionSize: NSObject {
             
             confirmCash += thisAllocation
             
-            result += "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\t\(Int(numShares))\t$\(Int(thisAllocation))\n"
+            // tab evenly add space to Ticker
+            let tkr = items.allTickers[0].ticker
+            var fullTicker = ""
+            if tkr.characters.count < 3 {
+                fullTicker = tkr + "  "
+            } else {
+                fullTicker = tkr
+            }
+            
+            // tab evenly round weight to 2 deciamls
+            let x = items.allTickers[0].weight
+            let y = Double(round(1000*x)/1000)
+            
+            // tab evenly add spacece to shares < 100
+            
+            let n = numShares
+            var numsharesToString = ""
+            if n < 100 {
+                numsharesToString = "\(String(format: "$%.0f", n))   "
+            } else if n < 1000 {
+                numsharesToString = "\(String(format: "$%.0f", n)) "
+            } else {
+                numsharesToString = "\(String(format: "$%.0f", n))"
+            }//String(format: "%.2f", 10.426123)
+            
+            
+            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(thisAllocation))\n"
         }
         
         result += "\nTotal Allocation $\(Int(confirmCash))"

@@ -68,11 +68,11 @@ class ViewController: UIViewController {
     @IBAction func posSizeAction(_ sender: Any) {
         
         //MARK: - Load Realm
-        let result = filteredSymbolsData.readFromRealm()
+        //let result = filteredSymbolsData.readFromRealm()
         
         let posSize = positionSize.calcPositionSise()
         
-        textView.text  = result  + posSize
+        textView.text  =  posSize
     }
 
 
