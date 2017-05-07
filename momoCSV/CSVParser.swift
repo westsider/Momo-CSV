@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class FilteredSymbols: Tickers {
     
@@ -30,6 +31,7 @@ class CSVParse: NSObject {
     
     var  data:[[String:String]] = []
     var  columnTitles:[String] = []
+    
     
     func readDataFromFile(file:String)-> String!{
         guard let filepath = Bundle.main.path(forResource: file, ofType: "csv")
@@ -117,7 +119,10 @@ class CSVParse: NSObject {
         return tableString
     }
     
+    //MARK: - Filter Tickers
     func filterTickers() -> FilteredSymbols {
+        
+        
         
         var totalPortfoio = 0.0
         
@@ -125,13 +130,17 @@ class CSVParse: NSObject {
         
         let filteredSymbols = FilteredSymbols()
         
-        filteredSymbols.allTickers.removeAll()
+        let filteredSymbolsData = List<TickersData>()
+        
+        //filteredSymbols.allTickers.removeAll()
         
         for (index, row ) in data.enumerated() {
             
             if index > 0 && totalPortfoio < 100 { // exclude title row and portfolio full
                 
                 let thisTicker = Tickers()
+                
+                let newRow = TickersData()
                 
                 guard let ticker = row["Ticker"] else {
                     print("Got nil in ticker")
@@ -165,6 +174,19 @@ class CSVParse: NSObject {
                     thisTicker.weight = targetWeight
                     thisTicker.close = close
                     
+                    // realm persistant Data
+                    newRow.ticker = ticker
+                    newRow.weight = targetWeight
+                    newRow.close = close
+                    print("\nAdded A Realm Row: \(newRow)\n")
+                    
+                    let realm = try! Realm()
+                    
+                    try! realm.write() {
+                        //let person = realm.create(FilteredSymbolsData.self, value: [ticker, targetWeight, close])
+                        filteredSymbolsData.append(newRow)
+                        realm.add(filteredSymbolsData)
+                    }
                     
                     print("Adding: \(thisTicker.ticker)")
                     filteredSymbols.allTickers.append(thisTicker)
