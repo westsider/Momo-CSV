@@ -9,31 +9,6 @@
 import Foundation
 import RealmSwift
 
-//// class to add tableview rows to each event
-//class TableViewRow: Object {
-//    dynamic var icon = ""
-//    dynamic var title = ""
-//    dynamic var detail =  ""
-//    dynamic var catagory = 0
-//    
-//    override var description: String { return "TableViewRow {\(icon), \(title), \(detail)}" }
-//}
-//
-//// class to hold each event, user and tableview list of equipment
-//class EventUserRealm: Object {
-//    
-//    dynamic var eventName = "Default"
-//    dynamic var taskID = NSUUID().uuidString
-//    dynamic var userName = "Default"
-//    dynamic var production = ""
-//    dynamic var company = ""
-//    dynamic var city = ""
-//    dynamic var date = ""
-//    dynamic var weather = ""
-//    
-//    var tableViewArray = List<TableViewRow>()
-//}
-
 class TickersData: Object {
 
     dynamic var ticker = ""
@@ -48,6 +23,47 @@ class FilteredSymbolsData: Object {
     dynamic var taskID = NSUUID().uuidString
     
     let allTickers = List<TickersData>()
+    
+    func saveRealmWith(Tickers: FilteredSymbols )-> String {
+        
+        let realm = try! Realm()
+        
+        var displayText = ""
+        
+        for item in Tickers.allTickers {
+            let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
+            displayText += thisRow
+            
+            // load into realm
+            let newTicker = TickersData()
+            newTicker.ticker = item.ticker
+            newTicker.close = item.close
+            newTicker.weight = item.weight
+            let newTickerArray = FilteredSymbolsData()
+            newTickerArray.allTickers.append(newTicker)
+            try! realm.write {
+                realm.add(newTickerArray)
+            }
+        }
+        return displayText
+    }
+    
+    func readFromRealm()-> String {
+        
+        let otherRealm = try! Realm()
+        
+        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
+        
+        //print("Retrived Tickers count \(otherResults.count) icker \(otherResults)")
+        
+        var result = ""
+        
+        for items in otherResults {
+            
+            result += "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\n"
+        }
+        return result
+    }
     
 }
 

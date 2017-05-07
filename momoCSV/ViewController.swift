@@ -29,23 +29,24 @@ class ViewController: UIViewController {
     
     let csvParse = CSVParse()
     
-    var fileString = ""
-    
-    //var filterResults = ""
+    let filteredSymbolsData = FilteredSymbolsData()
 
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fileString = csvParse.readDataFromFile(file: "2017_05_04")
+        //fileString = csvParse.readDataFromFile(file: "2017_05_04")
     }
     
     @IBAction func importAction(_ sender: Any) {
         
-        fileString = csvParse.readDataFromFile(file: "2017_05_04")
+        guard let fileString = csvParse.readDataFromFile(file: "2017_05_04") else {
+            textView.text =  "Warning csv file does not exist!"
+            return
+        }
         
-        let parsedCvs = csvParse.printData(of: fileString) // calls convertCSV, cleaneRows
+        let parsedCvs = csvParse.printData(of: fileString)  // calls convertCSV, cleanRows
 
         textView.text = parsedCvs
     }
@@ -53,25 +54,9 @@ class ViewController: UIViewController {
     @IBAction func fiterAction(_ sender: Any) {
         
         let filterResults = csvParse.filterTickers()
-        
-        var displayText = ""
-        
-        for item in filterResults.allTickers {
-            let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
-            displayText += thisRow
-            
-            // load into realm
-            let newTicker = TickersData()
-            newTicker.ticker = item.ticker
-            newTicker.close = item.close
-            newTicker.weight = item.weight
-            let newTickerArray = FilteredSymbolsData()
-            newTickerArray.allTickers.append(newTicker)
-                try! realm.write {
-                    realm.add(newTickerArray)
-            }
-        }
 
+        let displayText = filteredSymbolsData.saveRealmWith(Tickers: filterResults)
+        
         print(displayText)
         
         textView.text = displayText
@@ -81,66 +66,22 @@ class ViewController: UIViewController {
     @IBAction func posSizeAction(_ sender: Any) {
         
         //MARK: - Load Realm
-        print("'nRetriving from realm")
-        
-        let otherRealm = try! Realm()
-        
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
-        
-        print("Retrived Tickers count \(otherResults.count) icker \(otherResults)")
-        
-        var result = ""
-        
-        for items in otherResults {
-            
-            result += "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\n"
-        }
+        let result = filteredSymbolsData.readFromRealm()
         
         textView.text  = result  //print(result)
     }
 
+
+    
     @IBAction func clearRealm(_ sender: Any) {
         //MARK: - Delete All
         try! realm.write {
             realm.deleteAll()
         }
+        textView.text =  "Realm Database Deleted"
     }
-}
-/*
-// MARK: - Store realm
-let newTicker = TickersData()
-newTicker.ticker = "MSFT"
-newTicker.close = 60.20
-newTicker.weight = 4.89
-print("Added ticker; \(newTicker.ticker) : \(newTicker.close) : \(newTicker.weight)")
 
-let newTickerArray = FilteredSymbolsData()
-newTickerArray.allTickers.append(newTicker)
-
-print("\nAppended new ticker to array: \(newTickerArray.allTickers)")
-
-let realm = try! Realm()
-
-print("\nAdding to realm")
-
-try! realm.write {
-    realm.add(newTickerArray)
 }
 
-//MARK: - Load Realm
-print("'nRetriving from realm")
-
-let otherRealm = try! Realm()
-
-let otherResults = otherRealm.objects(FilteredSymbolsData.self)
-
-print("Retrived Tickers count \(otherResults.count) icker \(otherResults)")
-
-for items in otherResults {
-    print("Ticker : \(items.allTickers[0].ticker) Close : \(items.allTickers[0].close) Weight : \(items.allTickers[0].weight)\n")
-    
-    
-}
-*/
 
 
