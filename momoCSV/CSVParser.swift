@@ -19,11 +19,11 @@ class FilteredSymbols: Tickers {
 
 class Tickers: NSObject {
     
-    var ticker = "AAPL"
+    var ticker = ""
     
-    var close = 144.50
+    var close = 0.0
     
-    var weight = 6.67
+    var weight = 0.0
 }
 
 class CSVParse: NSObject {
@@ -158,18 +158,22 @@ class CSVParse: NSObject {
                     continue
                 }
                 if trend == 1   && gap < 15 {
-                    let results = "ticker: \(ticker) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)\n"
+                    let results = "\nticker: \(ticker) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)"
                     print(results)
                     filteredResults += results
                     thisTicker.ticker = ticker
                     thisTicker.weight = targetWeight
                     thisTicker.close = close
                     
+                    
+                    print("Adding: \(thisTicker.ticker)")
+                    filteredSymbols.allTickers.append(thisTicker)
+                    
                 } else {
                     print("Excluded: \(ticker) Trend: \(trend) Gap: \(gap)")
                 }
                 totalPortfoio += targetWeight
-                filteredSymbols.allTickers.append(thisTicker)
+                
             }
             
         }

@@ -9,6 +9,7 @@
 //  task: move tickerFIlter to another class
 //  func to print filtered tickers
 //  task: button to show filtered tickers
+//  fix: adding wrong symbols to filtered
 
 //  task: add realm
 //  task: calc num shares on 325,000
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
         
         var displayText = ""
         for item in filterResults.allTickers {
-            let thisRow = "\(item.ticker)\t\(item.close)\t\(item.weight)\r"
+            let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
             displayText += thisRow
         }
 
