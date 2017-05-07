@@ -22,20 +22,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-HZ-yGe">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hlw-SU-CQb">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-m3-yAF">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Import"/>
+                                        <connections>
+                                            <action selector="importAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYp-qN-uA5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QV-BG5">
+                                        <rect key="frame" x="87" y="0.0" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Filter"/>
+                                        <connections>
+                                            <action selector="fiterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWN-vH-ayO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp4-If-18u">
+                                        <rect key="frame" x="174" y="0.0" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Position Size"/>
+                                        <connections>
+                                            <action selector="posSizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12k-po-5T1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-i7-fDI">
+                                        <rect key="frame" x="261" y="0.0" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome to Portfolio Optimizer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-HZ-yGe">
+                                <rect key="frame" x="16" y="66" width="343" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0zL-BU-Zbh"/>
-                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TbA-E2-KPe"/>
-                            <constraint firstAttribute="bottom" secondItem="bcU-HZ-yGe" secondAttribute="bottom" constant="20" symbolic="YES" id="rep-Fy-8E4"/>
-                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="w29-sS-IMV"/>
+                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7aV-6m-CbX"/>
+                            <constraint firstItem="hlw-SU-CQb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="92i-Hh-ctB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hlw-SU-CQb" secondAttribute="trailing" id="LJ7-fw-Udw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcU-HZ-yGe" secondAttribute="bottom" constant="8" id="Qqq-kJ-X4s"/>
+                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="brk-e3-rdK"/>
+                            <constraint firstItem="hlw-SU-CQb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uw0-Ze-jyM"/>
+                            <constraint firstItem="bcU-HZ-yGe" firstAttribute="top" secondItem="hlw-SU-CQb" secondAttribute="bottom" constant="8" id="vNC-TC-yrE"/>
                         </constraints>
                     </view>
                     <connections>

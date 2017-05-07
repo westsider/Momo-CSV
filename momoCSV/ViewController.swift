@@ -5,8 +5,17 @@
 //  Created by Warren Hansen on 5/5/17.
 //  Copyright © 2017 Warren Hansen. All rights reserved.
 //  task: Add gap + trend filter to list
+//  bug: why am I filtering IDXX in my main data file?
+//  task: move tickerFIlter to another class
+//  func to print filtered tickers
+//  task: button to show filtered tickers
 
-//  bug: why am I filtering IDXX
+//  task: add realm
+//  task: calc num shares on 325,000
+//  task: split shares on IRS 75k vs Reg 250k
+//  Calc the Port rebalance every weds
+//  Calc the Pos rebalance every 2nd weds
+//  Find a way to download the cvs directly
 
 import UIKit
 
@@ -16,60 +25,44 @@ class ViewController: UIViewController {
     
     let csvParse = CSVParse()
     
+    var fileString = ""
+    
+    //var filterResults = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fileString = csvParse.readDataFromFile(file: "2017_05_04")
-        
-        let cleanedRows = csvParse.cleanRows(file: fileString!)
-  
-        textView.text = csvParse.printData(of: cleanedRows)
-        
-        filterTickers()
+        fileString = csvParse.readDataFromFile(file: "2017_05_04")
     }
     
-    
-    func filterTickers() {
+    @IBAction func importAction(_ sender: Any) {
         
-        var totalPortfoio = 0.0
+        fileString = csvParse.readDataFromFile(file: "2017_05_04")
         
-        for (index, row ) in csvParse.data.enumerated() {
-            
-            if index > 0 && totalPortfoio < 100 {
-                //print(index, row)
-                guard let ticker = row["Ticker"] else {
-                    print("Got nil in ticker")
-                    continue
-                }
-                guard let slope = Double(row["Adj.Slope90"]!) else {
-                    print("Got nil in slope: \(index)")
-                    continue
-                }
-                guard let trend = Int(row["\"Stock Trend - SMA100\""]!) else {
-                    print("Got nil in trend")
-                    continue
-                }
-                guard let gap = Double(row["\"Max Gap\""]!) else {
-                    print("Got nil in gap")
-                    continue
-                }
-                guard let targetWeight = Double(row["\"Target Weight\""]!) else {
-                    print("Got nil in targetWeight")
-                    continue
-                }
-                
-                if trend == 1   && gap < 15 {
-                    print("ticker:",ticker, "  slope:", slope, "   trend:", trend, "   gap", gap, "   Taregt Weight:", targetWeight,"   Total Weight:", totalPortfoio)
-                } else {
-                    print("Excluded: \(ticker) Trend: \(trend) Gap: \(gap)")
-                }
-                totalPortfoio += targetWeight
-            }
-            
-        }
-    }
-    
+        let parsedCvs = csvParse.printData(of: fileString) // calls convertCSV, cleaneRows
 
+        textView.text = parsedCvs
+    }
+    
+    @IBAction func fiterAction(_ sender: Any) {
+        
+        let filterResults = csvParse.filterTickers()
+        
+        var displayText = ""
+        for item in filterResults.allTickers {
+            let thisRow = "\(item.ticker)\t\(item.close)\t\(item.weight)\r"
+            displayText += thisRow
+        }
+
+        print(displayText)
+        
+        textView.text = displayText
+        
+        
+    }
+    
+    @IBAction func posSizeAction(_ sender: Any) {
+    }
 
 }
 
