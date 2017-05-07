@@ -11,8 +11,8 @@
 //  task: button to show filtered tickers
 //  fix: adding wrong symbols to filtered
 //  task: add realm
-
 //  task: calc num shares on 325,000
+
 //  task: split shares on IRS 75k vs Reg 250k
 
 
@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     let csvParse = CSVParse()
     
     let filteredSymbolsData = FilteredSymbolsData()
+    
+    let positionSize = PositionSize()
 
     let realm = try! Realm()
     
@@ -68,7 +70,9 @@ class ViewController: UIViewController {
         //MARK: - Load Realm
         let result = filteredSymbolsData.readFromRealm()
         
-        textView.text  = result  //print(result)
+        let posSize = positionSize.calcPositionSise()
+        
+        textView.text  = result  + posSize
     }
 
 

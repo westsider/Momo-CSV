@@ -7,41 +7,41 @@
 //
 
 import Foundation
+import RealmSwift
 
 class PositionSize: NSObject {
     
-    let initialBalanceReg = 250000
+    let initialBalanceReg = 250000.00
     
-    let initialBalanceIRA = 75000
+    let initialBalanceIRA = 75000.00
+
+    func calcPositionSise()-> String {
+        
+        let totalCash = initialBalanceReg + initialBalanceIRA
+        
+        let otherRealm = try! Realm()
+        
+        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
+        
+        var result = ""
+        
+        var confirmCash = 0.0
+        
+        for items in otherResults {
+            
+            let thisAllocation =  totalCash / items.allTickers[0].weight
+            
+            let numShares = thisAllocation / items.allTickers[0].close
+            
+            confirmCash += thisAllocation
+            
+            result += "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\t\(Int(numShares))\t$\(Int(thisAllocation))\n"
+        }
+        
+        result += "\nTotal Allocation $\(Int(confirmCash))"
+        
+        return result
+    }
     
-    /*
-     what do I nned from filterTickers
-     
-     ticker, close, targetWeight
-     
-     
- */
-    
-    /*
-     
-     for each new ticker
-        get target weight
-        thjisAllocation =  cash / aloocation
-        numShares = thisAllocation / share price
- 
- */
-//    func calcPostionSize(tickers: FilteredSymbols){
-//        
-//        let filterResults = csvParse.filterTickers()
-//        
-//        var displayText = ""
-//        for item in filterResults.allTickers {
-//            let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
-//            displayText += thisRow
-//        }
-//        
-//        print(displayText)
-//        
-//    }
 }
 
