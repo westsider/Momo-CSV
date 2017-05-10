@@ -122,8 +122,6 @@ class CSVParse: NSObject {
     //MARK: - Filter Tickers
     func filterTickers() -> FilteredSymbols {
         
-        
-        
         var totalPortfoio = 0.0
         
         var filteredResults = ""

@@ -26,7 +26,7 @@
                                 <rect key="frame" x="16" y="28" width="343" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-m3-yAF">
-                                        <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Import"/>
                                         <connections>
@@ -34,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QV-BG5">
-                                        <rect key="frame" x="87" y="0.0" width="82" height="30"/>
+                                        <rect key="frame" x="69.5" y="0.0" width="64.5" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Filter"/>
                                         <connections>
@@ -42,17 +42,24 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp4-If-18u">
-                                        <rect key="frame" x="174" y="0.0" width="82" height="30"/>
+                                        <rect key="frame" x="139" y="0.0" width="65" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Position Size"/>
+                                        <state key="normal" title="Pos Size"/>
                                         <connections>
                                             <action selector="posSizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12k-po-5T1"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-pU-Kis">
+                                        <rect key="frame" x="209" y="0.0" width="64.5" height="30"/>
+                                        <state key="normal" title="Split"/>
+                                        <connections>
+                                            <action selector="splitPortfolio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mzb-q8-AjD"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-i7-fDI">
-                                        <rect key="frame" x="261" y="0.0" width="82" height="30"/>
+                                        <rect key="frame" x="278.5" y="0.0" width="64.5" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Clear"/>
+                                        <state key="normal" title="Clr"/>
                                         <connections>
                                             <action selector="clearRealm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jga-qX-zfw"/>
                                         </connections>
@@ -83,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-126" y="49"/>
         </scene>
     </scenes>
 </document>

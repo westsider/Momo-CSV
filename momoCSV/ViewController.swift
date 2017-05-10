@@ -12,9 +12,9 @@
 //  fix: adding wrong symbols to filtered
 //  task: add realm
 //  task: calc num shares on 325,000
-
 //  task: split shares on IRS 75k vs Reg 250k
 
+//  fix: position sise as 250000
 
 //  Calc the Port rebalance every weds
 //  Calc the Pos rebalance every 2nd weds
@@ -37,29 +37,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //fileString = csvParse.readDataFromFile(file: "2017_05_04")
     }
     
     @IBAction func importAction(_ sender: Any) {
         
+        // read data from file and saves a string Data object
         guard let fileString = csvParse.readDataFromFile(file: "2017_05_04") else {
             textView.text =  "Warning csv file does not exist!"
             return
         }
         
-        let parsedCvs = csvParse.printData(of: fileString)  // calls convertCSV, cleanRows
+        // calls convertCSV, cleanRows returns String
+        let parsedCvs = csvParse.printData(of: fileString)
 
         textView.text = parsedCvs
     }
     
     @IBAction func fiterAction(_ sender: Any) {
         
+        // returns array of Ticker Objects of top momentum filtered symbols that will fit into portfolio
         let filterResults = csvParse.filterTickers()
-
+        
+        // saves above Ticker objects into a realm Ticker Object array
         let displayText = filteredSymbolsData.saveRealmWith(Tickers: filterResults)
         
-        print(displayText)
+        print("DISPLAY TEXT:\n\(displayText)")
         
         textView.text = displayText
         
@@ -67,15 +69,18 @@ class ViewController: UIViewController {
     
     @IBAction func posSizeAction(_ sender: Any) {
         
-        //MARK: - Load Realm
-        //let result = filteredSymbolsData.readFromRealm()
-        
+        //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
         let posSize = positionSize.calcPositionSise()
         
         textView.text  =  posSize
     }
 
-
+    //MARK: - Load Realm array of Ticker Objects and split into ira nad reg
+    @IBAction func splitPortfolio(_ sender: Any) {
+        
+        positionSize.splitRealmPortfolio()
+        textView.text  =  positionSize.getRealmPortfolio()
+    }
     
     @IBAction func clearRealm(_ sender: Any) {
         //MARK: - Delete All
@@ -84,7 +89,6 @@ class ViewController: UIViewController {
         }
         textView.text =  "Realm Database Deleted"
     }
-
 }
 
 

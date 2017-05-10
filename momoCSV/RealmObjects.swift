@@ -16,6 +16,12 @@ class TickersData: Object {
     dynamic var close = 0.0
     
     dynamic var weight = 0.0
+    
+    dynamic var shares = 0.0
+    
+    dynamic var cost = 0.0
+    
+    dynamic var account = ""
 }
 
 class FilteredSymbolsData: Object {
@@ -23,6 +29,8 @@ class FilteredSymbolsData: Object {
     dynamic var taskID = NSUUID().uuidString
     
     let allTickers = List<TickersData>()
+    
+    let filteredTickers = List<TickersData>()
     
     func saveRealmWith(Tickers: FilteredSymbols )-> String {
         
