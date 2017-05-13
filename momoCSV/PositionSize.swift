@@ -25,7 +25,7 @@ class PositionSize: NSObject {
     
     func calcPositionSise()-> String {
         
-        let totalCash = initialBalanceReg + initialBalanceIRA
+        var totalCash = initialBalanceReg + initialBalanceIRA
         
         let otherRealm = try! Realm()
         
@@ -35,9 +35,18 @@ class PositionSize: NSObject {
         
         var totalAccocation = 0.0
         
+        let numberOfAllocations = otherResults.count
+        
+        var sumOfAllocation = 0.0
+        
         for items in otherResults {
             
-            let thisAllocation =  totalCash / items.allTickers[0].weight
+            let thisAllocation =  totalCash * ( items.allTickers[0].weight * 0.01) // get cash in % of total portfolio
+            
+            // bug here, total cash not gettng de incremented
+           // totalCash = totalCash - thisAllocation
+            
+            //print("Total cash is now: \(totalCash)")
             
             let numShares = thisAllocation / items.allTickers[0].close
             
@@ -45,6 +54,8 @@ class PositionSize: NSObject {
                 items.allTickers[0].cost = thisAllocation
                 items.allTickers[0].shares = numShares
             }
+            
+            sumOfAllocation += items.allTickers[0].weight
             
             totalAccocation += thisAllocation
             
@@ -77,7 +88,9 @@ class PositionSize: NSObject {
             
         }
         
-        result += "\nTotal Allocation $\(Int(totalAccocation))"
+        result += "\nSum of Allocation \(sumOfAllocation)  Total Allocation $\(Int(totalAccocation))"
+        
+        print("numberOfAllocations: \(numberOfAllocations) sumOfAllocation \(sumOfAllocation)")
         
         return result
     }

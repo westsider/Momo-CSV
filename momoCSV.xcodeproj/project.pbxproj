@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3D6ABF1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */; };
 		0D560AAC1EBD2952002A80D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AAB1EBD2952002A80D8 /* AppDelegate.swift */; };
 		0D560AAE1EBD2952002A80D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AAD1EBD2952002A80D8 /* ViewController.swift */; };
 		0D560AB11EBD2952002A80D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D560AAF1EBD2952002A80D8 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		02E56E0696E3BC133B2C2CF2 /* Pods-momoCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoCSV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momoCSV/Pods-momoCSV.debug.xcconfig"; sourceTree = "<group>"; };
 		0A8C2B9A583187D6BBBDCDA7 /* Pods-momoCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momoCSV.release.xcconfig"; path = "Pods/Target Support Files/Pods-momoCSV/Pods-momoCSV.release.xcconfig"; sourceTree = "<group>"; };
+		0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Momentum rankings - 2017-05-11 - $spx.csv"; sourceTree = "<group>"; };
 		0D560AA81EBD2952002A80D8 /* momoCSV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = momoCSV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D560AAB1EBD2952002A80D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D560AAD1EBD2952002A80D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3D6ABC1EC6231600040D6B /* Raw Data */ = {
+			isa = PBXGroup;
+			children = (
+				0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */,
+				0D560ABF1EBD2A54002A80D8 /* 2017_05_04.csv */,
+			);
+			name = "Raw Data";
+			sourceTree = "<group>";
+		};
+		0D3D6ABD1EC6232900040D6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
+				0D560AC11EBD3001002A80D8 /* CSVParser.swift */,
+				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0D560A9F1EBD2952002A80D8 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +90,10 @@
 		0D560AAA1EBD2952002A80D8 /* momoCSV */ = {
 			isa = PBXGroup;
 			children = (
-				0D560ABF1EBD2A54002A80D8 /* 2017_05_04.csv */,
 				0D560AAF1EBD2952002A80D8 /* Main.storyboard */,
 				0D560AAD1EBD2952002A80D8 /* ViewController.swift */,
-				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
-				0D560AC11EBD3001002A80D8 /* CSVParser.swift */,
-				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
+				0D3D6ABD1EC6232900040D6B /* Model */,
+				0D3D6ABC1EC6231600040D6B /* Raw Data */,
 				0D560AB21EBD2952002A80D8 /* Assets.xcassets */,
 				0D560AB41EBD2952002A80D8 /* LaunchScreen.storyboard */,
 				0D560AB71EBD2952002A80D8 /* Info.plist */,
@@ -167,6 +186,7 @@
 				0D560AC01EBD2A54002A80D8 /* 2017_05_04.csv in Resources */,
 				0D560AB31EBD2952002A80D8 /* Assets.xcassets in Resources */,
 				0D560AB11EBD2952002A80D8 /* Main.storyboard in Resources */,
+				0D3D6ABF1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

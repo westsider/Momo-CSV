@@ -38,6 +38,8 @@ class FilteredSymbolsData: Object {
         
         var displayText = ""
         
+        var sumOfAllocation = 0.0
+        
         for item in Tickers.allTickers {
             let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
             displayText += thisRow
@@ -52,8 +54,9 @@ class FilteredSymbolsData: Object {
             try! realm.write {
                 realm.add(newTickerArray)
             }
+            sumOfAllocation += newTicker.weight
         }
-        return displayText
+        return "\nTicker\t\tClose\tWeight\n" + displayText + "\nSum of Allocation: \(sumOfAllocation)"
     }
     
     func readFromRealm()-> String {

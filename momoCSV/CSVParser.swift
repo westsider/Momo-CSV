@@ -134,7 +134,7 @@ class CSVParse: NSObject {
         
         for (index, row ) in data.enumerated() {
             
-            if index > 0 && totalPortfoio < 100 { // exclude title row and portfolio full
+            if index > 0 && totalPortfoio < 105 { // exclude title row and portfolio full
                 
                 let thisTicker = Tickers()
                 
@@ -166,9 +166,15 @@ class CSVParse: NSObject {
                 }
                 if trend == 1   && gap < 15 {
                     let results = "\nticker: \(ticker) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)"
-                    print(results)
+                    //print(results)
                     filteredResults += results
                     thisTicker.ticker = ticker
+                    // trim porfolio wieght > 100 ooon last sybmol
+                    if totalPortfoio > 100 {
+                        thisTicker.weight = ( targetWeight - totalPortfoio - 100 )
+                    } else {
+                        thisTicker.weight =  targetWeight
+                    }
                     thisTicker.weight = targetWeight
                     thisTicker.close = close
                     
@@ -176,7 +182,7 @@ class CSVParse: NSObject {
                     newRow.ticker = ticker
                     newRow.weight = targetWeight
                     newRow.close = close
-                    print("\nAdded A Realm Row: \(newRow)\n")
+                    //print("\nAdded A Realm Row: \(newRow)\n")
                     
                     let realm = try! Realm()
                     
@@ -186,7 +192,7 @@ class CSVParse: NSObject {
                         realm.add(filteredSymbolsData)
                     }
                     
-                    print("Adding: \(thisTicker.ticker)")
+                    //print("Adding: \(thisTicker.ticker)")
                     filteredSymbols.allTickers.append(thisTicker)
                     
                 } else {
@@ -197,6 +203,7 @@ class CSVParse: NSObject {
             }
             
         }
+        print("\ntotalPortfoio \(totalPortfoio)\n")
         return filteredSymbols
     }
     

@@ -4,6 +4,7 @@
 //
 //  Created by Warren Hansen on 5/5/17.
 //  Copyright © 2017 Warren Hansen. All rights reserved.
+
 //  task: Add gap + trend filter to list
 //  bug: why am I filtering IDXX in my main data file?
 //  task: move tickerFIlter to another class
@@ -13,12 +14,15 @@
 //  task: add realm
 //  task: calc num shares on 325,000
 //  task: split shares on IRS 75k vs Reg 250k
+//  fix: error in poition size as % of total portfolio
 
-//  fix: position sise as 250000
+//  fix: allocation of 75K to IRA
 
-//  Calc the Port rebalance every weds
-//  Calc the Pos rebalance every 2nd weds
-//  Find a way to download the cvs directly
+//  Construct the initial portfolio. Buy from the top until you run out of cash.
+
+//  Calc the Portfolio rebalance every weds
+//  Calc the Position rebalance every 2nd weds
+//  Download the cvs directly to my own backend
 
 import UIKit
 import RealmSwift
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
         //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
         let posSize = positionSize.calcPositionSise()
         
-        textView.text  =  posSize
+        textView.text  =  posSize         
     }
 
     //MARK: - Load Realm array of Ticker Objects and split into ira nad reg
