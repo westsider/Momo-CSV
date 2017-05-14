@@ -142,7 +142,7 @@ class PositionSize: NSObject {
         
         let otherResults = otherRealm.objects(FilteredSymbolsData.self)
         
-        var result = "\nTicker\tClose\tWeight\tShares\tCost\tAccount\n"
+        var result = "\nTicker\tClose\tWeight\tShares\tCost\t\tAccount\n"
         
         var totalAccocation = 0.0
         
@@ -164,18 +164,24 @@ class PositionSize: NSObject {
             let y = Double(round(1000*x)/1000)
             
             // tab evenly add spacece to shares < 100
-            
             let n = items.allTickers[0].shares
             var numsharesToString = ""
             if n < 100 {
-                numsharesToString = "\(String(format: "%.0f", n))   "
+                numsharesToString = "\(String(format: "%.0f", n))    "
             } else if n < 1000 {
-                numsharesToString = "\(String(format: "%.0f", n)) "
+                numsharesToString = "\(String(format: "%.0f", n))   "
             } else {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.allTickers[0].cost))\t\(items.allTickers[0].account)\n"
+            // tab evenly the Cost column
+//            let cost = items.allTickers[0].cost
+//            var costString = ""
+//            if cost < 100 {
+//                costString = "\(String(format: "%.0f", n))   "
+//            }
+            
+            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.allTickers[0].cost))\t\t\(items.allTickers[0].account)\n"
             
         }
         

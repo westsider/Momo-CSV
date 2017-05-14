@@ -15,9 +15,10 @@
 //  task: calc num shares on 325,000
 //  task: split shares on IRS 75k vs Reg 250k
 //  fix: error in poition size as % of total portfolio
-
 //  fix: allocation of 75K to IRA
+//  fix UI for split of portfolio
 
+//  print the sum or IRA and Reg
 //  Construct the initial portfolio. Buy from the top until you run out of cash.
 
 //  Calc the Portfolio rebalance every weds
