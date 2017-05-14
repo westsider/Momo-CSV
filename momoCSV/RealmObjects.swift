@@ -49,6 +49,7 @@ class FilteredSymbolsData: Object {
             newTicker.ticker = item.ticker
             newTicker.close = item.close
             newTicker.weight = item.weight
+            newTicker.account = "REG"
             let newTickerArray = FilteredSymbolsData()
             newTickerArray.allTickers.append(newTicker)
             try! realm.write {

@@ -51,6 +51,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-pU-Kis">
                                         <rect key="frame" x="209" y="0.0" width="64.5" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Split"/>
                                         <connections>
                                             <action selector="splitPortfolio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mzb-q8-AjD"/>

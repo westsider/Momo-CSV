@@ -110,41 +110,28 @@ class PositionSize: NSObject {
             thisAllocation.append(Int(items.allTickers[0].cost))
         }
         
-        //find best fit for smaller portfolio
-        let sortedAllocation = thisAllocation.sorted{$0 < $1}
+        // find the best fit of symbols to fill the IRA Account
+        var bestFit = BestFit().bestFit(initBalanceIRA: 75000, allocations: thisAllocation)
         
-        var smallerAccount = [Int]()
+        print("This is the best fit + Sum \(bestFit)\n")
         
-        var smallerAccountSum = 0
+        bestFit.removeLast()
         
-        let initialBalanceIRA = 75000
-        
-        for item in sortedAllocation {
-            
-            smallerAccountSum = smallerAccount.reduce(0) { $0 + $1 }
-            
-            if smallerAccountSum < initialBalanceIRA {
-                
-                smallerAccount.append(item)
-            } else {
-                smallerAccount.removeLast()
-            }
-        }
-        //let finalSum = smallerAccount.reduce(0) { $0 + $1 }
-        //print(smallerAccount, finalSum)
+        print("This is the best fit - Sum \(bestFit)\n")
         
         // update realm object
         for item in otherResults {
             
-            if Int(item.allTickers[0].cost) == smallerAccount[0] || Int(item.allTickers[0].cost) == smallerAccount[1] {
-                try! realm.write {
-                    item.allTickers[0].account = "IRA"
+            for best in bestFit {
+                
+                if Int(item.allTickers[0].cost) == best {
+                    try! realm.write {
+                        item.allTickers[0].account = "IRA"
+                    }
                 }
-            } else {
-                try! realm.write {
-                    item.allTickers[0].account = "REG"
-                }
+                
             }
+            
         }
         
     }
