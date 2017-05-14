@@ -146,9 +146,19 @@ class PositionSize: NSObject {
         
         var totalAccocation = 0.0
         
+        var iraAllocation = 0.0
+        
+        var regAllocation = 0.0
+        
         for items in otherResults {
             
             totalAccocation += items.allTickers[0].cost
+            
+            if items.allTickers[0].account == "IRA"{
+                iraAllocation += items.allTickers[0].cost
+            } else {
+                regAllocation += items.allTickers[0].cost
+            }
             
             // tab evenly add space to Ticker
             let tkr = items.allTickers[0].ticker
@@ -174,18 +184,11 @@ class PositionSize: NSObject {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            // tab evenly the Cost column
-//            let cost = items.allTickers[0].cost
-//            var costString = ""
-//            if cost < 100 {
-//                costString = "\(String(format: "%.0f", n))   "
-//            }
-            
             result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.allTickers[0].cost))\t\t\(items.allTickers[0].account)\n"
             
         }
         
-        result += "\nTotal Allocation $\(Int(totalAccocation))"
+        result += "\nReg = $\(regAllocation) IRA = $\(iraAllocation)\nTotal Allocation $\(Int(totalAccocation))"
         
         return result
     }
