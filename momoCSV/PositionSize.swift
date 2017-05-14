@@ -11,10 +11,6 @@ import RealmSwift
 
 class PositionSize: NSObject {
     
-    let initialBalanceReg = 250000.00
-    
-    let initialBalanceIRA = 75000.00
-    
     var regAccount = "Reg"
     
     var iraAccount = "IRA"
@@ -23,9 +19,9 @@ class PositionSize: NSObject {
     
     let realm = try! Realm()
     
-    func calcPositionSise()-> String {
+    func calcPositionSise(account_One: Int, account_Two: Int)-> String {
         
-        var totalCash = initialBalanceReg + initialBalanceIRA
+        let totalCash = Double( account_One + account_Two )
         
         let otherRealm = try! Realm()
         
@@ -95,7 +91,8 @@ class PositionSize: NSObject {
         return result
     }
     
-    func splitRealmPortfolio() {
+    func splitRealmPortfolio(account_One: Int, account_Two: Int) {
+        
         let otherRealm = try! Realm()
         
         let otherResults = otherRealm.objects(FilteredSymbolsData.self)
@@ -110,8 +107,8 @@ class PositionSize: NSObject {
             thisAllocation.append(Int(items.allTickers[0].cost))
         }
         
-        // find the best fit of symbols to fill the IRA Account
-        var bestFit = BestFit().bestFit(initBalanceIRA: 75000, allocations: thisAllocation)
+        // find the best fit of symbols to fill the IRA Account, account_Two
+        var bestFit = BestFit().bestFit(initBalanceIRA: account_Two, allocations: thisAllocation)
         
         print("This is the best fit + Sum \(bestFit)\n")
         

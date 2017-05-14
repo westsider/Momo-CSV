@@ -64,10 +64,10 @@
 		0D3D6ABD1EC6232900040D6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
 				0D560AC11EBD3001002A80D8 /* CSVParser.swift */,
-				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
+				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
 				0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */,
+				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
