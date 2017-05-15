@@ -104,7 +104,7 @@ class CSVParse: NSObject {
         convertCSV(file: of)
         var tableString = ""
         var rowString = ""
-        //print("data: \(data)")
+
         for row in data{
             rowString = ""
             for fieldName in columnTitles{
@@ -170,7 +170,7 @@ class CSVParse: NSObject {
                 }
                 if trend == 1   && gap < 15 {
                     let results = "\nticker: \(ticker) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)"
-                    //print(results)
+                  
                     filteredResults += results
                     thisTicker.ticker = ticker
                     // trim porfolio wieght > 100 ooon last sybmol
@@ -186,7 +186,6 @@ class CSVParse: NSObject {
                     newRow.ticker = ticker
                     newRow.weight = targetWeight
                     newRow.close = close
-                    //print("\nAdded A Realm Row: \(newRow)\n")
                     
                     let realm = try! Realm()
                     
@@ -196,18 +195,15 @@ class CSVParse: NSObject {
                         realm.add(filteredSymbolsData)
                     }
                     
-                    //print("Adding: \(thisTicker.ticker)")
                     filteredSymbols.allTickers.append(thisTicker)
                     
                 } else {
                     print("Excluded: \(ticker) Trend: \(trend) Gap: \(gap)")
                 }
                 totalPortfoio += targetWeight
-                
             }
-            
         }
-        print("\ntotalPortfoio \(totalPortfoio)\n")
+        
         return filteredSymbols
     }
     

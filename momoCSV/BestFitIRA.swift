@@ -45,7 +45,7 @@ class BestFit {
                 if smallerAccountSum < initBalIRA {
                     
                     smallerAccount.append(item)
-                    //print(smallerAccount)
+                  
                 } else {
                     smallerAccount.removeLast()
                     break
