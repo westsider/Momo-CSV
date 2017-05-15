@@ -66,8 +66,6 @@ class FilteredSymbolsData: Object {
         
         let otherResults = otherRealm.objects(FilteredSymbolsData.self)
         
-        //print("Retrived Tickers count \(otherResults.count) icker \(otherResults)")
-        
         var result = ""
         
         for items in otherResults {

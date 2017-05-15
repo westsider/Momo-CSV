@@ -81,8 +81,6 @@ class PositionSize: NSObject {
         
         result += "\nSum of Allocation \(sumOfAllocation)  Total Allocation $\(Int(totalAccocation))"
         
-        print("numberOfAllocations: \(numberOfAllocations) sumOfAllocation \(sumOfAllocation)")
-        
         return result
     }
     
@@ -97,7 +95,6 @@ class PositionSize: NSObject {
         for items in otherResults {
             
             let result = "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\t\t\(items.allTickers[0].shares)\t\(Int(items.allTickers[0].cost))\t\(items.allTickers[0].account)"
-            print("\(result)")
             
             thisAllocation.append(Int(items.allTickers[0].cost))
         }

@@ -22,12 +22,15 @@
 //  task: Portfolio accounts as inputs
 //  task: Calc the Portfolio rebalance every weds
 //  task: Check for new csv and run weekly rebalance on it
+//  style: cleaned up print statements
+//  task: implement share
 
 //  Calc the Position rebalance every 2nd weds = Check position size
 //  Download the cvs directly to my own backend
 
 import UIKit
 import RealmSwift
+import MessageUI
 
 class ViewController: UIViewController {
 
@@ -51,7 +54,11 @@ class ViewController: UIViewController {
     
     let iraAccount = 71336
     
+    let portfolioDownload = "2017_05_04"
+    
     let latestDownload = "Momentum rankings - 2017-05-11 - $spx"
+    
+    var messageText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,15 +69,15 @@ class ViewController: UIViewController {
     // read data from file and saves a string Data object
     @IBAction func importAction(_ sender: Any) {
         
-        guard let fileString = csvParse.readDataFromFile(file: "2017_05_04") else {
+        guard let fileString = csvParse.readDataFromFile(file: portfolioDownload) else {
             textView.text =  "Warning csv file does not exist!"
             return
         }
         
         // calls convertCSV, cleanRows returns String
-        let parsedCvs = csvParse.printData(of: fileString)
+        messageText = csvParse.printData(of: fileString)
 
-        textView.text = parsedCvs
+        textView.text = messageText
     }
     
     @IBAction func fiterAction(_ sender: Any) {
@@ -79,26 +86,25 @@ class ViewController: UIViewController {
         let filterResults = csvParse.filterTickers()
         
         // saves above Ticker objects into a realm Ticker Object array
-        let displayText = filteredSymbolsData.saveRealmWith(Tickers: filterResults)
+        messageText = filteredSymbolsData.saveRealmWith(Tickers: filterResults)
         
-        print("DISPLAY TEXT:\n\(displayText)")
-        
-        textView.text = displayText
+        textView.text = messageText
     }
     
     //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
     @IBAction func posSizeAction(_ sender: Any) {
         
-        let posSize = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
+        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
         
-        textView.text  =  posSize         
+        textView.text  =  messageText
     }
 
     //MARK: - Load Realm array of Ticker Objects and split into ira nad reg
     @IBAction func splitPortfolio(_ sender: Any) {
         
         positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
-        textView.text  =  positionSize.getRealmPortfolio()
+        messageText =  positionSize.getRealmPortfolio()
+        textView.text = messageText
     }
     
     @IBAction func clearRealm(_ sender: Any) {
@@ -116,9 +122,18 @@ class ViewController: UIViewController {
     
     //MARK: - Weekly Rebalance
     @IBAction func weeklyRebalanceAction(_ sender: Any) {
-        
-        textView.text = portfolioActions.weeklyRebalance(newFile: latestDownload)
+        messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
+        textView.text = messageText
     }
+    
+    @IBAction func shareAction(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [messageText], applicationActivities: nil)
+        activityVC.setValue("Portfolio Update", forKey: "Subject")
+        // exclude sms from sharing with images
+        activityVC.excludedActivityTypes = [ UIActivityType.message ]
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
 }
 
 
