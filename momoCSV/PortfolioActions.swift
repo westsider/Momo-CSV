@@ -11,7 +11,7 @@ import RealmSwift
 
 class PortfolioActions {
 
-    func weeklyRebalance()-> String {
+    func weeklyRebalance(newFile: String)-> String {
         
         print("Called weeklyRebalance")
         
@@ -20,7 +20,7 @@ class PortfolioActions {
         let csvParse = CSVParse()
         
         // read data from file and saves a string Data object
-        guard let fileString = csvParse.readDataFromFile(file: "2017_05_04") else {
+        guard let fileString = csvParse.readDataFromFile(file: newFile) else {
             print( "Warning csv file does not exist!")
             result = "Warning csv file does not exist!"
             return result

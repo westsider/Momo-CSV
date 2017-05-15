@@ -21,16 +21,7 @@
 //  Construct the initial portfolio. Buy from the top until you run out of cash.
 //  task: Portfolio accounts as inputs
 //  task: Calc the Portfolio rebalance every weds
-//      Portfolio Rebalancing Every Wednesday
-//      1. Sell Stocks not in top 20%
-//      2. Sell Stocks below 100 SMA
-//      3. Sell Stocks that gap over 15%in last week
-//      4. Sell if Stock Left Index
-
-//  Check for new csv and add it to realm
-//      1. change parse csv to get all symbol attributes
-//      2. change realm to get all attributes
-
+//  task: Check for new csv and run weekly rebalance on it
 
 //  Calc the Position rebalance every 2nd weds = Check position size
 //  Download the cvs directly to my own backend
@@ -60,40 +51,17 @@ class ViewController: UIViewController {
     
     let iraAccount = 71336
     
+    let latestDownload = "Momentum rankings - 2017-05-11 - $spx"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         regTextField.text = "\(regAccount)"
         iraTextField.text = "\(iraAccount)"
     }
     
-    // this is where I update account bal
-    @IBAction func updateAccounts(_ sender: Any) {
-        
-    }
-    
-    // this event should creat a perminant store of Data so I can check my current portfolio against it or...
-    //  run this func again and check position is
-    //  1. in top 20%
-    //  2. above 100 SMA
-    //  3. gap < 15
-    //  4. is in index
-    
-    @IBAction func weeklyRebalanceAction(_ sender: Any) {
-
-        // get current symbols from realm
-        // sell position if:
-        // query in top 20%
-        // query for above 100 sma
-        // query if N has gap > 15
-        // query is in index
-        
-        textView.text = portfolioActions.weeklyRebalance()
-    }
-
-    
+    // read data from file and saves a string Data object
     @IBAction func importAction(_ sender: Any) {
         
-        // read data from file and saves a string Data object
         guard let fileString = csvParse.readDataFromFile(file: "2017_05_04") else {
             textView.text =  "Warning csv file does not exist!"
             return
@@ -116,12 +84,11 @@ class ViewController: UIViewController {
         print("DISPLAY TEXT:\n\(displayText)")
         
         textView.text = displayText
-        
     }
     
+    //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
     @IBAction func posSizeAction(_ sender: Any) {
         
-        //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
         let posSize = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
         
         textView.text  =  posSize         
@@ -140,6 +107,17 @@ class ViewController: UIViewController {
             realm.deleteAll()
         }
         textView.text =  "Realm Database Deleted"
+    }
+    
+    // this is where I update account bal
+    @IBAction func updateAccounts(_ sender: Any) {
+        
+    }
+    
+    //MARK: - Weekly Rebalance
+    @IBAction func weeklyRebalanceAction(_ sender: Any) {
+        
+        textView.text = portfolioActions.weeklyRebalance(newFile: latestDownload)
     }
 }
 
