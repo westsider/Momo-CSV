@@ -27,11 +27,12 @@ class Tickers: NSObject {
     var weight = 0.0
 }
 
+
 class CSVParse: NSObject {
     
     var  data:[[String:String]] = []
-    var  columnTitles:[String] = []
     
+    var  columnTitles:[String] = []
     
     func readDataFromFile(file:String)-> String!{
         guard let filepath = Bundle.main.path(forResource: file, ofType: "csv")
@@ -52,7 +53,6 @@ class CSVParse: NSObject {
         var cleanFile = file
         cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-        //cleanFile = cleanFile.replacingOccurrences(of: "5c", with: "")
         return cleanFile
     }
     
@@ -130,7 +130,11 @@ class CSVParse: NSObject {
         
         let filteredSymbolsData = List<TickersData>()
         
-        //filteredSymbols.allTickers.removeAll()
+        //      Portfolio Rebalancing Every Wednesday
+        //      1. Sell Stocks not in top 20% = get row number
+        //      2. Sell Stocks below 100 SMA
+        //      3. Sell Stocks that gap over 15%in last week
+        //      4. Sell if Stock Left Index
         
         for (index, row ) in data.enumerated() {
             

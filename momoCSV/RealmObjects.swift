@@ -41,7 +41,7 @@ class FilteredSymbolsData: Object {
         var sumOfAllocation = 0.0
         
         for item in Tickers.allTickers {
-            let thisRow = "\(item.ticker)\t\t\(item.close)\t\t\(item.weight)\r"
+            let thisRow = "\(item.ticker)  \t\t\(item.close)\t\t\(item.weight)\r"
             displayText += thisRow
             
             // load into realm
@@ -57,7 +57,7 @@ class FilteredSymbolsData: Object {
             }
             sumOfAllocation += newTicker.weight
         }
-        return "\nTicker\t\tClose\tWeight\n" + displayText + "\nSum of Allocation: \(sumOfAllocation)"
+        return "\nTicker\t\tClose\tWeight\n" + displayText + "\n\nSum of Allocation: \(sumOfAllocation)"
     }
     
     func readFromRealm()-> String {
@@ -72,7 +72,7 @@ class FilteredSymbolsData: Object {
         
         for items in otherResults {
             
-            result += "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\n"
+            result += "\(items.allTickers[0].ticker)  \t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\n"
         }
         return result
     }

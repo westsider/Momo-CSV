@@ -85,15 +85,17 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-LS-4sx">
                                                 <rect key="frame" x="69.5" y="0.0" width="64.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="nil"/>
+                                                <state key="normal" title="Weekly"/>
                                                 <connections>
                                                     <action selector="fiterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ce2-p8-0Wb"/>
+                                                    <action selector="weeklyRebalanceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTJ-Jl-bKy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-eN-NZg">
                                                 <rect key="frame" x="139" y="0.0" width="65" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="nil"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="2x Month"/>
                                                 <connections>
                                                     <action selector="posSizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msV-4T-wQM"/>
                                                 </connections>

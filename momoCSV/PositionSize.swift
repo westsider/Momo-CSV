@@ -39,11 +39,6 @@ class PositionSize: NSObject {
             
             let thisAllocation =  totalCash * ( items.allTickers[0].weight * 0.01) // get cash in % of total portfolio
             
-            // bug here, total cash not gettng de incremented
-           // totalCash = totalCash - thisAllocation
-            
-            //print("Total cash is now: \(totalCash)")
-            
             let numShares = thisAllocation / items.allTickers[0].close
             
             try! realm.write {
@@ -80,7 +75,7 @@ class PositionSize: NSObject {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(thisAllocation))\t\(account)\n"
+            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)  \t$\(Int(thisAllocation))\t\(account)\n"
             
         }
         

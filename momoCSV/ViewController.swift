@@ -19,14 +19,19 @@
 //  fix UI for split of portfolio
 //  task: print the sum or IRA and Reg
 //  Construct the initial portfolio. Buy from the top until you run out of cash.
-//  task: Portfolio accounts as inputs 
+//  task: Portfolio accounts as inputs
+//  task: Calc the Portfolio rebalance every weds
+//      Portfolio Rebalancing Every Wednesday
+//      1. Sell Stocks not in top 20%
+//      2. Sell Stocks below 100 SMA
+//      3. Sell Stocks that gap over 15%in last week
+//      4. Sell if Stock Left Index
 
-//  Calc the Portfolio rebalance every weds
-//        Portfolio Rebalancing Every Wednesday
-//        1. Sell Stocks not in top 20%
-//        2. Sell Stocks below 100 SMA
-//        3. Sell Stocks that gap over 15%in last week
-//        4. Sell if Stock Left Index
+//  Check for new csv and add it to realm
+//      1. change parse csv to get all symbol attributes
+//      2. change realm to get all attributes
+
+
 //  Calc the Position rebalance every 2nd weds = Check position size
 //  Download the cvs directly to my own backend
 
@@ -46,6 +51,8 @@ class ViewController: UIViewController {
     let filteredSymbolsData = FilteredSymbolsData()
     
     let positionSize = PositionSize()
+    
+    let portfolioActions = PortfolioActions()
 
     let realm = try! Realm()
     
@@ -59,9 +66,30 @@ class ViewController: UIViewController {
         iraTextField.text = "\(iraAccount)"
     }
     
+    // this is where I update account bal
     @IBAction func updateAccounts(_ sender: Any) {
         
     }
+    
+    // this event should creat a perminant store of Data so I can check my current portfolio against it or...
+    //  run this func again and check position is
+    //  1. in top 20%
+    //  2. above 100 SMA
+    //  3. gap < 15
+    //  4. is in index
+    
+    @IBAction func weeklyRebalanceAction(_ sender: Any) {
+
+        // get current symbols from realm
+        // sell position if:
+        // query in top 20%
+        // query for above 100 sma
+        // query if N has gap > 15
+        // query is in index
+        
+        textView.text = portfolioActions.weeklyRebalance()
+    }
+
     
     @IBAction func importAction(_ sender: Any) {
         
