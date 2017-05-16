@@ -21,7 +21,13 @@ class TickersData: Object {
     
     dynamic var cost = 0.0
     
-    dynamic var account = ""
+    dynamic var account = "REG"
+    
+    dynamic var updated = ""
+    
+    dynamic var action = "Hold"
+    
+    dynamic var lastUpdate = ""
 }
 
 class FilteredSymbolsData: Object {
@@ -47,6 +53,7 @@ class FilteredSymbolsData: Object {
             // load into realm
             let newTicker = TickersData()
             newTicker.ticker = item.ticker
+            newTicker.updated = item.updated
             newTicker.close = item.close
             newTicker.weight = item.weight
             newTicker.account = "REG"
@@ -64,15 +71,33 @@ class FilteredSymbolsData: Object {
         
         let otherRealm = try! Realm()
         
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
+        let otherResults = otherRealm.objects(TickersData.self)
         
-        var result = ""
+        var result = "Ticker\tDate\tClose\tWeight\n"
         
         for items in otherResults {
             
-            result += "\(items.allTickers[0].ticker)  \t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\n"
+            result += "\(items.ticker)  \t\(truncateDate(oldDates: items.updated))\t\(items.close)\t\(items.weight)\n"
         }
         return result
+    }
+    
+    func readObjctsFromRealm()-> Results<TickersData> {
+        
+        let realm = try! Realm()
+        
+        let allObjects = realm.objects(TickersData.self)
+        
+        return allObjects
+    }
+    
+    func truncateDate(oldDates: String)-> String {
+        var oldDate = oldDates
+        let lowBound = oldDates.index(oldDates.startIndex, offsetBy: 0)
+        let hiBound = oldDate.index(oldDate.endIndex, offsetBy: -5)
+        let midRange = lowBound ..< hiBound
+        oldDate.removeSubrange(midRange)
+        return oldDate
     }
     
 }

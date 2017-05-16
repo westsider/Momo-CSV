@@ -78,7 +78,6 @@
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Accts"/>
                                                 <connections>
-                                                    <action selector="importAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFw-Bp-zRz"/>
                                                     <action selector="updateAccounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jt-eM-3LO"/>
                                                 </connections>
                                             </button>
@@ -87,7 +86,6 @@
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Weekly"/>
                                                 <connections>
-                                                    <action selector="fiterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ce2-p8-0Wb"/>
                                                     <action selector="weeklyRebalanceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTJ-Jl-bKy"/>
                                                 </connections>
                                             </button>
@@ -97,23 +95,19 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="2x Month"/>
                                                 <connections>
-                                                    <action selector="posSizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msV-4T-wQM"/>
+                                                    <action selector="biWeeklyRebalance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSA-2D-xx4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-mO-XB5">
                                                 <rect key="frame" x="440" y="0.0" width="141.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="nil"/>
-                                                <connections>
-                                                    <action selector="splitPortfolio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgG-Zy-wZU"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-H0-372">
                                                 <rect key="frame" x="586.5" y="0.0" width="141.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Share"/>
                                                 <connections>
-                                                    <action selector="clearRealm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpN-0m-0ax"/>
                                                     <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eqw-qi-pD3"/>
                                                 </connections>
                                             </button>
@@ -163,11 +157,18 @@
                                     <constraint firstAttribute="trailing" secondItem="hlw-SU-CQb" secondAttribute="trailing" id="yTe-9H-H9J"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome to Portfolio Optimizer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-HZ-yGe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-HZ-yGe">
                                 <rect key="frame" x="20" y="130" width="728" height="886"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welcome to Portfolio Optimizer">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

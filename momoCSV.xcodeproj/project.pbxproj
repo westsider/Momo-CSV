@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D3D6ABF1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */; };
 		0D560AAC1EBD2952002A80D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AAB1EBD2952002A80D8 /* AppDelegate.swift */; };
-		0D560AAE1EBD2952002A80D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AAD1EBD2952002A80D8 /* ViewController.swift */; };
+		0D560AAE1EBD2952002A80D8 /*  ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AAD1EBD2952002A80D8 /*  ViewController.swift */; };
 		0D560AB11EBD2952002A80D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D560AAF1EBD2952002A80D8 /* Main.storyboard */; };
 		0D560AB31EBD2952002A80D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D560AB21EBD2952002A80D8 /* Assets.xcassets */; };
 		0D560AB61EBD2952002A80D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D560AB41EBD2952002A80D8 /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 		0DB952D01EBE8C240012F2EF /* PositionSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB952CF1EBE8C240012F2EF /* PositionSize.swift */; };
 		0DCBDB601EC7E2F7002CAE56 /* BestFitIRA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */; };
 		0DCFF6F71EBEBDE0000B534B /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */; };
-		0DF991321EC8BC8F00EABB5B /* PortfolioActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF991311EC8BC8F00EABB5B /* PortfolioActions.swift */; };
+		0DF991321EC8BC8F00EABB5B /* PortfolioRebalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */; };
 		B70824C3313B998A343C25CC /* Pods_momoCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADFFB5D598EE99BB97C05F7 /* Pods_momoCSV.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Momentum rankings - 2017-05-11 - $spx.csv"; sourceTree = "<group>"; };
 		0D560AA81EBD2952002A80D8 /* momoCSV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = momoCSV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D560AAB1EBD2952002A80D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D560AAD1EBD2952002A80D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D560AAD1EBD2952002A80D8 /*  ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ViewController.swift"; sourceTree = "<group>"; };
 		0D560AB01EBD2952002A80D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D560AB21EBD2952002A80D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D560AB51EBD2952002A80D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		0DB952CF1EBE8C240012F2EF /* PositionSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionSize.swift; sourceTree = "<group>"; };
 		0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestFitIRA.swift; sourceTree = "<group>"; };
 		0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
-		0DF991311EC8BC8F00EABB5B /* PortfolioActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioActions.swift; sourceTree = "<group>"; };
+		0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioRebalance.swift; sourceTree = "<group>"; };
 		DADFFB5D598EE99BB97C05F7 /* Pods_momoCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,7 +70,7 @@
 				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
 				0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */,
 				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
-				0DF991311EC8BC8F00EABB5B /* PortfolioActions.swift */,
+				0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0D560AAF1EBD2952002A80D8 /* Main.storyboard */,
-				0D560AAD1EBD2952002A80D8 /* ViewController.swift */,
+				0D560AAD1EBD2952002A80D8 /*  ViewController.swift */,
 				0D3D6ABD1EC6232900040D6B /* Model */,
 				0D3D6ABC1EC6231600040D6B /* Raw Data */,
 				0D560AB21EBD2952002A80D8 /* Assets.xcassets */,
@@ -251,10 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D560AAE1EBD2952002A80D8 /* ViewController.swift in Sources */,
+				0D560AAE1EBD2952002A80D8 /*  ViewController.swift in Sources */,
 				0DB952D01EBE8C240012F2EF /* PositionSize.swift in Sources */,
 				0DCBDB601EC7E2F7002CAE56 /* BestFitIRA.swift in Sources */,
-				0DF991321EC8BC8F00EABB5B /* PortfolioActions.swift in Sources */,
+				0DF991321EC8BC8F00EABB5B /* PortfolioRebalance.swift in Sources */,
 				0D560AAC1EBD2952002A80D8 /* AppDelegate.swift in Sources */,
 				0D560AC21EBD3001002A80D8 /* CSVParser.swift in Sources */,
 				0DCFF6F71EBEBDE0000B534B /* RealmObjects.swift in Sources */,

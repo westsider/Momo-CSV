@@ -25,6 +25,8 @@ class Tickers: NSObject {
     var close = 0.0
     
     var weight = 0.0
+    
+    var updated = ""
 }
 
 
@@ -40,7 +42,6 @@ class CSVParse: NSObject {
                 return nil
         }
         do {
-            //let contents = try String(contentsOfFile: filepath, usedEncoding: nil)
             let contents = try String(contentsOfFile: filepath, encoding: .utf8)
             return contents
         } catch {
@@ -120,15 +121,15 @@ class CSVParse: NSObject {
     }
     
     //MARK: - Filter Tickers
-    func filterTickers() -> FilteredSymbols {
+    func filterTickers() {
         
         var totalPortfoio = 0.0
         
         var filteredResults = ""
         
-        let filteredSymbols = FilteredSymbols()
+        //let filteredSymbols = FilteredSymbols()
         
-        let filteredSymbolsData = List<TickersData>()
+        //let filteredSymbolsData = List<TickersData>()
         
         //      Portfolio Rebalancing Every Wednesday
         //      1. Sell Stocks not in top 20% = get row number
@@ -142,7 +143,7 @@ class CSVParse: NSObject {
                 
                 let thisTicker = Tickers()
                 
-                let newRow = TickersData()
+                let newTicker = TickersData()
                 
                 guard let ticker = row["Ticker"] else {
                     print("Got nil in ticker")
@@ -168,8 +169,12 @@ class CSVParse: NSObject {
                     print("Got nil in Close Price")
                     continue
                 }
+                guard let updated = row["Updated"] else {
+                    print("Got nil in date: \(index)")
+                    continue
+                }
                 if trend == 1   && gap < 15 {
-                    let results = "\nticker: \(ticker) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)"
+                    let results = "\nticker: \(ticker) Date: \(updated) slope:\(slope) trend: \(trend) gap: \(gap) Taregt Weight: \(targetWeight) Total Weight: \(totalPortfoio)"
                   
                     filteredResults += results
                     thisTicker.ticker = ticker
@@ -183,19 +188,20 @@ class CSVParse: NSObject {
                     thisTicker.close = close
                     
                     // realm persistant Data
-                    newRow.ticker = ticker
-                    newRow.weight = targetWeight
-                    newRow.close = close
+                    newTicker.ticker = ticker
+                    newTicker.weight = targetWeight
+                    newTicker.close = close
+                    newTicker.updated = updated
                     
                     let realm = try! Realm()
                     
                     try! realm.write() {
                         //let person = realm.create(FilteredSymbolsData.self, value: [ticker, targetWeight, close])
-                        filteredSymbolsData.append(newRow)
-                        realm.add(filteredSymbolsData)
+                       // filteredSymbolsData.append(newRow)
+                        realm.add(newTicker)
                     }
                     
-                    filteredSymbols.allTickers.append(thisTicker)
+                    //filteredSymbols.allTickers.append(thisTicker)
                     
                 } else {
                     print("Excluded: \(ticker) Trend: \(trend) Gap: \(gap)")
@@ -204,7 +210,7 @@ class CSVParse: NSObject {
             }
         }
         
-        return filteredSymbols
+        // return filteredSymbols
     }
     
 }

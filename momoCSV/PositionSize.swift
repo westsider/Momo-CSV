@@ -17,41 +17,39 @@ class PositionSize: NSObject {
 
     var account = ""
     
+    let filteredSymbolsData = FilteredSymbolsData()
+    
     let realm = try! Realm()
     
     func calcPositionSise(account_One: Int, account_Two: Int)-> String {
         
         let totalCash = Double( account_One + account_Two )
         
-        let otherRealm = try! Realm()
+        let allObjects = filteredSymbolsData.readObjctsFromRealm()
         
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
-        
-        var result = "\nTicker\tClose\tWeight\tShares\tCost\n"
+        var result = "\nTicker\tDate\tClose\tWeight\tShares\tCost\n"
         
         var totalAccocation = 0.0
         
-        let numberOfAllocations = otherResults.count
-        
         var sumOfAllocation = 0.0
         
-        for items in otherResults {
+        for items in allObjects {
             
-            let thisAllocation =  totalCash * ( items.allTickers[0].weight * 0.01) // get cash in % of total portfolio
+            let thisAllocation =  totalCash * ( items.weight * 0.01) // get cash in % of total portfolio
             
-            let numShares = thisAllocation / items.allTickers[0].close
+            let numShares = thisAllocation / items.close
             
             try! realm.write {
-                items.allTickers[0].cost = thisAllocation
-                items.allTickers[0].shares = numShares
+                items.cost = thisAllocation
+                items.shares = numShares
             }
             
-            sumOfAllocation += items.allTickers[0].weight
+            sumOfAllocation += items.weight
             
             totalAccocation += thisAllocation
             
             // tab evenly add space to Ticker
-            let tkr = items.allTickers[0].ticker
+            let tkr = items.ticker
             var fullTicker = ""
             if tkr.characters.count < 3 {
                 fullTicker = tkr + "  "
@@ -59,8 +57,11 @@ class PositionSize: NSObject {
                 fullTicker = tkr
             }
             
+            // get short date
+            let updated = truncateDate(oldDates: items.updated)
+            
             // tab evenly round weight to 2 deciamls
-            let x = items.allTickers[0].weight
+            let x = items.weight
             let y = Double(round(1000*x)/1000)
             
             // tab evenly add spacece to shares < 100
@@ -75,7 +76,7 @@ class PositionSize: NSObject {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)  \t$\(Int(thisAllocation))\t\(account)\n"
+            result += "\(fullTicker)\t\(updated)\t\(items.close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)  \t$\(Int(thisAllocation))\t\(account)\n"
             
         }
         
@@ -86,17 +87,15 @@ class PositionSize: NSObject {
     
     func splitRealmPortfolio(account_One: Int, account_Two: Int) {
         
-        let otherRealm = try! Realm()
-        
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
+        let allObjects = filteredSymbolsData.readObjctsFromRealm()
         
         var thisAllocation = [Int]()
         
-        for items in otherResults {
+        for items in allObjects {
             
-            let result = "\(items.allTickers[0].ticker)\t\(items.allTickers[0].close)\t\(items.allTickers[0].weight)\t\t\(items.allTickers[0].shares)\t\(Int(items.allTickers[0].cost))\t\(items.allTickers[0].account)"
+            //let result = "\(items.ticker)\t\(items.close)\t\(items.weight)\t\t\(items.shares)\t\(Int(items.cost))\t\(items.account)"
             
-            thisAllocation.append(Int(items.allTickers[0].cost))
+            thisAllocation.append(Int(items.cost))
         }
         
         // find the best fit of symbols to fill the IRA Account, account_Two
@@ -109,13 +108,13 @@ class PositionSize: NSObject {
         print("This is the best fit - Sum \(bestFit)\n")
         
         // update realm object
-        for item in otherResults {
+        for item in allObjects {
             
             for best in bestFit {
                 
-                if Int(item.allTickers[0].cost) == best {
+                if Int(item.cost) == best {
                     try! realm.write {
-                        item.allTickers[0].account = "IRA"
+                        item.account = "IRA"
                     }
                 }
                 
@@ -127,11 +126,9 @@ class PositionSize: NSObject {
     
     func getRealmPortfolio()-> String {
         
-        let otherRealm = try! Realm()
+        let allObjects = filteredSymbolsData.readObjctsFromRealm()
         
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
-        
-        var result = "\nTicker\tClose\tWeight\tShares\tCost\t\tAccount\n"
+        var result = "\nTicker\tDate\tClose\tWeight\tShares\tCost\t\tAccount\n"
         
         var totalAccocation = 0.0
         
@@ -139,18 +136,18 @@ class PositionSize: NSObject {
         
         var regAllocation = 0.0
         
-        for items in otherResults {
+        for items in allObjects {
             
-            totalAccocation += items.allTickers[0].cost
+            totalAccocation += items.cost
             
-            if items.allTickers[0].account == "IRA"{
-                iraAllocation += items.allTickers[0].cost
+            if items.account == "IRA"{
+                iraAllocation += items.cost
             } else {
-                regAllocation += items.allTickers[0].cost
+                regAllocation += items.cost
             }
             
             // tab evenly add space to Ticker
-            let tkr = items.allTickers[0].ticker
+            let tkr = items.ticker
             var fullTicker = ""
             if tkr.characters.count < 3 {
                 fullTicker = tkr + "  "
@@ -159,11 +156,11 @@ class PositionSize: NSObject {
             }
             
             // tab evenly round weight to 2 deciamls
-            let x = items.allTickers[0].weight
+            let x = items.weight
             let y = Double(round(1000*x)/1000)
             
             // tab evenly add spacece to shares < 100
-            let n = items.allTickers[0].shares
+            let n = items.shares
             var numsharesToString = ""
             if n < 100 {
                 numsharesToString = "\(String(format: "%.0f", n))    "
@@ -173,13 +170,22 @@ class PositionSize: NSObject {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            result += "\(fullTicker)\t\(items.allTickers[0].close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.allTickers[0].cost))\t\t\(items.allTickers[0].account)\n"
+            result += "\(fullTicker)\t\(truncateDate(oldDates: items.updated))\t\(items.close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.cost))\t\t\(items.account)\n"
             
         }
         
         result += "\nReg = $\(regAllocation) IRA = $\(iraAllocation)\nTotal Allocation $\(Int(totalAccocation))"
         
         return result
+    }
+    
+    func truncateDate(oldDates: String)-> String {
+        var oldDate = oldDates
+        let lowBound = oldDates.index(oldDates.startIndex, offsetBy: 0)
+        let hiBound = oldDate.index(oldDate.endIndex, offsetBy: -5)
+        let midRange = lowBound ..< hiBound
+        oldDate.removeSubrange(midRange)
+        return oldDate
     }
 
 }
