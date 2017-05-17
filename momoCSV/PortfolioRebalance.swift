@@ -40,14 +40,7 @@ class PortfolioActions {
             theseTickers.append(items.ticker)
         }
         
-        // todays date
-        let date = Date()
-        let formatter = DateFormatter()
-        //Give the format you want to the formatter:
-        formatter.dateFormat = "dd.MM.yyyy"
-        //Get the result string:
-        let todaysDate = formatter.string(from: date)
-        
+        let todaysDate = dateToString()
         
         //MARK: = Check if symbol is in top 20%
         for (index, row ) in latestData.enumerated() {
@@ -110,78 +103,20 @@ class PortfolioActions {
         return result
     }
     
+    func dateToString() -> String {
+        // todays date
+        let date = Date()
+        let formatter = DateFormatter()
+        //Give the format you want to the formatter:
+        formatter.dateFormat = "dd.MM.yyyy"
+        //Get the result string:
+        let todaysDate = formatter.string(from: date)
+        return todaysDate
+    }
+    
     // Calc the Position rebalance every 2nd weds = Check position size
     func biWeeklyRebalance(newFile: String)-> String  {
-        
-        var result = "Ticker\tRow\tTrend\tGap\tAdvise\tOld Weight\tNew Weight\n"
-        //MARK: - get data from last parse
-        let csvParse = CSVParse()
-        
-        // read data from file and saves a string Data object
-        guard let fileString = csvParse.readDataFromFile(file: newFile) else {
-            result = "Warning csv file does not exist!"
-            return result
-        }
-        
-        // load the filestring into a dictionary
-        _ = csvParse.printData(of: fileString)
-        let latestData = csvParse.data
-        
-        //MARK: -  get current symbols from realm
-        let otherRealm = try! Realm()
-        
-        let otherResults = otherRealm.objects(FilteredSymbolsData.self)
-        
-        print(otherResults)
-        var theseTickers  = [String]()
-        
-        // make an array of Tickers
-        for items in otherResults {
-            theseTickers.append(items.allTickers[0].ticker)
-        }
-        
-        //MARK: = Check if symbol is in top 20%
-        for (index, row ) in latestData.enumerated() {
-            
-            guard let ticker = row["Ticker"] else {
-                print("Got nil in ticker")
-                continue
-            }
-            guard let trend = Int(row["\"Stock Trend - SMA100\""]!) else {
-                print("Got nil in trend")
-                continue
-            }
-            guard let gap = Double(row["\"Max Gap\""]!) else {
-                print("Got nil in gap")
-                continue
-            }
-            guard let targetWeight = Double(row["\"Target Weight\""]!) else {
-                print("Got nil in targetWeight")
-                continue
-            }
-            var hold = "Hold"
-            //MARK: -  sell position if not
-            //MARK: -  query in top 20%
-            //MARK: -  query for above 100 sma
-            //MARK: -  query if N has gap > 15
-            //MARK: -  query is in index
-            
-            // first see if this ticker should still be in portfolio then change hold to sell
-            if trend != 1  || gap > 14 || index > 100 {
-                hold = "Sell"
-            }
-            
-            if theseTickers.contains(ticker) {
-                
-//               let puppies = otherRealm.objects(FilteredSymbolsData.self).filter("allTickers == %@", ticker)
-//                print("my puppies: \(puppies)")
-                
-                result += "\(ticker)  \t\(index)\t\(trend)\t\(gap)   \t\(hold)\(targetWeight)\n"
-                
-            }
-        }
-        
-        return result
+        return "no data yet"
     }
 }
 

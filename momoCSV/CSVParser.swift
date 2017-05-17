@@ -121,7 +121,7 @@ class CSVParse: NSObject {
     }
     
     //MARK: - Filter Tickers
-    func filterTickers() {
+    func filterTickers(file: String) {
         
         var totalPortfoio = 0.0
         
@@ -192,6 +192,7 @@ class CSVParse: NSObject {
                     newTicker.weight = targetWeight
                     newTicker.close = close
                     newTicker.updated = updated
+                    newTicker.currentFileName = file
                     
                     let realm = try! Realm()
                     

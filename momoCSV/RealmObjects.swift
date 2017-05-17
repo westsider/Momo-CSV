@@ -28,44 +28,13 @@ class TickersData: Object {
     dynamic var action = "Hold"
     
     dynamic var lastUpdate = ""
+    
+    dynamic var currentFileName = ""
 }
 
 class FilteredSymbolsData: Object {
     
     dynamic var taskID = NSUUID().uuidString
-    
-    let allTickers = List<TickersData>()
-    
-    let filteredTickers = List<TickersData>()
-    
-    func saveRealmWith(Tickers: FilteredSymbols )-> String {
-        
-        let realm = try! Realm()
-        
-        var displayText = ""
-        
-        var sumOfAllocation = 0.0
-        
-        for item in Tickers.allTickers {
-            let thisRow = "\(item.ticker)  \t\t\(item.close)\t\t\(item.weight)\r"
-            displayText += thisRow
-            
-            // load into realm
-            let newTicker = TickersData()
-            newTicker.ticker = item.ticker
-            newTicker.updated = item.updated
-            newTicker.close = item.close
-            newTicker.weight = item.weight
-            newTicker.account = "REG"
-            let newTickerArray = FilteredSymbolsData()
-            newTickerArray.allTickers.append(newTicker)
-            try! realm.write {
-                realm.add(newTickerArray)
-            }
-            sumOfAllocation += newTicker.weight
-        }
-        return "\nTicker\t\tClose\tWeight\n" + displayText + "\n\nSum of Allocation: \(sumOfAllocation)"
-    }
     
     func readFromRealm()-> String {
         
@@ -99,6 +68,45 @@ class FilteredSymbolsData: Object {
         oldDate.removeSubrange(midRange)
         return oldDate
     }
+}
+
+class JournalUpdate: Object {
     
+    dynamic var entry = ""
+    
+    dynamic var taskID = NSUUID().uuidString
+    
+    func addContent(lastEntry: String) {
+        
+        print("\nUpdating journal with \(lastEntry)/n")
+        
+        let realm = try! Realm()
+        
+        let thisEntry = JournalUpdate()
+        
+        thisEntry.entry = lastEntry
+        
+        try! realm.write {
+            realm.add(thisEntry)
+            print("\nWriting \(lastEntry)")
+        }
+    }
+    
+    func readContent()-> String {
+        
+        let realm = try! Realm()
+        
+        let allEntrys = realm.objects(JournalUpdate.self)
+        
+        print("\nJournal: All Entries count \(allEntrys.count)------------------------------->\n\(allEntrys)\n")
+        
+        var message = "\(allEntrys.count) Journal Entries\n"
+        
+        for thisEntry in allEntrys {
+            message += thisEntry.entry
+        }
+        
+        return message
+    }
 }
 

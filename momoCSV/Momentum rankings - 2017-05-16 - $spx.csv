@@ -1,0 +1,504 @@
+#,Ticker,Name,Adj.Slope90,Adj.Slope125,Adj.Slope250,Avg.Slope.125.250,Sector,Industry,"Max Gap","Target Weight","Stock Trend - SMA100",ATR,Updated,"Close Price"
+1,VRTX,"Vertex Pharmaceuticals Inc Common",213.7,117.88,1.06,59.470000,Healthcare,"Biotechnology & Medical Research",20.45,4.19,1,2.81,2017-05-16,118.09
+2,ATVI,"Activision Blizzard Inc Common",163.2,141.52,10.22,75.870000,Technology,"Online Services",18.88,6.81,1,0.83,2017-05-16,56.78
+3,WYNN,"Wynn Resorts Ltd Common",147.7,69.96,5.23,37.595000,"Consumer Cyclicals","Casinos & Gaming",7.94,4.54,1,2.82,2017-05-16,127.91
+4,LRCX,"Lam Research Corp Common",131.1,102.95,71.75,87.350000,Technology,"Semiconductor Equipment & Testing",6.86,6.46,1,2.36,2017-05-16,152.56
+5,IDXX,"IDEXX Laboratories Inc Common",130.8,123.95,78.87,101.410000,Healthcare,"Medical Equipment, Supplies & Distribution",13.25,6.85,1,2.40,2017-05-16,164.72
+6,HPQ,"HP Inc Common",115.7,54.82,35.06,44.940000,Technology,"Computer Hardware",8.64,7.08,1,0.28,2017-05-16,19.47
+7,AMT,"American Tower Common",99.4,52.64,0.76,26.700000,Financials,"Specialized REITs",2.84,8.67,1,1.48,2017-05-16,128.37
+8,ISRG,"Intuitive Surgical Inc Common",98.6,84.65,8.70,46.675000,Healthcare,"Advanced Medical Equipment & Technology",6.37,8.73,1,9.76,2017-05-16,859.47
+9,MU,"Micron Technology Inc Common",98.3,125.51,151.78,138.645000,Technology,Semiconductors,7.40,4.17,1,0.69,2017-05-16,29.02
+10,ADBE,"Adobe Systems Inc Common",95.9,90.00,33.74,61.870000,Technology,Software,3.81,10.79,1,1.28,2017-05-16,138.03
+11,AMAT,"Applied Materials Inc Common",95.8,89.58,73.82,81.700000,Technology,"Semiconductor Equipment & Testing",3.15,6.31,1,0.71,2017-05-16,45.07
+12,FMC,"FMC Corp Common",92.1,63.90,49.17,56.535000,"Basic Materials","Diversified Chemicals",13.15,4.95,1,1.53,2017-05-16,75.67
+13,KLAC,"KLA-Tencor Corp Common",89.5,78.16,34.81,56.485000,Technology,"Semiconductor Equipment & Testing",5.18,6.47,1,1.58,2017-05-16,102.33
+14,CERN,"Cerner Corp Common",88.8,77.42,-0.18,38.620000,Healthcare,"Advanced Medical Equipment & Technology",7.81,6.20,1,1.05,2017-05-16,64.83
+15,BCR,"C R Bard Inc Common",82.6,80.84,9.64,45.240000,Healthcare,"Medical Equipment, Supplies & Distribution",19.50,8.62,1,3.55,2017-05-16,306.32
+16,AAPL,"Apple Inc Common",82.2,99.53,52.46,75.995000,Technology,"Computer Hardware",6.10,8.68,1,1.79,2017-05-16,155.47
+17,DXC,"DXC Technology Co Common",80.6,69.18,65.76,67.470000,Technology,"IT Services & Consulting",11.12,5.30,1,1.52,2017-05-16,80.59
+18,MTD,"Mettler-Toledo International Inc Common",77.0,63.53,34.02,48.775000,Industrials,"Industrial Machinery & Equipment",6.69,6.62,1,8.52,2017-05-16,565.82
+19,DRI,"Darden Restaurants Inc Common",73.5,25.04,27.56,26.300000,"Consumer Cyclicals","Restaurants & Bars",9.31,7.18,1,1.20,2017-05-16,85.96
+20,BAX,"Baxter International Inc Common",73.3,61.53,10.32,35.925000,Healthcare,"Medical Equipment, Supplies & Distribution",4.47,8.60,1,0.67,2017-05-16,57.58
+21,WYN,"Wyndham Worldwide Corp Common",70.7,61.70,26.04,43.870000,"Consumer Cyclicals","Hotels, Motels & Cruise Lines",9.02,6.24,1,1.54,2017-05-16,95.94
+22,PCLN,"Priceline Group Inc Common",69.4,61.42,41.16,51.290000,"Consumer Cyclicals","Leisure & Recreation",5.64,6.90,1,26.25,2017-05-16,1829.8
+23,SYMC,"Symantec Corp Common",69.2,90.26,63.06,76.660000,Technology,Software,5.07,4.92,1,0.64,2017-05-16,31.32
+24,LOW,"Lowe's Companies Inc Common",69.0,48.11,0.07,24.090000,"Consumer Cyclicals","Home Improvement Products & Services Retailers",9.52,8.20,1,1.04,2017-05-16,85.36
+25,EA,"Electronic Arts Inc Common",68.6,54.61,15.01,34.810000,Technology,Software,12.65,5.80,1,1.93,2017-05-16,111.76
+26,ALB,"Albemarle Corp Common",67.7,72.94,31.59,52.265000,"Basic Materials","Commodity Chemicals",9.79,6.47,1,1.74,2017-05-16,112.37
+27,WAT,"Waters Corp Common",67.5,61.00,1.56,31.280000,Healthcare,"Advanced Medical Equipment & Technology",6.98,7.07,1,2.47,2017-05-16,174.91
+28,STZ,"Constellation Brands Inc Class A Common",67.1,29.07,0.05,14.560000,"Consumer non-Cyclicals","Distillers & Wineries",6.43,7.72,1,2.36,2017-05-16,182.21
+29,VAR,"Varian Medical Systems Inc Common",66.5,38.96,8.74,23.850000,Healthcare,"Advanced Medical Equipment & Technology",6.44,7.32,1,1.31,2017-05-16,95.95
+30,RHT,"Red Hat Inc Common",66.2,27.04,7.77,17.405000,Technology,Software,5.21,7.86,1,1.14,2017-05-16,89.64
+31,SNPS,"Synopsys Inc Common",63.5,66.66,39.39,53.025000,Technology,Software,6.64,10.79,1,0.70,2017-05-16,75.12
+32,SWKS,"Skyworks Solutions Inc Common",61.3,96.73,60.19,78.460000,Technology,Semiconductors,13.01,5.57,1,1.89,2017-05-16,105.5
+33,FBHS,"Fortune Brands Home & Security Inc Common",60.8,31.86,0.00,15.930000,"Consumer Cyclicals","Construction Supplies & Fixtures",2.27,8.40,1,0.75,2017-05-16,62.89
+34,ALLE,"Allegion PLC Common",60.0,45.58,1.87,23.725000,Technology,"Communications & Networking",6.11,7.16,1,1.10,2017-05-16,78.48
+35,PM,"Philip Morris International Inc Common",60.0,78.67,1.93,40.300000,"Consumer non-Cyclicals",Tobacco,3.45,8.41,1,1.35,2017-05-16,113.52
+36,IFF,"International Flavors & Fragrances Inc Common",60.0,27.24,-0.09,13.575000,"Consumer non-Cyclicals","Food Processing",6.11,6.53,1,2.04,2017-05-16,133.16
+37,COH,"Coach Inc Common",59.9,22.80,-0.00,11.400000,"Consumer Cyclicals","Apparel & Accessories Retailers",11.38,4.48,1,1.00,2017-05-16,44.99
+38,FB,"Facebook Inc Class A Common",59.4,69.85,15.00,42.425000,Technology,"Online Services",2.23,8.67,1,1.73,2017-05-16,149.78
+39,MAR,"Marriott International Inc Class A Common",58.9,48.55,45.18,46.865000,"Consumer Cyclicals","Hotels, Motels & Cruise Lines",6.36,6.71,1,1.55,2017-05-16,103.99
+40,WDC,"Western Digital Corp Common",57.4,90.89,105.83,98.360000,Technology,"Computer Hardware",5.28,4.40,1,2.02,2017-05-16,88.96
+41,BBY,"Best Buy Co Inc Common",56.9,9.24,62.93,36.085000,"Consumer Cyclicals","Computer & Electronics Retailers",6.43,5.96,1,0.87,2017-05-16,51.82
+42,ANTM,"Anthem Inc Common",56.4,63.50,31.96,47.730000,Healthcare,"Managed Healthcare",4.31,5.84,1,3.09,2017-05-16,180.81
+43,PKI,"PerkinElmer Inc Common",55.2,37.64,1.35,19.495000,Healthcare,"Advanced Medical Equipment & Technology",3.12,7.61,1,0.82,2017-05-16,62.54
+44,IT,"Gartner Inc Common",55.2,17.86,6.80,12.330000,Technology,"IT Services & Consulting",3.05,8.05,1,1.41,2017-05-16,113.83
+45,AMZN,"Amazon.com Inc Common",55.1,57.41,19.98,38.695000,"Consumer Cyclicals","Department Stores",3.54,8.04,1,11.99,2017-05-16,966.07
+46,A,"Agilent Technologies Inc Common",54.1,62.44,12.62,37.530000,Healthcare,"Advanced Medical Equipment & Technology",3.62,7.47,1,0.76,2017-05-16,56.83
+47,EXPE,"Expedia Inc Common",53.9,17.87,14.67,16.270000,"Consumer Cyclicals","Leisure & Recreation",2.57,6.58,1,2.21,2017-05-16,145.37
+48,CNC,"Centene Corp Common",53.9,85.58,0.09,42.835000,Healthcare,"Managed Healthcare",5.30,4.83,1,1.58,2017-05-16,76.44
+49,TIF,"Tiffany & Co Common",53.6,39.47,57.31,48.390000,"Consumer Cyclicals","Apparel & Accessories Retailers",3.82,6.92,1,1.33,2017-05-16,92.45
+50,COL,"Rockwell Collins Inc Common",52.7,21.44,14.76,18.100000,Industrials,"Aerospace & Defense",5.13,7.60,1,1.37,2017-05-16,103.99
+51,MCD,"McDonald's Corp Common",52.6,34.72,5.76,20.240000,"Consumer Cyclicals","Restaurants & Bars",5.57,11.11,1,1.32,2017-05-16,147.29
+52,CTXS,"Citrix Systems Inc Common",51.9,57.71,23.54,40.625000,Technology,Software,7.09,5.60,1,1.51,2017-05-16,84.83
+53,CMG,"Chipotle Mexican Grill Inc Common",51.9,41.28,1.03,21.155000,"Consumer Cyclicals","Restaurants & Bars",4.92,4.90,1,10.06,2017-05-16,496.14
+54,ORCL,"Oracle Corp Common",51.5,35.13,4.09,19.610000,Technology,Software,6.23,10.48,1,0.43,2017-05-16,45.29
+55,AVGO,"Broadcom Ltd Common",51.0,85.97,43.79,64.880000,Technology,Semiconductors,3.84,6.50,1,3.70,2017-05-16,240.68
+56,RCL,"Royal Caribbean Cruises Ltd Common",50.8,65.76,43.92,54.840000,"Consumer Cyclicals","Hotels, Motels & Cruise Lines",9.09,5.64,1,1.90,2017-05-16,107.34
+57,SWK,"Stanley Black & Decker Inc Common",49.8,36.87,10.67,23.770000,Industrials,"Industrial Machinery & Equipment",3.65,7.51,1,1.82,2017-05-16,136.94
+58,DGX,"Quest Diagnostics Inc Common",47.6,42.21,29.91,36.060000,Healthcare,"Healthcare Facilities & Services",6.03,8.68,1,1.23,2017-05-16,106.39
+59,MCO,"Moody's Corp Common",46.9,48.20,5.20,26.700000,Industrials,"Professional Information Services",2.43,6.94,1,1.66,2017-05-16,115.23
+60,YHOO,"Yahoo! Inc Common",46.5,52.47,20.20,36.335000,Technology,"Online Services",3.54,8.36,1,0.61,2017-05-16,50.96
+61,HD,"Home Depot Inc Common",46.5,44.83,9.04,26.935000,"Consumer Cyclicals","Home Improvement Products & Services Retailers",1.82,9.14,1,1.73,2017-05-16,158.26
+62,EFX,"Equifax Inc Common",46.1,44.07,0.06,22.065000,Industrials,"Professional Information Services",5.03,7.60,1,1.78,2017-05-16,135.68
+63,SPGI,"S&P Global Inc Common",45.2,37.51,9.19,23.350000,Industrials,"Professional Information Services",3.00,8.58,1,1.62,2017-05-16,139.02
+64,MJN,"Mead Johnson Nutrition Co Common",45.1,66.78,-0.00,33.390000,"Consumer non-Cyclicals","Food Processing",21.41,35.61,1,0.25,2017-05-16,88.97
+65,ILMN,"Illumina Inc Common",44.7,100.38,2.04,51.210000,Healthcare,"Advanced Medical Equipment & Technology",16.60,5.24,1,3.39,2017-05-16,178.24
+66,CCL,"Carnival Corp Common",44.0,44.48,31.59,38.035000,"Consumer Cyclicals","Hotels, Motels & Cruise Lines",2.38,7.97,1,0.77,2017-05-16,61.2
+67,PYPL,"PayPal Holdings Inc Common",43.7,35.48,16.48,25.980000,Technology,"Online Services",6.17,6.76,1,0.74,2017-05-16,50.34
+68,MCHP,"Microchip Technology Inc Common",42.8,47.21,49.45,48.330000,Technology,Semiconductors,6.00,6.12,1,1.33,2017-05-16,81.63
+69,VRSN,"Verisign Inc Common",42.4,32.07,0.66,16.365000,Technology,"IT Services & Consulting",3.14,7.86,1,1.14,2017-05-16,89.93
+70,LEN,"Lennar Corp Common",42.2,47.48,1.54,24.510000,"Consumer Cyclicals",Homebuilding,5.99,6.12,1,0.84,2017-05-16,51.43
+71,ROP,"Roper Technologies Inc Common",41.9,48.45,25.91,37.180000,Industrials,"Industrial Machinery & Equipment",4.76,8.87,1,2.53,2017-05-16,224.19
+72,WMT,"Wal-Mart Stores Inc Common",41.2,6.92,-0.00,3.460000,"Consumer non-Cyclicals","Food Retail & Distribution",3.00,10.07,1,0.75,2017-05-16,75.11
+73,CRM,"Salesforce.Com Inc Common",40.5,50.10,0.20,25.150000,Technology,"IT Services & Consulting",3.02,8.83,1,1.02,2017-05-16,89.75
+74,PPL,"PPL Corp Common",40.5,38.27,-0.00,19.135000,Utilities,"Multiline Utilities",2.04,9.84,1,0.39,2017-05-16,38.48
+75,DLPH,"Delphi Automotive PLC Common",40.4,52.57,15.15,33.860000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",10.91,4.74,1,1.83,2017-05-16,87.06
+76,DHI,"D.R. Horton Inc Common",40.0,47.70,0.02,23.860000,"Consumer Cyclicals",Homebuilding,6.61,6.04,1,0.56,2017-05-16,33.56
+77,SHW,"Sherwin-Williams Co Common",39.7,59.03,1.86,30.445000,"Basic Materials","Commodity Chemicals",7.61,8.96,1,3.75,2017-05-16,336.88
+78,RAI,"Reynolds American Inc Common",39.3,49.20,26.63,37.915000,"Consumer non-Cyclicals",Tobacco,3.06,16.12,1,0.41,2017-05-16,66.27
+79,PHM,"PulteGroup Inc Common",38.9,61.61,6.05,33.830000,"Consumer Cyclicals",Homebuilding,5.88,5.34,1,0.43,2017-05-16,23.07
+80,AET,"Aetna Inc Common",38.8,6.51,8.23,7.370000,Healthcare,"Managed Healthcare",3.26,7.29,1,1.94,2017-05-16,141.86
+81,HAS,"Hasbro Inc Common",38.7,44.42,11.24,27.830000,"Consumer Cyclicals","Toys & Children's Products",14.14,7.15,1,1.41,2017-05-16,101.02
+82,BA,"Boeing Co Common",38.4,54.80,50.06,52.430000,Industrials,"Aerospace & Defense",4.24,8.10,1,2.25,2017-05-16,182.7
+83,XEL,"Xcel Energy Inc Common",38.3,37.56,0.21,18.885000,Utilities,"Electric Utilities",1.87,10.53,1,0.43,2017-05-16,45.57
+84,HOLX,"Hologic Inc Common",38.2,28.56,21.56,25.060000,Healthcare,"Advanced Medical Equipment & Technology",5.09,5.97,1,0.73,2017-05-16,43.44
+85,AME,"Ametek Inc Common",37.9,43.86,15.98,29.920000,Industrials,"Electrical Components & Equipment",3.17,7.83,1,0.76,2017-05-16,59.81
+86,WFM,"Whole Foods Market Inc Common",37.8,6.79,0.06,3.425000,"Consumer non-Cyclicals","Food Retail & Distribution",9.98,4.71,1,0.77,2017-05-16,36.49
+87,PNR,"Pentair plc Common",37.5,21.44,0.00,10.720000,Industrials,"Industrial Machinery & Equipment",3.82,5.91,1,1.11,2017-05-16,65.5
+88,LEG,"Leggett & Platt Inc Common",37.3,9.21,-0.00,4.605000,"Consumer Cyclicals","Home Furnishings",2.50,7.75,1,0.67,2017-05-16,51.72
+89,COO,"Cooper Companies Inc Common",37.3,51.03,10.59,30.810000,Healthcare,"Medical Equipment, Supplies & Distribution",3.32,8.43,1,2.50,2017-05-16,210.46
+90,EL,"Estee Lauder Companies Inc Class A Common",37.1,36.01,-2.55,16.730000,"Consumer non-Cyclicals","Personal Products",4.37,7.44,1,1.23,2017-05-16,91.9
+91,ETN,"Eaton Corporation PLC Common",36.9,34.37,20.58,27.475000,Industrials,"Electrical Components & Equipment",2.98,7.11,1,1.09,2017-05-16,77.24
+92,MMM,"3M Co Common",36.8,30.27,6.62,18.445000,Industrials,"Industrial Conglomerates",1.88,12.16,1,1.63,2017-05-16,197.91
+93,ADSK,"Autodesk Inc Common",36.8,47.21,68.33,57.770000,Technology,Software,3.32,6.05,1,1.62,2017-05-16,98.03
+94,PNW,"Pinnacle West Capital Corp Common",36.1,33.59,3.83,18.710000,Utilities,"Electric Utilities",2.10,9.00,1,0.93,2017-05-16,83.89
+95,V,"Visa Inc Class A Common",36.0,43.08,11.70,27.390000,Technology,"Online Services",4.59,10.73,1,0.87,2017-05-16,93.15
+96,SYK,"Stryker Corp Common",35.9,46.52,11.42,28.970000,Healthcare,"Medical Equipment, Supplies & Distribution",2.42,9.10,1,1.48,2017-05-16,134.77
+97,NEE,"NextEra Energy Inc Common",34.3,40.81,0.50,20.655000,Utilities,"Electric Utilities",2.21,9.57,1,1.42,2017-05-16,135.9
+98,MHK,"Mohawk Industries Inc Common",34.3,47.66,11.07,29.365000,"Consumer Cyclicals","Home Furnishings",3.70,6.94,1,3.33,2017-05-16,231.27
+99,CCI,"Crown Castle International Corp Common",34.0,30.21,-0.44,14.885000,Financials,"Specialized REITs",3.04,8.27,1,1.16,2017-05-16,95.93
+100,PVH,"PVH Corp Common",33.8,0.00,-0.11,-0.055000,"Consumer Cyclicals","Apparel & Accessories",8.48,4.84,1,2.04,2017-05-16,99.09
+101,PEP,"PepsiCo Inc Common",33.4,26.38,1.69,14.035000,"Consumer non-Cyclicals","Non-Alcoholic Beverages",1.68,12.47,1,0.91,2017-05-16,113.79
+102,QRVO,"Qorvo Inc Common",32.9,73.66,17.46,45.560000,Technology,"Semiconductor Equipment & Testing",5.52,4.26,1,1.76,2017-05-16,74.84
+103,RSG,"Republic Services Inc Common",32.4,35.02,30.19,32.605000,Industrials,"Environmental Services & Equipment",2.88,10.89,1,0.57,2017-05-16,62.18
+104,NFLX,"Netflix Inc Common",32.3,65.15,75.18,70.165000,Technology,"Online Services",5.79,5.46,1,2.92,2017-05-16,159.41
+105,PPG,"PPG Industries Inc Common",31.9,29.51,-0.03,14.740000,"Basic Materials","Commodity Chemicals",6.00,7.10,1,1.51,2017-05-16,107.41
+106,SRE,"Sempra Energy Common",31.8,31.02,0.00,15.510000,Utilities,"Multiline Utilities",1.94,8.29,1,1.33,2017-05-16,110.62
+107,NI,"NiSource Inc Common",30.7,26.09,-1.76,12.165000,Utilities,"Multiline Utilities",2.59,7.96,1,0.30,2017-05-16,24.21
+108,IR,"Ingersoll-Rand PLC Common",30.3,28.35,33.84,31.095000,Industrials,"Industrial Machinery & Equipment",3.53,7.70,1,1.15,2017-05-16,88.81
+109,EQIX,"Equinix Common",30.1,48.01,1.78,24.895000,Financials,"Commercial REITs",3.46,7.65,1,5.58,2017-05-16,427.64
+110,FISV,"Fiserv Inc Common",30.0,31.28,6.12,18.700000,Industrials,"Business Support Services",1.91,8.96,1,1.34,2017-05-16,119.75
+111,EIX,"Edison International Common",29.9,38.29,1.29,19.790000,Utilities,"Electric Utilities",2.44,8.47,1,0.92,2017-05-16,77.87
+112,AVY,"Avery Dennison Corp Common",29.8,38.65,1.76,20.205000,"Basic Materials","Non-Paper Containers & Packaging",9.08,8.94,1,0.94,2017-05-16,84.31
+113,CSX,"CSX Corp Common",29.3,107.90,116.24,112.070000,Industrials,"Ground Freight & Logistics",23.40,5.61,1,0.91,2017-05-16,51.12
+114,AVB,"AvalonBay Communities Common",29.2,32.31,0.53,16.420000,Financials,"Residential REITs",3.50,7.47,1,2.57,2017-05-16,192.1
+115,ED,"Consolidated Edison Inc Common",28.8,28.27,0.00,14.135000,Utilities,"Electric Utilities",1.70,10.03,1,0.79,2017-05-16,79.14
+116,PCG,"PG&E Corp Common",28.7,34.17,1.22,17.695000,Utilities,"Electric Utilities",2.17,8.66,1,0.76,2017-05-16,65.55
+117,CBOE,"CBOE Holdings Inc Common",28.6,36.39,27.09,31.740000,Financials,"Financial & Commodity Market Operators & Service P",3.32,6.51,1,1.29,2017-05-16,83.93
+118,MDT,"Medtronic PLC Common",28.6,23.59,-2.15,10.720000,Healthcare,"Medical Equipment, Supplies & Distribution",2.13,9.74,1,0.86,2017-05-16,83.94
+119,ITW,"Illinois Tool Works Inc Common",28.0,21.67,26.52,24.095000,Industrials,"Industrial Conglomerates",3.63,8.53,1,1.61,2017-05-16,137.72
+120,ES,"Eversource Energy Common",27.9,31.74,0.38,16.060000,Utilities,"Electric Utilities",1.78,9.21,1,0.65,2017-05-16,59.63
+121,HUM,"Humana Inc Common",27.6,11.47,23.40,17.435000,Healthcare,"Managed Healthcare",3.70,6.37,1,3.54,2017-05-16,226.2
+122,ALL,"Allstate Corp Common",27.3,38.46,23.32,30.890000,Financials,"Property & Casualty Insurance",3.79,9.42,1,0.89,2017-05-16,84.33
+123,CHD,"Church & Dwight Co Inc Common",27.2,33.70,-0.02,16.840000,"Consumer non-Cyclicals","Household Products",4.31,8.60,1,0.58,2017-05-16,49.48
+124,REGN,"Regeneron Pharmaceuticals Inc Common",27.0,1.39,-0.01,0.690000,Healthcare,"Biotechnology & Medical Research",6.70,4.05,1,11.12,2017-05-16,454.75
+125,CNP,"CenterPoint Energy Inc Common",26.7,44.31,20.11,32.210000,Utilities,"Multiline Utilities",2.32,8.01,1,0.34,2017-05-16,27.19
+126,CMS,"CMS Energy Corp Common",26.5,30.42,0.13,15.275000,Utilities,"Multiline Utilities",1.74,9.21,1,0.49,2017-05-16,45.31
+127,GOOG,"Alphabet Inc Class C Common",26.4,30.07,17.93,24.000000,Technology,"Online Services",3.63,9.21,1,10.14,2017-05-16,943
+128,HON,"Honeywell International Inc Common",26.4,31.43,6.81,19.120000,Industrials,"Industrial Conglomerates",2.67,9.37,1,1.41,2017-05-16,132.01
+129,AEP,"American Electric Power Company Inc Common",26.3,30.68,-0.01,15.335000,Utilities,"Electric Utilities",1.73,9.92,1,0.68,2017-05-16,67.86
+130,ULTA,"Ulta Beauty Inc Common",26.3,32.12,14.07,23.095000,"Consumer Cyclicals","Other Specialty Retailers",4.62,7.43,1,3.93,2017-05-16,293.33
+131,AON,"Aon PLC Class A Common",26.2,18.06,9.86,13.960000,Financials,"Multiline Insurance & Brokers",1.77,9.84,1,1.28,2017-05-16,125.98
+132,XL,"XL Group Ltd Common",26.0,29.45,27.75,28.600000,Financials,"Property & Casualty Insurance",2.66,7.92,1,0.53,2017-05-16,42.01
+133,TMO,"Thermo Fisher Scientific Inc Common",25.9,30.02,0.31,15.165000,Healthcare,"Advanced Medical Equipment & Technology",6.35,8.28,1,2.08,2017-05-16,172.27
+134,ADS,"Alliance Data Systems Corp Common",25.4,18.93,14.86,16.895000,Industrials,"Business Support Services",8.30,4.50,1,5.44,2017-05-16,245.06
+135,XRAY,"Dentsply Sirona Inc Common",25.2,10.79,-0.00,5.395000,Healthcare,"Medical Equipment, Supplies & Distribution",3.33,6.48,1,0.96,2017-05-16,62.16
+136,MAS,"Masco Corp Common",25.0,22.31,0.42,11.365000,"Consumer Cyclicals","Construction Supplies & Fixtures",5.34,6.94,1,0.54,2017-05-16,37.26
+137,PGR,"Progressive Corp Common",24.8,45.15,21.77,33.460000,Financials,"Property & Casualty Insurance",3.17,8.97,1,0.45,2017-05-16,40.12
+138,PH,"Parker-Hannifin Corp Common",24.8,35.86,51.60,43.730000,Industrials,"Industrial Machinery & Equipment",3.35,6.18,1,2.53,2017-05-16,156.47
+139,MON,"Monsanto Co Common",24.2,31.98,3.81,17.895000,"Basic Materials","Agricultural Chemicals",1.84,16.52,1,0.71,2017-05-16,116.65
+140,CI,"Cigna Corp Common",24.2,34.44,18.42,26.430000,Healthcare,"Managed Healthcare",2.38,6.37,1,2.53,2017-05-16,161.34
+141,AWK,"American Water Works Company Inc Common",23.8,14.18,-0.12,7.030000,Utilities,"Water & Related Utilities",2.60,7.16,1,1.06,2017-05-16,75.85
+142,GLW,"Corning Inc Common",23.7,41.02,40.00,40.510000,Technology,"Electronic Equipment & Parts",5.69,7.06,1,0.42,2017-05-16,29.6
+143,DTE,"DTE Energy Co Common",23.5,21.15,6.22,13.685000,Utilities,"Electric Utilities",2.29,10.26,1,1.02,2017-05-16,104.8
+144,MA,"Mastercard Inc Class A Common",23.4,26.65,24.71,25.680000,Technology,"Online Services",2.72,9.40,1,1.26,2017-05-16,118.49
+145,GOOGL,"Alphabet Inc Class A Common",23.3,29.02,17.04,23.030000,Technology,"Online Services",3.71,8.96,1,10.66,2017-05-16,964.61
+146,HSIC,"Henry Schein Inc Common",22.8,34.59,-0.05,17.270000,Healthcare,"Medical Equipment, Supplies & Distribution",2.91,8.01,1,2.21,2017-05-16,176.84
+147,DUK,"Duke Energy Corp Common",22.6,25.64,-0.03,12.805000,Utilities,"Electric Utilities",2.76,10.57,1,0.79,2017-05-16,83.12
+148,MSFT,"Microsoft Corp Common",22.4,23.03,30.74,26.885000,Technology,Software,2.35,8.96,1,0.77,2017-05-16,69.41
+149,ESS,"Essex Property Trust Common",21.4,20.98,2.14,11.560000,Financials,"Residential REITs",3.12,7.09,1,3.58,2017-05-16,254.33
+150,ETR,"Entergy Corp Common",21.0,17.95,-1.35,8.300000,Utilities,"Electric Utilities",2.94,8.53,1,0.88,2017-05-16,75.14
+151,AFL,"Aflac Inc Common",21.0,8.93,0.13,4.530000,Financials,"Life & Health Insurance",4.07,9.73,1,0.76,2017-05-16,73.74
+152,PFG,"Principal Financial Group Inc Common",20.9,20.81,58.04,39.425000,Financials,"Life & Health Insurance",3.32,6.64,1,0.96,2017-05-16,63.98
+153,ABBV,"AbbVie Inc Common",20.9,14.13,0.08,7.105000,Healthcare,Pharmaceuticals,4.57,7.38,1,0.91,2017-05-16,66.85
+154,JNJ,"Johnson & Johnson Common",20.9,20.10,0.25,10.175000,Healthcare,Pharmaceuticals,3.10,10.91,1,1.17,2017-05-16,127.77
+155,HCN,"Welltower Inc Common",20.3,24.24,-1.94,11.150000,Financials,"Specialized REITs",3.04,6.55,1,1.09,2017-05-16,71.6
+156,WLTW,"Willis Towers Watson PLC Common",20.2,16.22,1.45,8.835000,Financials,"Multiline Insurance & Brokers",6.22,6.89,1,2.07,2017-05-16,142.65
+157,CTSH,"Cognizant Technology Solutions Corp Class A Common",19.9,15.57,0.01,7.790000,Technology,"IT Services & Consulting",4.95,7.47,1,0.87,2017-05-16,65.19
+158,GD,"General Dynamics Corp Common",19.5,27.64,44.74,36.190000,Industrials,"Aerospace & Defense",4.42,9.39,1,2.08,2017-05-16,195.29
+159,CTAS,"Cintas Corp Common",19.1,9.17,20.96,15.065000,Industrials,"Business Support Services",4.72,8.19,1,1.50,2017-05-16,122.57
+160,CSCO,"Cisco Systems Inc Common",18.9,28.17,10.24,19.205000,Technology,"Communications & Networking",2.38,8.57,1,0.40,2017-05-16,34.3
+161,GT,"Goodyear Tire & Rubber Co Common",18.9,30.15,29.35,29.750000,"Consumer Cyclicals","Tires & Rubber Products",5.90,4.49,-1,0.75,2017-05-16,33.56
+162,LNT,"Alliant Energy Corp Common",18.5,19.75,0.01,9.880000,Utilities,"Electric Utilities",2.27,8.73,1,0.45,2017-05-16,39.38
+163,UTX,"United Technologies Corp Common",18.4,14.95,10.86,12.905000,Industrials,"Aerospace & Defense",1.36,10.64,1,1.14,2017-05-16,121.4
+164,ROK,"Rockwell Automation Inc Common",18.3,39.72,42.99,41.355000,Industrials,"Electrical Components & Equipment",7.73,6.17,1,2.55,2017-05-16,157.5
+165,LMT,"Lockheed Martin Corp Common",18.2,6.62,6.55,6.585000,Industrials,"Aerospace & Defense",2.24,10.51,1,2.58,2017-05-16,271.65
+166,UNH,"UnitedHealth Group Inc Common",18.2,17.90,26.93,22.415000,Healthcare,"Managed Healthcare",3.68,7.73,1,2.18,2017-05-16,168.12
+167,HRB,"H & R Block Inc Common",18.2,2.10,0.07,1.085000,"Consumer non-Cyclicals","Personal Services",14.88,4.23,1,0.60,2017-05-16,25.18
+168,AMP,"Ameriprise Financial Inc Common",17.7,30.29,37.85,34.070000,Financials,"Investment Management & Fund Operators",4.26,5.93,1,2.19,2017-05-16,129.92
+169,ECL,"Ecolab Inc Common",17.6,18.02,1.66,9.840000,"Basic Materials","Specialty Chemicals",3.09,10.17,1,1.25,2017-05-16,127.38
+170,CBG,"CBRE Group Inc Class A Common",17.5,27.39,17.85,22.620000,Financials,"Real Estate Services",7.70,5.01,1,0.69,2017-05-16,34.35
+171,CL,"Colgate-Palmolive Co Common",17.4,23.27,-0.12,11.575000,"Consumer non-Cyclicals","Personal Products",5.22,9.31,1,0.77,2017-05-16,71.58
+172,EW,"Edwards Lifesciences Corp Common",17.2,22.26,-1.76,10.250000,Healthcare,"Advanced Medical Equipment & Technology",10.49,5.53,1,2.05,2017-05-16,113.65
+173,LLL,"L3 Technologies Inc Common",17.1,16.41,14.15,15.280000,Industrials,"Aerospace & Defense",3.18,7.16,1,2.28,2017-05-16,163.69
+174,COG,"Cabot Oil & Gas Corp Common",17.1,5.09,-1.18,1.955000,Energy,"Oil & Gas Exploration and Production",10.73,3.30,1,0.72,2017-05-16,23.82
+175,TGNA,"Tegna Inc Common",17.0,23.82,4.28,14.050000,"Consumer Cyclicals",Broadcasting,6.75,3.39,-1,0.65,2017-05-16,22.01
+176,CLX,"Clorox Co Common",16.9,36.70,0.00,18.350000,"Consumer non-Cyclicals","Household Products",4.08,8.41,1,1.55,2017-05-16,130.71
+177,KO,"Coca-Cola Co Common",16.9,9.29,-2.08,3.605000,"Consumer non-Cyclicals","Non-Alcoholic Beverages",1.88,12.49,1,0.35,2017-05-16,43.85
+178,MMC,"Marsh & McLennan Companies Inc Common",16.7,16.38,9.37,12.875000,Financials,"Multiline Insurance & Brokers",3.17,9.15,1,0.81,2017-05-16,74.08
+179,RTN,"Raytheon Co Common",16.5,13.25,15.01,14.130000,Industrials,"Aerospace & Defense",2.70,8.62,1,1.85,2017-05-16,159.76
+180,APH,"Amphenol Corp Class A Common",16.5,11.05,25.74,18.395000,Technology,"Electronic Equipment & Parts",2.52,9.25,1,0.80,2017-05-16,73.74
+181,MKC,"McCormick & Company Inc Non-Voting Common",16.4,22.05,-0.16,10.945000,"Consumer non-Cyclicals","Food Processing",2.89,9.85,1,1.01,2017-05-16,99.49
+182,WY,"Weyerhaeuser Co Common",16.2,16.59,4.24,10.415000,Financials,"Specialized REITs",3.41,6.09,1,0.54,2017-05-16,33.12
+183,FL,"Foot Locker Inc Common",16.2,0.54,31.84,16.190000,"Consumer Cyclicals","Apparel & Accessories Retailers",9.38,4.99,-1,1.44,2017-05-16,71.79
+184,TXN,"Texas Instruments Inc Common",16.0,24.17,29.89,27.030000,Technology,Semiconductors,3.03,7.68,1,1.07,2017-05-16,82.27
+185,SRCL,"Stericycle Inc Common",16.0,25.61,-5.95,9.830000,Industrials,"Environmental Services & Equipment",7.70,5.92,1,1.41,2017-05-16,83.75
+186,ARNC,"Arconic Inc Common",15.7,82.68,7.65,45.165000,"Basic Materials",Aluminum,10.93,4.21,1,0.65,2017-05-16,27.41
+187,VFC,"VF Corp Common",15.7,-0.00,-11.76,-5.880000,"Consumer Cyclicals","Apparel & Accessories",5.57,5.14,-1,1.02,2017-05-16,52.39
+188,KMB,"Kimberly-Clark Corp Common",15.0,33.52,-0.02,16.750000,"Consumer non-Cyclicals","Personal Products",4.19,8.72,1,1.46,2017-05-16,127.42
+189,HRS,"Harris Corp Common",14.7,10.56,40.17,25.365000,Technology,"Communications & Networking",3.09,7.89,1,1.38,2017-05-16,108.64
+190,DLR,"Digital Realty Trust Common",14.7,43.34,1.38,22.360000,Financials,"Commercial REITs",2.88,7.20,1,1.60,2017-05-16,115.22
+191,BSX,"Boston Scientific Corp Common",14.6,49.43,1.57,25.500000,Healthcare,"Advanced Medical Equipment & Technology",6.40,7.53,1,0.35,2017-05-16,26.48
+192,HPE,"Hewlett Packard Enterprise Co Common",14.6,1.48,22.48,11.980000,Technology,"Computer Hardware",6.89,6.74,1,0.28,2017-05-16,19.11
+193,LUK,"Leucadia National Corp Common",14.4,33.11,61.11,47.110000,Financials,"Holding Companies",3.15,5.57,1,0.46,2017-05-16,25.36
+194,PX,"Praxair Inc Common",13.9,1.77,2.18,1.975000,"Basic Materials","Commodity Chemicals",2.87,8.28,1,1.58,2017-05-16,131.03
+195,MNST,"Monster Beverage Corp Common",13.8,4.16,-9.42,-2.630000,"Consumer non-Cyclicals","Non-Alcoholic Beverages",12.76,5.78,1,0.81,2017-05-16,46.81
+196,AEE,"Ameren Corp Common",12.6,20.54,4.20,12.370000,Utilities,"Multiline Utilities",2.09,8.58,1,0.64,2017-05-16,54.66
+197,NOC,"Northrop Grumman Corp Common",12.4,0.61,12.04,6.325000,Industrials,"Aerospace & Defense",1.68,9.57,1,2.58,2017-05-16,247.38
+198,EBAY,"eBay Inc Common",12.4,37.65,19.23,28.440000,Technology,"Online Services",5.00,6.49,1,0.54,2017-05-16,34.81
+199,WEC,"WEC Energy Group Inc Common",12.4,13.82,-0.86,6.480000,Utilities,"Electric Utilities",3.10,9.19,1,0.66,2017-05-16,60.59
+200,WMB,"Williams Companies Inc Common",12.3,-0.02,18.16,9.070000,Energy,"Oil & Gas Transportation Services",10.74,4.78,1,0.64,2017-05-16,30.62
+201,JNPR,"Juniper Networks Inc Common",11.9,5.58,30.79,18.185000,Technology,"Communications & Networking",6.05,7.58,1,0.40,2017-05-16,30.59
+202,DD,"E I du Pont de Nemours and Co Common",11.7,22.02,21.89,21.955000,Industrials,"Industrial Conglomerates",4.49,6.52,1,1.21,2017-05-16,79.1
+203,LH,"Laboratory Corporation of America Holdings Common",11.6,28.90,1.30,15.100000,Healthcare,"Healthcare Facilities & Services",5.69,6.98,-1,1.98,2017-05-16,138.14
+204,LUV,"Southwest Airlines Co Common",11.5,34.09,47.90,40.995000,Industrials,Airlines,9.02,5.13,1,1.14,2017-05-16,58.27
+205,UDR,"UDR Inc Common",11.2,13.93,0.06,6.995000,Financials,"Residential REITs",3.03,7.27,1,0.52,2017-05-16,37.65
+206,UHS,"Universal Health Services Inc Class B Common",11.1,4.82,-3.71,0.555000,Healthcare,"Healthcare Facilities & Services",3.35,5.31,1,2.28,2017-05-16,120.86
+207,GPN,"Global Payments Inc Common",11.1,35.14,2.23,18.685000,Industrials,"Business Support Services",7.17,6.72,1,1.33,2017-05-16,89.36
+208,PLD,"ProLogis Common",11.1,3.31,0.45,1.880000,Financials,"Commercial REITs",3.32,7.03,1,0.78,2017-05-16,54.83
+209,BDX,"Becton Dickinson and Co Common",11.0,21.50,2.81,12.155000,Healthcare,"Medical Equipment, Supplies & Distribution",4.44,6.40,1,2.85,2017-05-16,182.75
+210,LLY,"Eli Lilly and Co Common",11.0,33.48,0.55,17.015000,Healthcare,Pharmaceuticals,4.08,6.52,-1,1.21,2017-05-16,78.99
+211,CMI,"Cummins Inc Common",11.0,19.73,39.27,29.500000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",6.10,5.45,1,2.88,2017-05-16,157.42
+212,CHTR,"Charter Communications Inc Class A Common",10.8,43.99,53.81,48.900000,"Consumer Cyclicals",Broadcasting,7.36,5.14,-1,6.21,2017-05-16,320.01
+213,NTAP,"NetApp Inc Common",10.8,24.96,61.93,43.445000,Technology,"Computer Hardware",4.43,6.48,1,0.64,2017-05-16,41.62
+214,CELG,"Celgene Corp Common",10.6,4.82,15.45,10.135000,Healthcare,"Biotechnology & Medical Research",3.31,6.44,-1,1.85,2017-05-16,119.36
+215,GPS,"Gap Inc Common",10.1,0.00,3.30,1.650000,"Consumer Cyclicals","Apparel & Accessories Retailers",5.40,3.70,1,0.66,2017-05-16,24.59
+216,ICE,"Intercontinental Exchange Inc Common",9.7,10.71,13.11,11.910000,Financials,"Financial & Commodity Market Operators & Service P",4.82,7.49,1,0.79,2017-05-16,59
+217,TWX,"Time Warner Inc Common",9.6,11.71,40.16,25.935000,"Consumer Cyclicals","Entertainment Production",1.27,13.33,1,0.73,2017-05-16,97.87
+218,DE,"Deere & Co Common",9.5,21.36,45.77,33.565000,Industrials,"Heavy Machinery & Vehicles",2.63,7.35,1,1.56,2017-05-16,114.8
+219,XYL,"Xylem Inc Common",9.5,-0.15,2.18,1.015000,Industrials,"Industrial Machinery & Equipment",4.20,5.40,1,0.96,2017-05-16,51.77
+220,PDCO,"Patterson Companies Inc Common",9.4,9.43,-4.03,2.700000,Healthcare,"Medical Equipment, Supplies & Distribution",3.16,6.68,-1,0.65,2017-05-16,43.26
+221,ZBH,"Zimmer Biomet Holdings Inc Common",9.4,39.32,-0.52,19.400000,Healthcare,"Medical Equipment, Supplies & Distribution",6.23,5.39,1,2.22,2017-05-16,119.78
+222,CMCSA,"Comcast Corp Common",9.4,24.02,19.53,21.775000,"Consumer Cyclicals",Broadcasting,2.81,7.09,1,0.55,2017-05-16,38.82
+223,COST,"Costco Wholesale Corp Common",9.3,24.00,3.98,13.990000,"Consumer Cyclicals","Discount Stores",4.34,9.38,1,1.82,2017-05-16,171
+224,CB,"Chubb Ltd Common",9.1,12.65,7.53,10.090000,Financials,"Multiline Insurance & Brokers",2.29,10.18,1,1.34,2017-05-16,137.02
+225,WM,"Waste Management Inc Common",9.0,8.35,14.05,11.200000,Industrials,"Environmental Services & Equipment",2.60,9.91,-1,0.72,2017-05-16,71.25
+226,DOW,"Dow Chemical Co Common",9.0,26.06,23.73,24.895000,"Basic Materials","Diversified Chemicals",4.38,6.47,1,0.96,2017-05-16,62.3
+227,KSU,"Kansas City Southern Common",8.7,2.77,-2.21,0.280000,Industrials,"Ground Freight & Logistics",4.04,5.96,1,1.53,2017-05-16,91.38
+228,D,"Dominion Energy Inc Common",7.7,5.81,0.44,3.125000,Utilities,"Electric Utilities",5.81,9.25,1,0.83,2017-05-16,77.21
+229,SBUX,"Starbucks Corp Common",7.3,1.45,1.53,1.490000,"Consumer Cyclicals","Restaurants & Bars",4.00,8.24,1,0.73,2017-05-16,59.98
+230,MSI,"Motorola Solutions Inc Common",6.9,1.92,22.61,12.265000,Technology,"Communications & Networking",5.37,6.54,1,1.28,2017-05-16,83.7
+231,ABT,"Abbott Laboratories Common",6.9,29.56,1.88,15.720000,Healthcare,Pharmaceuticals,1.99,8.34,1,0.52,2017-05-16,43.69
+232,TSS,"Total System Services Inc Common",6.9,18.69,1.10,9.895000,Technology,"IT Services & Consulting",7.14,6.64,1,0.88,2017-05-16,58.52
+233,DIS,"Walt Disney Co Common",6.7,22.60,14.40,18.500000,"Consumer Cyclicals",Broadcasting,2.40,7.87,-1,1.37,2017-05-16,107.98
+234,VTR,"Ventas Inc Common",6.7,7.62,-6.68,0.470000,Financials,"Specialized REITs",3.61,6.11,1,1.06,2017-05-16,65.02
+235,FIS,"Fidelity National Information Services Inc Common",6.2,14.38,5.14,9.760000,Financials,"Financial & Commodity Market Operators & Service P",3.29,9.26,1,0.90,2017-05-16,83.78
+236,BEN,"Franklin Resources Inc Common",6.0,12.37,24.15,18.260000,Financials,"Investment Management & Fund Operators",3.85,6.28,1,0.69,2017-05-16,43.42
+237,AGN,"Allergan plc Common",5.7,48.77,-0.08,24.345000,Healthcare,Pharmaceuticals,4.76,5.69,-1,3.94,2017-05-16,224.55
+238,HCA,"HCA Healthcare Inc Common",5.6,38.37,4.33,21.350000,Healthcare,"Healthcare Facilities & Services",5.17,5.78,1,1.44,2017-05-16,83.49
+239,EQR,"Equity Residential Common",5.6,3.40,-0.01,1.695000,Financials,"Residential REITs",1.75,7.49,1,0.86,2017-05-16,64.52
+240,BF.B,"Brown-Forman Corp Class B Common",5.3,4.98,-0.84,2.070000,"Consumer non-Cyclicals","Distillers & Wineries",3.14,9.20,1,0.55,2017-05-16,50.46
+241,GRMN,"Garmin Ltd Common",5.2,0.13,5.49,2.810000,Industrials,"Aerospace & Defense",7.33,5.99,1,0.88,2017-05-16,52.6
+242,PFE,"Pfizer Inc Common",5.0,8.25,-1.17,3.540000,Healthcare,Pharmaceuticals,2.32,9.26,-1,0.35,2017-05-16,32.6
+243,AJG,"Arthur J Gallagher & Co Common",5.0,20.17,18.84,19.505000,Financials,"Multiline Insurance & Brokers",1.70,8.36,1,0.66,2017-05-16,55.31
+244,DVA,"DaVita Inc Common",4.7,7.41,-2.70,2.355000,Healthcare,"Healthcare Facilities & Services",5.97,5.24,-1,1.18,2017-05-16,62.09
+245,MAA,"Mid America Apartment Communities Common",4.6,15.39,-0.01,7.690000,Financials,"Residential REITs",4.14,6.88,-1,1.43,2017-05-16,98.7
+246,TEL,"TE Connectivity Ltd Common",4.4,17.35,32.02,24.685000,Industrials,"Electrical Components & Equipment",4.87,6.71,1,1.14,2017-05-16,76.43
+247,DLTR,"Dollar Tree Inc Common",4.3,-2.22,-7.77,-4.995000,"Consumer Cyclicals","Discount Stores",3.62,5.33,1,1.49,2017-05-16,79.1
+248,STX,"Seagate Technology PLC Common",4.0,23.60,87.00,55.300000,Technology,"Computer Hardware",16.83,3.80,-1,1.16,2017-05-16,44
+249,FLIR,"FLIR Systems Inc Common",4.0,1.17,18.27,9.720000,Technology,"Communications & Networking",8.14,6.10,1,0.62,2017-05-16,37.82
+250,IPG,"Interpublic Group of Companies Inc Common",4.0,1.77,1.42,1.595000,"Consumer Cyclicals","Advertising & Marketing",4.13,6.30,1,0.38,2017-05-16,24.19
+251,XLNX,"Xilinx Inc Common",3.9,8.44,27.61,18.025000,Technology,Semiconductors,7.35,6.11,1,1.07,2017-05-16,65.46
+252,MPC,"Marathon Petroleum Corp Common",3.9,4.57,44.08,24.325000,Energy,"Oil & Gas Refining and Marketing",3.36,4.97,1,1.06,2017-05-16,52.48
+253,NTRS,"Northern Trust Corp Common",3.8,1.48,33.31,17.395000,Financials,"Investment Management & Fund Operators",4.72,6.74,1,1.34,2017-05-16,90.6
+254,INTU,"Intuit Inc Common",3.7,7.60,10.20,8.900000,Technology,Software,8.46,8.82,1,1.44,2017-05-16,127.5
+255,TJX,"TJX Companies Inc Common",3.6,0.30,0.00,0.150000,"Consumer Cyclicals","Discount Stores",4.08,5.79,-1,1.27,2017-05-16,73.76
+256,ZTS,"Zoetis Inc Class A Common",3.6,12.51,12.52,12.515000,Healthcare,Pharmaceuticals,5.90,7.05,1,0.86,2017-05-16,60.33
+257,CAT,"Caterpillar Inc Common",2.8,1.82,29.75,15.785000,Industrials,"Heavy Machinery & Vehicles",7.86,5.53,1,1.85,2017-05-16,102.34
+258,NWSA,"News Corp Class A Common",2.8,14.08,0.02,7.050000,"Consumer Cyclicals","Consumer Publishing",7.26,5.03,1,0.26,2017-05-16,12.93
+259,AMG,"Affiliated Managers Group Inc Common",2.6,9.22,1.31,5.265000,Financials,"Investment Management & Fund Operators",5.89,5.17,-1,2.98,2017-05-16,154.55
+260,SO,"Southern Co Common",2.6,5.99,-1.46,2.265000,Utilities,"Electric Utilities",1.82,10.42,-1,0.47,2017-05-16,49.34
+261,NWL,"Newell Brands Inc Common",2.3,2.65,-0.83,0.910000,"Consumer Cyclicals","Appliances, Tools & Housewares",11.94,5.30,1,1.00,2017-05-16,53.07
+262,JWN,"Nordstrom Inc Common",2.3,-12.31,0.69,-5.810000,"Consumer Cyclicals","Department Stores",10.84,2.61,-1,1.56,2017-05-16,40.64
+263,NWS,"News Corp Class B Common",2.2,13.98,0.01,6.995000,"Consumer Cyclicals","Consumer Publishing",6.67,5.06,1,0.26,2017-05-16,13.3
+264,C,"Citigroup Inc Common",2.2,1.62,44.82,23.220000,Financials,Banks,3.18,6.21,1,1.01,2017-05-16,62.49
+265,TRV,"Travelers Companies Inc Common",2.1,3.36,2.04,2.700000,Financials,"Property & Casualty Insurance",2.25,10.19,-1,1.18,2017-05-16,119.93
+266,ADI,"Analog Devices Inc Common",2.0,14.52,44.68,29.600000,Technology,Semiconductors,4.83,5.88,1,1.38,2017-05-16,81.05
+267,TMK,"Torchmark Corp Common",2.0,10.11,33.23,21.670000,Financials,"Life & Health Insurance",2.36,8.15,-1,0.93,2017-05-16,75.64
+268,ACN,"Accenture PLC Class A Common",1.8,0.11,1.46,0.785000,Technology,"IT Services & Consulting",4.52,9.30,1,1.32,2017-05-16,123.14
+269,SPLS,"Staples Inc Common",1.7,-0.16,1.43,0.635000,"Consumer Cyclicals","Other Specialty Retailers",9.82,3.52,-1,0.26,2017-05-16,8.99
+270,BK,"Bank of New York Mellon Corp Common",1.6,-0.02,18.17,9.075000,Financials,"Investment Management & Fund Operators",3.01,7.30,1,0.65,2017-05-16,47.18
+271,HSY,"Hershey Co Common",1.6,15.37,1.55,8.460000,"Consumer non-Cyclicals","Food Processing",1.32,9.84,1,1.09,2017-05-16,107.21
+272,DPS,"Dr Pepper Snapple Group Inc Common",1.6,10.48,0.00,5.240000,"Consumer non-Cyclicals","Non-Alcoholic Beverages",5.52,7.94,-1,1.15,2017-05-16,90.97
+273,EXPD,"Expeditors International of Washington Inc Common",1.5,3.38,13.36,8.370000,Industrials,"Courier, Postal, Air Freight & Land-based Logistic",3.48,7.21,-1,0.74,2017-05-16,53.08
+274,STT,"State Street Corp Common",1.5,0.69,34.87,17.780000,Financials,"Investment Management & Fund Operators",3.63,6.36,1,1.30,2017-05-16,82.9
+275,AIZ,"Assurant Inc Common",1.4,14.57,11.80,13.185000,Financials,"Multiline Insurance & Brokers",6.75,6.67,1,1.53,2017-05-16,101.97
+276,IVZ,"Invesco Ltd Common",1.4,0.03,4.85,2.440000,Financials,"Investment Management & Fund Operators",4.57,5.87,1,0.55,2017-05-16,32.18
+277,UNP,"Union Pacific Corp Common",1.2,7.90,25.64,16.770000,Industrials,"Ground Freight & Logistics",3.05,6.93,1,1.60,2017-05-16,111
+278,HCP,"HCP Inc Common",1.1,7.03,-1.59,2.720000,Financials,"Specialized REITs",3.00,5.61,1,0.55,2017-05-16,31
+279,INCY,"Incyte Corp Common",1.1,40.65,73.17,56.910000,Healthcare,"Biotechnology & Medical Research",10.49,3.11,-1,3.78,2017-05-16,117.76
+280,WBA,"Walgreens Boots Alliance Inc Common",1.1,0.01,2.29,1.150000,"Consumer non-Cyclicals","Drug Retailers",2.13,8.91,1,0.95,2017-05-16,84.51
+281,DHR,"Danaher Corp Common",1.1,12.59,6.52,9.555000,Healthcare,"Advanced Medical Equipment & Technology",4.43,9.37,-1,0.89,2017-05-16,83.01
+282,CBS,"CBS Corp Class B Common",1.0,7.44,28.51,17.975000,"Consumer Cyclicals",Broadcasting,3.35,4.33,-1,1.41,2017-05-16,61.2
+283,NRG,"NRG Energy Inc Common",1.0,89.78,4.29,47.035000,Utilities,"Electric Utilities",5.40,2.88,-1,0.52,2017-05-16,14.92
+284,KHC,"Kraft Heinz Co Common",0.9,13.50,1.40,7.450000,"Consumer non-Cyclicals","Food Processing",10.74,8.07,-1,1.10,2017-05-16,89.11
+285,AMD,"Advanced Micro Devices Inc Common",0.8,38.31,212.31,125.310000,Technology,Semiconductors,24.23,2.05,1,0.62,2017-05-16,12.75
+286,EMN,"Eastman Chemical Co Common",0.7,7.13,12.08,9.605000,"Basic Materials","Commodity Chemicals",3.23,6.20,1,1.28,2017-05-16,79.56
+287,BMY,"Bristol-Myers Squibb Co Common",0.6,-0.54,-12.67,-6.605000,Healthcare,Pharmaceuticals,11.28,6.61,-1,0.82,2017-05-16,54.39
+288,NKE,"Nike Inc Class B Common",0.5,11.32,-0.00,5.660000,"Consumer Cyclicals",Footwear,7.05,6.49,-1,0.81,2017-05-16,52.78
+289,AXP,"American Express Co Common",0.4,11.68,29.25,20.465000,Financials,"Consumer Lending",5.92,7.67,1,1.02,2017-05-16,78.13
+290,LVLT,"Level 3 Communications Inc Common",0.4,3.29,9.95,6.620000,"Telecommunication Services","Integrated Telecommunications Services",4.32,7.31,1,0.81,2017-05-16,59.37
+291,BLL,"Ball Corp Common",0.3,-0.01,0.02,0.005000,"Basic Materials","Non-Paper Containers & Packaging",5.60,7.88,1,0.51,2017-05-16,40.405
+292,YUM,"Yum! Brands Inc Common",0.3,3.15,4.05,3.600000,"Consumer Cyclicals","Restaurants & Bars",2.88,9.55,1,0.73,2017-05-16,69.35
+293,EXR,"Extra Space Storage Inc Common",0.2,2.52,-9.58,-3.530000,Financials,"Specialized REITs",3.70,5.19,-1,1.38,2017-05-16,71.79
+294,BLK,"BlackRock Inc Common",0.2,0.21,6.01,3.110000,Financials,"Investment Management & Fund Operators",2.67,7.61,1,5.12,2017-05-16,391.3
+295,BAC,"Bank of America Corp Common",0.2,10.73,96.06,53.395000,Financials,Banks,5.81,5.40,1,0.44,2017-05-16,23.99
+296,DOV,"Dover Corp Common",0.2,10.36,13.05,11.705000,Industrials,"Industrial Machinery & Equipment",2.95,5.44,1,1.49,2017-05-16,81.19
+297,PG,"Procter & Gamble Co Common",0.2,8.29,2.03,5.160000,"Consumer non-Cyclicals","Personal Products",3.71,11.56,-1,0.75,2017-05-16,86.24
+298,MO,"Altria Group Inc Common",0.1,15.21,5.48,10.345000,"Consumer non-Cyclicals",Tobacco,1.51,9.77,-1,0.73,2017-05-16,70.95
+299,TDC,"Teradata Corp Common",0.1,11.84,1.16,6.500000,Technology,"IT Services & Consulting",8.52,5.00,-1,0.59,2017-05-16,29.26
+300,CMA,"Comerica Inc Common",0.1,4.99,80.58,42.785000,Financials,Banks,6.51,4.59,1,1.55,2017-05-16,71.28
+301,BRK.B,"Berkshire Hathaway Inc Class B Common",0.1,1.99,19.38,10.685000,Financials,"Property & Casualty Insurance",3.42,10.03,-1,1.63,2017-05-16,163.61
+302,DISH,"DISH Network Corp Class A Common",0.1,9.98,23.83,16.905000,"Consumer Cyclicals",Broadcasting,6.77,4.49,1,1.39,2017-05-16,62.27
+303,ARE,"Alexandria Real Estate Equities Inc Common",0.1,2.62,7.73,5.175000,Financials,"Commercial REITs",4.30,6.69,1,1.73,2017-05-16,115.84
+304,NDAQ,"Nasdaq Inc Common",-0.0,2.39,0.76,1.575000,Financials,"Financial & Commodity Market Operators & Service P",3.46,7.95,-1,0.85,2017-05-16,67.37
+305,CAG,"Conagra Brands Inc Common",-0.0,2.14,8.07,5.105000,"Consumer non-Cyclicals","Food Processing",3.91,8.15,-1,0.46,2017-05-16,37.57
+306,EMR,"Emerson Electric Co Common",-0.0,5.19,11.06,8.125000,Industrials,"Electrical Components & Equipment",4.48,5.91,-1,0.99,2017-05-16,58.6
+307,FDX,"FedEx Corp Common",0.0,-0.00,21.74,10.870000,Industrials,"Courier, Postal, Air Freight & Land-based Logistic",3.46,7.31,1,2.65,2017-05-16,194.14
+308,DISCA,"Discovery Communications Inc Series A Common",-0.0,0.00,4.99,2.495000,"Consumer Cyclicals",Broadcasting,4.22,3.92,-1,0.65,2017-05-16,25.58
+309,MYL,"Mylan NV Common",-0.0,1.98,-4.85,-1.435000,Healthcare,Pharmaceuticals,7.22,4.13,-1,0.95,2017-05-16,39.15
+310,CA,"CA Inc Common",-0.0,0.04,-0.93,-0.445000,Technology,Software,4.98,6.65,-1,0.48,2017-05-16,31.71
+311,BWA,"BorgWarner Inc Common",0.0,5.35,29.57,17.460000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",4.46,5.07,1,0.83,2017-05-16,42.21
+312,PEG,"Public Service Enterprise Group Inc Common",0.0,4.45,-0.00,2.225000,Utilities,"Electric Utilities",3.07,7.94,-1,0.54,2017-05-16,43.1
+313,RJF,"Raymond James Financial Inc Common",-0.0,2.82,55.93,29.375000,Financials,"Investment Banking & Brokerage Services",4.82,5.42,1,1.41,2017-05-16,76.8
+314,PNC,"PNC Financial Services Group Inc Common",-0.0,6.19,57.75,31.970000,Financials,Banks,4.11,5.74,1,2.14,2017-05-16,122.62
+315,NSC,"Norfolk Southern Corp Common",-0.0,8.52,45.89,27.205000,Industrials,"Ground Freight & Logistics",4.05,6.46,1,1.81,2017-05-16,116.86
+316,SYY,"Sysco Corp Common",-0.0,-1.78,2.30,0.260000,"Consumer non-Cyclicals","Food Retail & Distribution",3.19,7.87,1,0.69,2017-05-16,54.19
+317,DISCK,"Discovery Communications Inc Series C Common",-0.0,0.02,7.13,3.575000,"Consumer Cyclicals",Broadcasting,3.75,4.20,-1,0.59,2017-05-16,24.81
+318,NVDA,"NVIDIA Corp Common",0.0,5.05,162.18,83.615000,Technology,Semiconductors,17.83,3.56,1,3.84,2017-05-16,136.81
+319,PRU,"Prudential Financial Inc Common",0.0,2.83,58.30,30.565000,Financials,"Life & Health Insurance",3.01,6.66,1,1.62,2017-05-16,107.8
+320,TDG,"TransDigm Group Inc Common",0.0,-1.40,-0.38,-0.890000,Industrials,"Aerospace & Defense",9.87,4.58,1,5.42,2017-05-16,248.96
+321,TROW,"T. Rowe Price Group Inc Common",-0.0,-5.68,-0.00,-2.840000,Financials,"Investment Management & Fund Operators",5.28,6.70,1,1.07,2017-05-16,71.83
+322,CVS,"CVS Health Corp Common",-0.0,0.69,-16.43,-7.870000,"Consumer non-Cyclicals","Drug Retailers",4.07,6.71,-1,1.18,2017-05-16,79.12
+323,WHR,"Whirlpool Corp Common",-0.0,0.44,0.01,0.225000,"Consumer Cyclicals","Appliances, Tools & Housewares",8.55,6.00,1,3.11,2017-05-16,186.94
+324,HST,"Host Hotels & Resorts Inc Common",0.0,0.08,7.44,3.760000,Financials,"Specialized REITs",6.70,4.23,-1,0.42,2017-05-16,17.68
+325,UNM,"Unum Group Common",0.0,8.84,48.80,28.820000,Financials,"Life & Health Insurance",3.87,6.37,1,0.73,2017-05-16,46.57
+326,WRK,"WestRock Co Common",0.0,1.11,33.20,17.155000,"Basic Materials","Paper Packaging",4.48,5.07,1,1.06,2017-05-16,53.79
+327,BIIB,"Biogen Inc Common",0.0,0.00,1.66,0.830000,Healthcare,Pharmaceuticals,4.67,5.18,-1,4.96,2017-05-16,257.64
+328,IRM,"Iron Mountain Inc Common",-0.0,6.16,-2.53,1.815000,Financials,"Commercial REITs",3.43,6.49,-1,0.54,2017-05-16,34.95
+329,L,"Loews Corp Common",0.0,0.62,19.01,9.815000,Financials,"Property & Casualty Insurance",2.39,8.92,-1,0.52,2017-05-16,46.38
+330,MLM,"Martin Marietta Materials Inc Common",-0.0,-0.03,13.57,6.770000,"Basic Materials","Construction Materials",7.62,4.42,1,5.27,2017-05-16,233.03
+331,AMGN,"Amgen Inc Common",0.0,16.55,0.03,8.290000,Healthcare,"Biotechnology & Medical Research",6.38,7.57,-1,2.11,2017-05-16,159.99
+332,JPM,"JPMorgan Chase & Co Common",0.0,4.79,50.45,27.620000,Financials,Banks,3.63,7.03,1,1.25,2017-05-16,87.61
+333,MRK,"Merck & Co Inc Common",0.0,2.89,5.37,4.130000,Healthcare,Pharmaceuticals,3.65,8.39,1,0.76,2017-05-16,63.79
+334,XRX,"Xerox Corp Common",-0.0,20.44,6.64,13.540000,Industrials,"Business Support Services",4.10,5.62,1,0.13,2017-05-16,7.14
+335,HIG,"Hartford Financial Services Group Inc Common",0.0,0.60,11.73,6.165000,Financials,"Multiline Insurance & Brokers",2.35,7.70,1,0.64,2017-05-16,49.28
+336,ADP,"Automatic Data Processing Inc Common",-0.0,1.08,13.46,7.270000,Technology,"IT Services & Consulting",6.25,6.87,-1,1.43,2017-05-16,98.32
+337,MDLZ,"Mondelez International Inc Class A Common",0.0,1.49,0.01,0.750000,"Consumer non-Cyclicals","Food Processing",5.81,6.63,1,0.69,2017-05-16,45.51
+338,CINF,"Cincinnati Financial Corp Common",-0.1,-7.16,-0.06,-3.610000,Financials,"Property & Casualty Insurance",6.65,6.83,-1,1.01,2017-05-16,69.33
+339,HOG,"Harley-Davidson Inc Common",-0.1,-0.74,20.42,9.840000,"Consumer Cyclicals","Auto & Truck Manufacturers",4.73,5.07,-1,1.07,2017-05-16,54.11
+340,STI,"SunTrust Banks Inc Common",-0.1,2.97,44.90,23.935000,Financials,Banks,5.01,5.46,1,1.04,2017-05-16,57.04
+341,CFG,"Citizens Financial Group Inc Common",-0.1,2.20,87.65,44.925000,Financials,Banks,5.98,4.51,1,0.82,2017-05-16,37.08
+342,CAH,"Cardinal Health Inc Common",-0.1,2.93,-0.18,1.375000,"Consumer non-Cyclicals","Drug Retailers",11.54,6.03,-1,1.20,2017-05-16,72.63
+343,KEY,"KeyCorp Common",-0.1,0.11,68.89,34.500000,Financials,Banks,6.53,4.74,1,0.39,2017-05-16,18.54
+344,CTL,"CenturyLink Inc Common",-0.1,-0.00,-11.34,-5.670000,"Telecommunication Services","Integrated Telecommunications Services",6.61,4.62,1,0.54,2017-05-16,24.77
+345,HBI,"HanesBrands Inc Common",-0.1,-6.55,-22.65,-14.600000,"Consumer Cyclicals","Apparel & Accessories",16.42,3.51,-1,0.59,2017-05-16,20.69
+346,UAL,"United Continental Holdings Inc Common",-0.1,0.01,80.65,40.330000,Industrials,Airlines,5.22,4.37,1,1.80,2017-05-16,79.06
+347,VIAB,"Viacom Inc Class B Common",-0.1,8.28,-0.01,4.135000,"Consumer Cyclicals","Entertainment Production",7.54,3.03,-1,1.12,2017-05-16,33.87
+348,FLS,"Flowserve Corp Common",-0.1,-0.00,0.09,0.045000,Industrials,"Industrial Machinery & Equipment",4.80,4.47,1,1.11,2017-05-16,49.58
+349,ADM,"Archer Daniels Midland Co Common",-0.2,-0.07,1.31,0.620000,"Consumer non-Cyclicals","Food Processing",8.88,5.53,-1,0.76,2017-05-16,41.9
+350,FE,"FirstEnergy Corp Common",-0.2,-0.99,-8.16,-4.575000,Utilities,"Electric Utilities",2.96,5.90,-1,0.49,2017-05-16,28.69
+351,ABC,"AmerisourceBergen Corp Common",-0.2,8.41,1.81,5.110000,"Consumer non-Cyclicals","Drug Retailers",4.71,5.61,1,1.59,2017-05-16,89.12
+352,CME,"CME Group Inc Class A Common",-0.2,1.52,28.84,15.180000,Financials,"Financial & Commodity Market Operators & Service P",4.56,6.96,-1,1.68,2017-05-16,116.68
+353,PSA,"Public Storage Common",-0.3,0.23,-4.93,-2.350000,Financials,"Specialized REITs",4.88,5.70,-1,3.65,2017-05-16,208.14
+354,VMC,"Vulcan Materials Co Common",-0.3,-2.18,0.62,-0.780000,"Basic Materials","Construction Materials",4.90,4.27,1,3.00,2017-05-16,128.33
+355,NUE,"Nucor Corp Common",-0.3,-1.04,17.37,8.165000,"Basic Materials",Steel,5.16,4.13,-1,1.40,2017-05-16,57.78
+356,FOXA,"Twenty-First Century Fox Inc Class A Common",-0.4,4.99,6.23,5.610000,"Consumer Cyclicals","Entertainment Production",5.09,4.20,-1,0.65,2017-05-16,27.34
+357,FOX,"Twenty-First Century Fox Inc Class B Common",-0.4,4.35,3.45,3.900000,"Consumer Cyclicals","Entertainment Production",5.03,4.41,-1,0.61,2017-05-16,27.11
+358,TSN,"Tyson Foods Inc Class A Common",-0.5,0.10,-2.90,-1.400000,"Consumer non-Cyclicals","Food Processing",6.08,5.47,-1,1.06,2017-05-16,57.85
+359,URI,"United Rentals Inc Common",-0.6,10.98,89.29,50.135000,Industrials,"Business Support Services",11.20,3.36,-1,3.32,2017-05-16,111.72
+360,APD,"Air Products and Chemicals Inc Common",-0.6,-2.05,1.11,-0.470000,"Basic Materials","Commodity Chemicals",4.57,8.17,1,1.77,2017-05-16,144.35
+361,INTC,"Intel Corp Common",-0.6,0.01,4.02,2.015000,Technology,Semiconductors,3.42,7.14,-1,0.50,2017-05-16,35.82
+362,USB,"U.S. Bancorp Common",-0.7,0.53,31.76,16.145000,Financials,Banks,2.86,7.01,-1,0.74,2017-05-16,51.96
+363,MS,"Morgan Stanley Common",-0.7,0.41,80.22,40.315000,Financials,"Investment Banking & Brokerage Services",5.46,5.29,-1,0.82,2017-05-16,43.38
+364,MCK,"McKesson Corp Common",-0.7,-0.00,-21.11,-10.555000,"Consumer non-Cyclicals","Drug Retailers",8.31,5.82,1,2.49,2017-05-16,144.92
+365,AES,"AES Corp Common",-0.8,-1.79,-1.40,-1.595000,Utilities,"Electric Utilities",6.62,5.39,-1,0.21,2017-05-16,11.32
+366,CHRW,"C.H. Robinson Worldwide Inc Common",-0.9,-0.00,2.18,1.090000,Industrials,"Ground Freight & Logistics",6.29,6.26,-1,1.11,2017-05-16,69.6
+367,BXP,"Boston Properties Common",-1.0,1.00,-0.05,0.475000,Financials,"Commercial REITs",4.94,6.41,-1,1.89,2017-05-16,120.89
+368,EXC,"Exelon Corp Common",-1.1,1.34,0.03,0.685000,Utilities,"Electric Utilities",3.34,6.58,-1,0.52,2017-05-16,34.51
+369,K,"Kellogg Co Common",-1.3,-0.37,-6.22,-3.295000,"Consumer non-Cyclicals","Food Processing",4.01,7.15,-1,0.98,2017-05-16,70.35
+370,PCAR,"PACCAR Inc Common",-1.3,2.87,27.26,15.065000,Industrials,"Heavy Machinery & Vehicles",3.56,5.07,-1,1.27,2017-05-16,64.44
+371,MTB,"M&T Bank Corp Common",-1.4,2.23,46.35,24.290000,Financials,Banks,3.91,5.80,1,2.80,2017-05-16,162.37
+372,PWR,"Quanta Services Inc Common",-1.5,0.96,64.79,32.875000,Industrials,"Construction & Engineering",7.59,3.83,-1,0.83,2017-05-16,31.82
+373,VLO,"Valero Energy Corp Common",-1.5,-0.00,29.83,14.915000,Energy,"Oil & Gas Refining and Marketing",3.62,5.45,-1,1.18,2017-05-16,64.54
+374,IP,"International Paper Co Common",-1.6,0.01,20.21,10.110000,"Basic Materials","Paper Packaging",5.58,6.33,1,0.83,2017-05-16,52.88
+375,DG,"Dollar General Corp Common",-1.6,-7.14,-11.85,-9.495000,"Consumer Cyclicals","Discount Stores",4.91,5.83,-1,1.22,2017-05-16,70.94
+376,AIV,"Apartment Investment and Management Co Class A Com",-1.6,1.10,0.10,0.600000,Financials,"Residential REITs",2.85,5.92,-1,0.72,2017-05-16,42.64
+377,O,"Realty Income Common",-1.7,1.45,-6.01,-2.280000,Financials,"Commercial REITs",3.58,4.81,-1,1.11,2017-05-16,53.21
+378,TSO,"Tesoro Corp Common",-2.0,-6.92,3.05,-1.935000,Energy,"Oil & Gas Refining and Marketing",3.55,4.75,-1,1.72,2017-05-16,81.88
+379,RF,"Regions Financial Corp Common",-2.1,0.14,74.80,37.470000,Financials,Banks,6.13,4.24,1,0.34,2017-05-16,14.54
+380,WFC,"Wells Fargo & Co Common",-2.1,0.01,13.09,6.550000,Financials,Banks,3.51,5.86,-1,0.91,2017-05-16,53.26
+381,LNC,"Lincoln National Corp Common",-2.2,0.02,72.72,36.370000,Financials,"Life & Health Insurance",5.28,5.12,1,1.33,2017-05-16,68.09
+382,SNI,"Scripps Networks Interactive Inc Class A Common",-2.3,1.33,18.91,10.120000,"Consumer Cyclicals",Broadcasting,7.18,3.92,-1,1.72,2017-05-16,67.68
+383,NLSN,"Nielsen Holdings PLC Common",-2.4,-1.60,-23.65,-12.625000,"Consumer Cyclicals","Advertising & Marketing",3.87,5.37,-1,0.75,2017-05-16,40.53
+384,JCI,"Johnson Controls International PLC Common",-2.5,-6.40,0.95,-2.725000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",3.37,6.49,-1,0.65,2017-05-16,42.07
+385,PAYX,"Paychex Inc Common",-2.6,-0.03,0.86,0.415000,Industrials,"Employment Services",2.94,8.13,-1,0.70,2017-05-16,57.16
+386,SLG,"SL Green Realty Common",-2.9,-0.11,0.00,-0.055000,Financials,"Commercial REITs",2.92,5.93,-1,1.72,2017-05-16,102.24
+387,COP,"ConocoPhillips Common",-3.0,-0.72,8.24,3.760000,Energy,"Oil & Gas Exploration and Production",8.81,4.34,-1,1.08,2017-05-16,47.13
+388,TAP,"Molson Coors Brewing Co Class B Common",-3.0,-2.05,-1.99,-2.020000,"Consumer non-Cyclicals",Brewers,4.69,7.14,-1,1.32,2017-05-16,94.07
+389,SCHW,"Charles Schwab Corp Common",-3.4,0.17,52.82,26.495000,Financials,"Investment Banking & Brokerage Services",6.38,4.96,1,0.82,2017-05-16,40.67
+390,RHI,"Robert Half International Inc Common",-3.5,-0.00,22.62,11.310000,Industrials,"Employment Services",7.27,5.25,-1,0.91,2017-05-16,47.55
+391,COTY,"Coty Inc Class A Common",-3.5,-1.53,-33.50,-17.515000,"Consumer non-Cyclicals","Personal Products",11.89,3.52,1,0.54,2017-05-16,18.87
+392,AAL,"American Airlines Group Inc Common",-3.6,-5.60,38.33,16.365000,Industrials,Airlines,5.32,3.63,1,1.29,2017-05-16,46.94
+393,SNA,"Snap-On Inc Common",-3.8,-0.53,6.12,2.795000,Industrials,"Industrial Machinery & Equipment",7.39,6.59,-1,2.59,2017-05-16,170.68
+394,OMC,"Omnicom Group Inc Common",-3.9,-4.33,0.45,-1.940000,"Consumer Cyclicals","Advertising & Marketing",3.58,7.98,-1,1.03,2017-05-16,81.91
+395,PXD,"Pioneer Natural Resources Co Common",-4.1,-1.03,6.19,2.580000,Energy,"Oil & Gas Exploration and Production",5.45,4.35,-1,4.01,2017-05-16,174.79
+396,VRSK,"Verisk Analytics Inc Common",-4.1,-2.94,0.00,-1.470000,Technology,"IT Services & Consulting",6.61,7.02,-1,1.12,2017-05-16,78.82
+397,HBAN,"Huntington Bancshares Inc Common",-4.2,0.02,47.85,23.935000,Financials,Banks,6.07,4.92,-1,0.26,2017-05-16,13.04
+398,LKQ,"LKQ Corp Common",-4.4,-9.44,-5.54,-7.490000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",4.45,5.87,1,0.53,2017-05-16,30.98
+399,XOM,"Exxon Mobil Corp Common",-4.8,-11.62,-6.75,-9.185000,Energy,"Oil & Gas Refining and Marketing",2.09,9.46,-1,0.87,2017-05-16,82.55
+400,ROST,"Ross Stores Inc Common",-4.9,-3.94,11.67,3.865000,"Consumer Cyclicals","Apparel & Accessories Retailers",2.67,5.58,-1,1.10,2017-05-16,61.5
+401,EQT,"EQT Corp Common",-5.0,-21.08,-19.46,-20.270000,Energy,"Oil & Gas Exploration and Production",7.07,3.67,-1,1.53,2017-05-16,56.16
+402,RL,"Ralph Lauren Corp Class A Common",-5.0,-32.44,-10.24,-21.340000,"Consumer Cyclicals","Apparel & Accessories",12.32,3.84,-1,1.92,2017-05-16,73.94
+403,KSS,"Kohls Corp Common",-5.0,-37.35,0.04,-18.655000,"Consumer Cyclicals","Department Stores",7.84,2.79,-1,1.32,2017-05-16,36.82
+404,MET,"Metlife Inc Common",-5.7,-8.62,24.84,8.110000,Financials,"Life & Health Insurance",5.27,6.01,-1,0.86,2017-05-16,51.85
+405,WU,"Western Union Co Common",-5.8,-11.51,0.01,-5.750000,Industrials,"Business Support Services",4.32,6.42,-1,0.30,2017-05-16,19.15
+406,FFIV,"F5 Networks Inc Common",-5.9,-4.30,16.04,5.870000,Technology,"IT Services & Consulting",8.25,5.66,-1,2.32,2017-05-16,131.38
+407,QCOM,"Qualcomm Inc Common",-5.9,-27.65,-0.03,-13.840000,Technology,"Communications & Networking",12.72,6.60,-1,0.85,2017-05-16,55.95
+408,ETFC,"E*TRADE Financial Corp Common",-6.1,-0.04,46.12,23.040000,Financials,"Investment Banking & Brokerage Services",8.86,4.42,-1,0.80,2017-05-16,35.28
+409,NAVI,"Navient Corp Common",-6.1,-21.72,6.62,-7.550000,Financials,"Consumer Lending",6.41,3.70,-1,0.39,2017-05-16,14.42
+410,DAL,"Delta Air Lines Inc Common",-6.1,-4.29,20.02,7.865000,Industrials,Airlines,5.35,4.96,1,1.00,2017-05-16,49.51
+411,TXT,"Textron Inc Common",-6.2,-0.07,26.92,13.425000,Industrials,"Aerospace & Defense",5.37,6.11,1,0.79,2017-05-16,48.18
+412,T,"AT&T Inc Common",-6.8,-0.01,-0.00,-0.005000,"Telecommunication Services","Wireless Telecommunications Services",2.19,8.10,-1,0.47,2017-05-16,38.19
+413,PSX,"Phillips 66 Common",-7.1,-15.21,0.05,-7.580000,Energy,"Oil & Gas Refining and Marketing",2.63,6.95,-1,1.13,2017-05-16,78.54
+414,BHI,"Baker Hughes Inc Common",-7.6,-11.48,30.25,9.385000,Energy,"Oil Related Services and Equipment",3.34,4.19,-1,1.37,2017-05-16,57.5
+415,HRL,"Hormel Foods Corp Common",-7.6,-0.18,-0.51,-0.345000,"Consumer non-Cyclicals","Food Processing",5.39,8.06,-1,0.42,2017-05-16,34.18
+416,FAST,"Fastenal Co Common",-7.6,-0.01,5.35,2.670000,Industrials,"Industrial Machinery & Equipment",8.05,4.76,-1,0.92,2017-05-16,43.96
+417,UPS,"United Parcel Service Inc Class B Common",-8.0,-16.15,0.01,-8.070000,Industrials,"Courier, Postal, Air Freight & Land-based Logistic",6.75,7.88,-1,1.33,2017-05-16,104.5
+418,OKE,"ONEOK Inc Common",-8.2,-2.70,16.96,7.130000,Energy,"Oil & Gas Transportation Services",5.37,4.54,-1,1.12,2017-05-16,50.89
+419,ORLY,"O'Reilly Automotive Inc Common",-8.3,-9.28,-0.57,-4.925000,"Consumer Cyclicals","Auto Vehicles, Parts & Service Retailers",4.13,4.96,-1,5.14,2017-05-16,254.91
+420,ZION,"Zions Bancorp Common",-8.6,-0.00,70.40,35.200000,Financials,Banks,5.44,4.37,-1,0.93,2017-05-16,40.66
+421,PRGO,"Perrigo Company PLC Common",-8.7,-25.10,-24.39,-24.745000,Healthcare,Pharmaceuticals,11.70,3.82,-1,1.95,2017-05-16,74.55
+422,NEM,"Newmont Mining Corp Common",-8.8,0.00,-4.56,-2.280000,"Basic Materials",Gold,5.85,4.29,-1,0.79,2017-05-16,33.75
+423,GE,"General Electric Co Common",-8.9,-12.41,-0.63,-6.520000,Industrials,"Industrial Conglomerates",2.55,8.06,-1,0.35,2017-05-16,28.04
+424,M,"Macy's Inc Common",-9.2,-41.27,-4.51,-22.890000,"Consumer Cyclicals","Department Stores",17.01,2.48,-1,0.92,2017-05-16,22.82
+425,SJM,"J M Smucker Co Common",-9.2,0.00,-3.64,-1.820000,"Consumer non-Cyclicals","Food Processing",4.39,9.62,-1,1.30,2017-05-16,124.77
+426,GS,"Goldman Sachs Group Inc Common",-9.4,-0.01,63.92,31.955000,Financials,"Investment Banking & Brokerage Services",4.72,5.94,-1,3.79,2017-05-16,225.6
+427,CXO,"Concho Resources Inc Common",-9.8,-6.10,2.14,-1.980000,Energy,"Oil & Gas Exploration and Production",6.83,4.36,-1,3.05,2017-05-16,133.08
+428,IBM,"International Business Machines Corp Common",-11.1,-0.01,5.36,2.675000,Technology,"IT Services & Consulting",4.92,7.91,-1,1.94,2017-05-16,153.68
+429,NOV,"National Oilwell Varco Inc Common",-11.4,-1.10,6.97,2.935000,Energy,"Oil Related Services and Equipment",4.89,3.99,-1,0.85,2017-05-16,34.08
+430,MNK,"Mallinckrodt Plc Common",-11.6,-22.32,-24.45,-23.385000,Healthcare,Pharmaceuticals,6.16,2.85,-1,1.57,2017-05-16,44.83
+431,R,"Ryder System Inc Common",-11.8,-12.94,6.80,-3.070000,Industrials,"Ground Freight & Logistics",13.87,4.19,-1,1.57,2017-05-16,65.67
+432,BBT,"BB&T Corp Common",-12.3,-2.23,27.07,12.420000,Financials,Banks,4.82,6.11,-1,0.71,2017-05-16,43.73
+433,COF,"Capital One Financial Corp Common",-12.3,-1.38,28.02,13.320000,Financials,"Consumer Lending",3.61,4.99,-1,1.62,2017-05-16,80.69
+434,ALXN,"Alexion Pharmaceuticals Inc Common",-13.2,-0.06,-0.85,-0.455000,Healthcare,Pharmaceuticals,5.12,3.71,-1,3.24,2017-05-16,120.3
+435,FRT,"Federal Realty Investment Trust Common",-13.3,-8.53,-17.25,-12.890000,Financials,"Commercial REITs",3.31,4.88,-1,2.50,2017-05-16,122.46
+436,BBBY,"Bed Bath & Beyond Inc Common",-14.1,-24.87,-7.90,-16.385000,"Consumer Cyclicals","Home Furnishings Retailers",3.58,4.54,-1,0.78,2017-05-16,35.48
+437,GILD,"Gilead Sciences Inc Common",-14.8,-19.18,-21.73,-20.455000,Healthcare,"Biotechnology & Medical Research",8.61,7.05,-1,0.93,2017-05-16,65.72
+438,VZ,"Verizon Communications Inc Common",-14.8,-8.82,-5.11,-6.965000,"Telecommunication Services","Integrated Telecommunications Services",4.37,8.03,-1,0.56,2017-05-16,45.31
+439,GPC,"Genuine Parts Co Common",-15.1,-8.27,-2.49,-5.380000,"Consumer Cyclicals","Auto, Truck & Motorcycle Parts",3.50,7.23,-1,1.27,2017-05-16,91.54
+440,ALK,"Alaska Air Group Inc Common",-15.4,0.18,53.16,26.670000,Industrials,Airlines,5.18,4.57,-1,1.86,2017-05-16,84.73
+441,FITB,"Fifth Third Bancorp Common",-15.7,-5.14,44.75,19.805000,Financials,Banks,4.87,4.54,-1,0.55,2017-05-16,24.9
+442,KORS,"Michael Kors Holdings Ltd Common",-15.8,-35.87,-20.76,-28.315000,"Consumer Cyclicals","Apparel & Accessories Retailers",10.80,4.12,-1,0.87,2017-05-16,35.95
+443,SCG,"SCANA Corp Common",-16.0,-15.97,-4.40,-10.185000,Utilities,"Electric Utilities",4.53,7.28,-1,0.89,2017-05-16,65.13
+444,JEC,"Jacobs Engineering Group Inc Common",-16.7,-17.40,3.67,-6.865000,Industrials,"Construction & Engineering",5.25,4.76,-1,1.10,2017-05-16,52.6
+445,LYB,"LyondellBasell Industries NV Class A Common",-16.8,-0.35,10.76,5.205000,"Basic Materials","Commodity Chemicals",4.35,4.77,-1,1.74,2017-05-16,83.06
+446,FLR,"Fluor Corp Common",-17.1,-4.11,0.12,-1.995000,Industrials,"Construction & Engineering",4.78,4.26,-1,1.09,2017-05-16,46.62
+447,AIG,"American International Group Inc Common",-17.5,-9.54,8.78,-0.380000,Financials,"Multiline Insurance & Brokers",9.03,6.83,-1,0.91,2017-05-16,62.08
+448,REG,"Regency Centers Corp Common",-17.8,-2.65,-18.58,-10.615000,Financials,"Commercial REITs",3.31,4.61,-1,1.28,2017-05-16,58.96
+449,TRIP,"TripAdvisor Inc Common",-17.9,-11.07,-34.96,-23.015000,"Consumer Cyclicals","Leisure & Recreation",10.97,3.53,-1,1.29,2017-05-16,45.62
+450,AZO,"Autozone Inc Common",-18.4,-22.89,-3.97,-13.430000,"Consumer Cyclicals","Auto Vehicles, Parts & Service Retailers",3.98,5.44,-1,12.21,2017-05-16,669.83
+451,GM,"General Motors Co Common",-18.9,-1.02,14.92,6.950000,"Consumer Cyclicals","Auto & Truck Manufacturers",4.84,5.10,-1,0.65,2017-05-16,33.42
+452,VNO,"Vornado Realty Trust Common",-19.1,-0.37,0.20,-0.085000,Financials,"Commercial REITs",2.95,5.80,-1,1.60,2017-05-16,93.1
+453,CSRA,"CSRA Inc Common",-19.4,-18.02,15.77,-1.125000,Technology,"IT Services & Consulting",6.91,6.00,-1,0.50,2017-05-16,29.75
+454,CPB,"Campbell Soup Co Common",-19.8,-0.54,-0.55,-0.545000,"Consumer non-Cyclicals","Food Processing",6.51,8.19,-1,0.70,2017-05-16,57.11
+455,KMI,"Kinder Morgan Inc Common",-19.9,-2.02,3.14,0.560000,Energy,"Oil & Gas Transportation Services",2.95,5.19,-1,0.38,2017-05-16,19.8
+456,CVX,"Chevron Corp Common",-20.9,-9.98,3.69,-3.145000,Energy,"Oil & Gas Refining and Marketing",2.63,7.27,-1,1.47,2017-05-16,107.25
+457,PBCT,"People's United Financial Inc Common",-22.1,-9.44,17.18,3.870000,Financials,Banks,4.35,5.65,-1,0.30,2017-05-16,17.15
+458,CHK,"Chesapeake Energy Corp Common",-22.2,-27.77,4.37,-11.700000,Energy,"Oil & Gas Exploration and Production",7.79,2.10,-1,0.26,2017-05-16,5.54
+459,MUR,"Murphy Oil Corp Common",-22.3,-29.08,-0.75,-14.915000,Energy,"Oil & Gas Exploration and Production",6.74,2.93,-1,0.89,2017-05-16,26.18
+460,GIS,"General Mills Inc Common",-22.6,-13.74,-11.02,-12.380000,"Consumer non-Cyclicals","Food Processing",3.75,7.42,-1,0.76,2017-05-16,56.09
+461,DFS,"Discover Financial Services Common",-22.8,-7.94,17.32,4.690000,Financials,"Consumer Lending",3.26,5.15,-1,1.17,2017-05-16,60.17
+462,EOG,"EOG Resources Inc Common",-22.9,-7.87,10.78,1.455000,Energy,"Oil & Gas Exploration and Production",4.72,4.70,-1,1.99,2017-05-16,93.83
+463,UA,"Under Armour Inc Class C Common",-23.2,-41.79,-50.83,-46.310000,"Consumer Cyclicals","Apparel & Accessories",23.40,3.13,-1,0.57,2017-05-16,17.97
+464,SPG,"Simon Property Group Common",-24.2,-12.34,-19.52,-15.930000,Financials,"Commercial REITs",3.39,4.74,-1,3.24,2017-05-16,154.13
+465,SEE,"Sealed Air Corp Common",-24.5,-9.08,-0.57,-4.825000,"Basic Materials","Non-Paper Containers & Packaging",8.86,4.97,-1,0.88,2017-05-16,43.71
+466,JBHT,"J B Hunt Transport Services Inc Common",-25.4,-6.99,11.24,2.125000,Industrials,"Ground Freight & Logistics",3.74,5.71,-1,1.50,2017-05-16,85.98
+467,MAC,"Macerich Co Common",-25.8,-18.47,-23.20,-20.835000,Financials,"Commercial REITs",4.39,4.15,-1,1.38,2017-05-16,57.44
+468,GGP,"GGP Inc Common",-26.0,-19.57,-18.18,-18.875000,Financials,"Commercial REITs",4.63,3.74,-1,0.59,2017-05-16,22.01
+469,ESRX,"Express Scripts Holding Co Common",-26.2,-24.98,-11.00,-17.990000,"Consumer non-Cyclicals","Drug Retailers",10.77,4.85,-1,1.24,2017-05-16,60.16
+470,KR,"Kroger Co Common",-27.2,-24.14,-5.95,-15.045000,"Consumer non-Cyclicals","Food Retail & Distribution",4.34,5.12,-1,0.56,2017-05-16,28.82
+471,MRO,"Marathon Oil Corp Common",-27.7,-19.30,3.35,-7.975000,Energy,"Oil & Gas Exploration and Production",8.66,2.86,-1,0.50,2017-05-16,14.43
+472,F,"Ford Motor Co Common",-27.9,-9.40,-4.16,-6.780000,"Consumer Cyclicals","Auto & Truck Manufacturers",4.56,6.04,-1,0.18,2017-05-16,10.94
+473,AYI,"Acuity Brands Inc Common",-28.6,-45.32,-24.70,-35.010000,"Consumer Cyclicals","Construction Supplies & Fixtures",14.77,3.46,-1,4.98,2017-05-16,172.7
+474,KMX,"Carmax Inc Common",-28.7,-0.82,8.56,3.870000,"Consumer Cyclicals","Auto Vehicles, Parts & Service Retailers",4.31,4.19,-1,1.47,2017-05-16,61.66
+475,OXY,"Occidental Petroleum Corp Common",-29.5,-25.54,-17.08,-21.310000,Energy,"Oil & Gas Exploration and Production",4.10,5.28,-1,1.14,2017-05-16,60.53
+476,HES,"Hess Corp Common",-30.0,-23.97,-2.74,-13.355000,Energy,"Oil & Gas Refining and Marketing",4.87,3.45,-1,1.41,2017-05-16,48.78
+477,UAA,"Under Armour Inc Class A Common",-30.9,-54.93,-49.44,-52.185000,"Consumer Cyclicals","Apparel & Accessories",25.74,2.90,-1,0.67,2017-05-16,19.48
+478,LB,"L Brands Inc Common",-31.0,-51.34,-22.41,-36.875000,"Consumer Cyclicals","Apparel & Accessories Retailers",15.81,3.33,-1,1.45,2017-05-16,48.29
+479,NFX,"Newfield Exploration Co Common",-32.5,-32.94,-8.19,-20.565000,Energy,"Oil & Gas Exploration and Production",8.05,2.93,-1,1.18,2017-05-16,34.59
+480,TGT,"Target Corp Common",-33.5,-50.88,-10.90,-30.890000,"Consumer Cyclicals","Discount Stores",12.17,5.47,-1,1.00,2017-05-16,54.53
+481,SLB,"Schlumberger NV Common",-35.4,-19.48,-0.00,-9.740000,Energy,"Oil Related Services and Equipment",2.57,5.65,-1,1.26,2017-05-16,71.37
+482,XEC,"Cimarex Energy Co Common",-35.5,-21.61,0.04,-10.785000,Energy,"Oil & Gas Exploration and Production",3.86,3.92,-1,2.98,2017-05-16,117.16
+483,SYF,"Synchrony Financial Common",-35.9,-13.04,11.57,-0.735000,Financials,"Consumer Lending",15.89,3.02,-1,0.89,2017-05-16,26.84
+484,APA,"Apache Corp Common",-37.9,-42.90,-0.12,-21.510000,Energy,"Oil & Gas Exploration and Production",3.90,3.76,-1,1.36,2017-05-16,50.97
+485,DVN,"Devon Energy Corp Common",-38.4,-25.73,2.22,-11.755000,Energy,"Oil & Gas Exploration and Production",6.52,3.47,-1,1.09,2017-05-16,37.92
+486,AAP,"Advance Auto Parts Inc Common",-39.3,-32.14,-0.12,-16.130000,"Consumer Cyclicals","Auto Vehicles, Parts & Service Retailers",2.91,5.51,-1,2.63,2017-05-16,145.25
+487,MAT,"Mattel Inc Common",-39.3,-41.70,-23.33,-32.515000,"Consumer Cyclicals","Toys & Children's Products",17.65,4.32,-1,0.52,2017-05-16,22.65
+488,EVHC,"Envision Healthcare Corp Common",-39.4,-17.72,-10.95,-14.335000,Healthcare,"Healthcare Facilities & Services",6.30,3.85,-1,1.46,2017-05-16,56.15
+489,GWW,"W W Grainger Inc Common",-39.4,-7.79,0.00,-3.895000,Industrials,"Industrial Machinery & Equipment",11.39,4.31,-1,4.15,2017-05-16,179.1
+490,AKAM,"Akamai Technologies Inc Common",-40.2,-20.93,5.21,-7.860000,Technology,"IT Services & Consulting",15.52,3.56,-1,1.38,2017-05-16,49.15
+491,NBL,"Noble Energy Inc Common",-40.4,-20.89,-0.03,-10.460000,Energy,"Oil & Gas Exploration and Production",7.11,3.88,-1,0.81,2017-05-16,31.61
+492,HP,"Helmerich and Payne Inc Common",-41.2,-26.50,0.57,-12.965000,Energy,"Oil & Gas Drilling",7.40,3.35,-1,1.74,2017-05-16,58.24
+493,SIG,"Signet Jewelers Ltd Common",-41.9,-54.48,-13.68,-34.080000,"Consumer Cyclicals","Apparel & Accessories Retailers",12.75,3.28,-1,1.78,2017-05-16,58.52
+494,TSCO,"Tractor Supply Co Common",-42.3,-28.11,-18.48,-23.295000,"Consumer Cyclicals","Other Specialty Retailers",8.32,4.49,-1,1.31,2017-05-16,58.69
+495,MOS,"Mosaic Co Common",-42.4,-5.44,0.73,-2.355000,"Basic Materials","Agricultural Chemicals",7.15,3.46,-1,0.68,2017-05-16,23.41
+496,RRC,"Range Resources Corp Common",-44.1,-46.45,-37.61,-42.030000,Energy,"Oil & Gas Exploration and Production",6.64,2.91,-1,0.87,2017-05-16,25.16
+497,FCX,"Freeport-McMoRan Inc Common",-44.6,-21.82,6.74,-7.540000,"Basic Materials","Integrated  Mining",8.27,2.66,-1,0.44,2017-05-16,11.77
+498,HAL,"Halliburton Co Common",-45.8,-11.49,8.96,-1.265000,Energy,"Oil Related Services and Equipment",3.49,4.38,-1,1.07,2017-05-16,46.78
+499,KIM,"Kimco Realty Common",-46.7,-37.29,-29.35,-33.320000,Financials,"Commercial REITs",4.17,3.59,-1,0.51,2017-05-16,18.15
+500,CF,"CF Industries Holdings Inc Common",-48.5,-2.23,5.72,1.745000,"Basic Materials","Agricultural Chemicals",6.12,2.94,-1,0.96,2017-05-16,28.07
+501,AN,"AutoNation Inc Common",-49.1,-15.05,-4.52,-9.785000,"Consumer Cyclicals","Auto Vehicles, Parts & Service Retailers",4.21,3.67,-1,1.10,2017-05-16,40.4
+502,APC,"Anadarko Petroleum Corp Common",-49.6,-22.35,5.69,-8.330000,Energy,"Oil & Gas Exploration and Production",7.69,3.60,-1,1.44,2017-05-16,51.75
+503,RIG,"Transocean Ltd Common",-58.1,-14.62,5.78,-4.420000,Energy,"Oil & Gas Drilling",8.12,2.41,-1,0.44,2017-05-16,10.69

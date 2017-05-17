@@ -15,6 +15,7 @@
 		0D560AB61EBD2952002A80D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D560AB41EBD2952002A80D8 /* LaunchScreen.storyboard */; };
 		0D560AC01EBD2A54002A80D8 /* 2017_05_04.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0D560ABF1EBD2A54002A80D8 /* 2017_05_04.csv */; };
 		0D560AC21EBD3001002A80D8 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D560AC11EBD3001002A80D8 /* CSVParser.swift */; };
+		0DB6384D1ECCABDE005ED2AB /* Momentum rankings - 2017-05-16 - $spx.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0DB6384C1ECCABDE005ED2AB /* Momentum rankings - 2017-05-16 - $spx.csv */; };
 		0DB952D01EBE8C240012F2EF /* PositionSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB952CF1EBE8C240012F2EF /* PositionSize.swift */; };
 		0DCBDB601EC7E2F7002CAE56 /* BestFitIRA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */; };
 		0DCFF6F71EBEBDE0000B534B /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */; };
@@ -35,6 +36,7 @@
 		0D560AB71EBD2952002A80D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D560ABF1EBD2A54002A80D8 /* 2017_05_04.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2017_05_04.csv; sourceTree = "<group>"; };
 		0D560AC11EBD3001002A80D8 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		0DB6384C1ECCABDE005ED2AB /* Momentum rankings - 2017-05-16 - $spx.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Momentum rankings - 2017-05-16 - $spx.csv"; sourceTree = "<group>"; };
 		0DB952CF1EBE8C240012F2EF /* PositionSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionSize.swift; sourceTree = "<group>"; };
 		0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestFitIRA.swift; sourceTree = "<group>"; };
 		0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		0D3D6ABC1EC6231600040D6B /* Raw Data */ = {
 			isa = PBXGroup;
 			children = (
+				0DB6384C1ECCABDE005ED2AB /* Momentum rankings - 2017-05-16 - $spx.csv */,
 				0D3D6ABE1EC6235300040D6B /* Momentum rankings - 2017-05-11 - $spx.csv */,
 				0D560ABF1EBD2A54002A80D8 /* 2017_05_04.csv */,
 			);
@@ -69,8 +72,8 @@
 				0D560AC11EBD3001002A80D8 /* CSVParser.swift */,
 				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
 				0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */,
-				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
 				0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */,
+				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D560AB61EBD2952002A80D8 /* LaunchScreen.storyboard in Resources */,
+				0DB6384D1ECCABDE005ED2AB /* Momentum rankings - 2017-05-16 - $spx.csv in Resources */,
 				0D560AC01EBD2A54002A80D8 /* 2017_05_04.csv in Resources */,
 				0D560AB31EBD2952002A80D8 /* Assets.xcassets in Resources */,
 				0D560AB11EBD2952002A80D8 /* Main.storyboard in Resources */,
