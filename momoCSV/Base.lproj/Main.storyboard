@@ -23,45 +23,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="11e-IQ-i5r" userLabel="Buttons Stack View">
-                                <rect key="frame" x="20" y="28" width="728" height="130"/>
+                                <rect key="frame" x="20" y="28" width="728" height="94"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hlw-SU-CQb" userLabel="Top Row Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="728" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-m3-yAF">
-                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTB-Nb-z2w">
+                                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Import"/>
+                                                <state key="normal" title="Accts"/>
                                                 <connections>
-                                                    <action selector="importAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EYp-qN-uA5"/>
+                                                    <action selector="updateAccounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jt-eM-3LO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QV-BG5">
-                                                <rect key="frame" x="146.5" y="0.0" width="141.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-H0-372">
+                                                <rect key="frame" x="244.5" y="0.0" width="239" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Filter"/>
+                                                <state key="normal" title="Share"/>
                                                 <connections>
-                                                    <action selector="fiterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWN-vH-ayO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp4-If-18u">
-                                                <rect key="frame" x="293" y="0.0" width="142" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Pos Size"/>
-                                                <connections>
-                                                    <action selector="posSizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12k-po-5T1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-pU-Kis">
-                                                <rect key="frame" x="440" y="0.0" width="141.5" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Split"/>
-                                                <connections>
-                                                    <action selector="splitPortfolio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mzb-q8-AjD"/>
+                                                    <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eqw-qi-pD3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-i7-fDI">
-                                                <rect key="frame" x="586.5" y="0.0" width="141.5" height="30"/>
+                                                <rect key="frame" x="488.5" y="0.0" width="239.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Clr"/>
                                                 <connections>
@@ -73,53 +57,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OOG-fP-IWa" userLabel="Mid Row Stack View">
                                         <rect key="frame" x="0.0" y="36" width="728" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTB-Nb-z2w">
-                                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Accts"/>
-                                                <connections>
-                                                    <action selector="updateAccounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jt-eM-3LO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-LS-4sx">
-                                                <rect key="frame" x="244.5" y="0.0" width="239" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Make New Buys"/>
-                                                <connections>
-                                                    <action selector="newBuysAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4to-kV-rPH"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-H0-372">
-                                                <rect key="frame" x="488.5" y="0.0" width="239.5" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Share"/>
-                                                <connections>
-                                                    <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eqw-qi-pD3"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-e0-c9e" userLabel="Bottom Row Stack View">
-                                        <rect key="frame" x="0.0" y="72" width="728" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9i-1M-jE8">
-                                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Portfollio"/>
-                                                <connections>
-                                                    <action selector="originalImportAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5T-gt-mzu"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6M-75-Vw8">
-                                                <rect key="frame" x="244.5" y="0.0" width="239" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Weekly Import"/>
                                                 <connections>
                                                     <action selector="weeklyImportAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Una-P5-A1a"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-LS-4sx">
+                                                <rect key="frame" x="183.5" y="0.0" width="178" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Make New Buys"/>
+                                                <connections>
+                                                    <action selector="newBuysAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4to-kV-rPH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9i-1M-jE8">
+                                                <rect key="frame" x="366.5" y="0.0" width="178.5" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Portfollio"/>
+                                                <connections>
+                                                    <action selector="originalImportAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5T-gt-mzu"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-tt-neG">
-                                                <rect key="frame" x="488.5" y="0.0" width="239.5" height="30"/>
+                                                <rect key="frame" x="550" y="0.0" width="178" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Journal"/>
@@ -130,7 +93,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="var-VT-PPY" userLabel="Lables Stack View">
-                                        <rect key="frame" x="0.0" y="108" width="728" height="22"/>
+                                        <rect key="frame" x="0.0" y="72" width="728" height="22"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reg Acct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-47-UM4">
                                                 <rect key="frame" x="0.0" y="0.0" width="178.5" height="22"/>
@@ -165,18 +128,16 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="6VD-e0-c9e" secondAttribute="trailing" id="0eu-ko-EMw"/>
                                     <constraint firstItem="OOG-fP-IWa" firstAttribute="leading" secondItem="11e-IQ-i5r" secondAttribute="leading" id="3Lm-gM-b3b"/>
                                     <constraint firstItem="hlw-SU-CQb" firstAttribute="leading" secondItem="11e-IQ-i5r" secondAttribute="leading" id="NKU-rJ-UgJ"/>
                                     <constraint firstAttribute="trailing" secondItem="OOG-fP-IWa" secondAttribute="trailing" id="R4Q-Tt-X8u"/>
-                                    <constraint firstItem="6VD-e0-c9e" firstAttribute="leading" secondItem="11e-IQ-i5r" secondAttribute="leading" id="dU1-FI-6rR"/>
                                     <constraint firstAttribute="trailing" secondItem="var-VT-PPY" secondAttribute="trailing" id="gZs-Hd-aDt"/>
                                     <constraint firstItem="var-VT-PPY" firstAttribute="leading" secondItem="11e-IQ-i5r" secondAttribute="leading" id="xeK-wt-vtH"/>
                                     <constraint firstAttribute="trailing" secondItem="hlw-SU-CQb" secondAttribute="trailing" id="yTe-9H-H9J"/>
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-HZ-yGe">
-                                <rect key="frame" x="20" y="166" width="728" height="850"/>
+                                <rect key="frame" x="20" y="130" width="728" height="886"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Welcome to Portfolio Optimizer">
