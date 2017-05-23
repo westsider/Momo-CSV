@@ -26,32 +26,23 @@
 //  task: implement share
 //  task: re wrote object so I can update each tickers properties
 //  add 3 buttons
+//  func initialImport()                                                    
+//  on subsequent runs load realm portfolio
+//  create a journal entry of actions in realm, text var object in realm
+//  every weds manually add a new csv file, change "latestDownload"
+//  updateWeeklyPortfolio()
+//  Show any buy / sell actions
+//  disable button until next weds
+//  enable "Replace Proftfolio" button
+//  delete sells in current portfolio
+//  get the available cash
+//  add journal entry
+//  show list of new buys
+//  position size new buys in portfolio
+//  task:  re order buttoms + remove top row
+//  task: added logo
 
-/*
- Need to automate the weekly update becuase it is error prone if working / traveling
- 
- I. func initialImport()                                                    DONE
- * Only happens once on first run in VDL using NSUserdefaults               DONE
- * on subsequent runs load realm portfolio                                  DONE
- * create a journal entry of actions in realm, text var object in realm     DONE
- II. every weds                                                             DONE
- * manually add a new csv file, change "latestDownload"                     DONE
- * updateWeeklyPortfolio()                                                  DONE
- * Show any buy / sell actions                                              DONE
- * disable button until next weds                                           DONE
- * enable "Replace Proftfolio" button                                       DONE
- * delete sells in current portfolio                                        DONE
- * get the available cash                                                   DONE
-  * add journal entry                                                       DONE
- * show list of new buys                                                    DONE
- * position size new buys in portfolio                                      DONE
-  * add journal entry                                                       DONE
- 
- re order buttoms
- remove top row
- *** if 2nd weds
- * compareWeight()
- */
+//  if 2nd weds    compareWeight()
 //  Download the cvs directly to my own backend
 
 import UIKit
