@@ -294,6 +294,11 @@ class ViewController: UIViewController {
         try! realm.write {
             realm.deleteAll()
         }
+        
+        UserDefaults.standard.set("nil", forKey: "FirstRun")
+        
+        UserDefaults.standard.set("nil", forKey: "FileName")
+        
         textView.text =  "Realm Database Deleted"
     }
     
