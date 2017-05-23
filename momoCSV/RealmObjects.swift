@@ -32,6 +32,29 @@ class TickersData: Object {
     dynamic var currentFileName = ""
 }
 
+class NewBuys: Object {
+    
+    dynamic var ticker = ""
+    
+    dynamic var close = 0.0
+    
+    dynamic var weight = 0.0
+    
+    dynamic var shares = 0.0
+    
+    dynamic var cost = 0.0
+    
+    dynamic var account = "REG"
+    
+    dynamic var updated = ""
+    
+    dynamic var action = "Hold"
+    
+    dynamic var lastUpdate = ""
+    
+    dynamic var currentFileName = ""
+}
+
 class FilteredSymbolsData: Object {
     
     dynamic var taskID = NSUUID().uuidString
@@ -60,6 +83,8 @@ class FilteredSymbolsData: Object {
         return allObjects
     }
     
+    
+    
     func truncateDate(oldDates: String)-> String {
         var oldDate = oldDates
         let lowBound = oldDates.index(oldDates.startIndex, offsetBy: 0)
@@ -78,17 +103,18 @@ class JournalUpdate: Object {
     
     func addContent(lastEntry: String) {
         
-        print("\nUpdating journal with \(lastEntry)/n")
+        var newEntry = "\nUpdating journal on \(DateFunctions().dateToString()) @ \(DateFunctions().timeToString())\n"
+        
+        newEntry += lastEntry
         
         let realm = try! Realm()
         
         let thisEntry = JournalUpdate()
         
-        thisEntry.entry = lastEntry
+        thisEntry.entry = "\(newEntry)\n"
         
         try! realm.write {
             realm.add(thisEntry)
-            print("\nWriting \(lastEntry)")
         }
     }
     
@@ -98,12 +124,12 @@ class JournalUpdate: Object {
         
         let allEntrys = realm.objects(JournalUpdate.self)
         
-        print("\nJournal: All Entries count \(allEntrys.count)------------------------------->\n\(allEntrys)\n")
+       // print("\nJournal: All Entries count \(allEntrys.count)------------------------------->\n")
         
         var message = "\(allEntrys.count) Journal Entries\n"
         
-        for thisEntry in allEntrys {
-            message += thisEntry.entry
+        for (index, thisEntry) in allEntrys.enumerated() {
+            message += "Entry \(index)-------------------------------\n" + thisEntry.entry
         }
         
         return message

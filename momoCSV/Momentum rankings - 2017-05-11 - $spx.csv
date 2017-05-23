@@ -1,7 +1,7 @@
 #,Ticker,Name,Adj.Slope90,Adj.Slope125,Adj.Slope250,Avg.Slope.125.250,Sector,Industry,"Max Gap","Target Weight","Stock Trend - SMA100",ATR,Updated,"Close Price"
 1,VRTX,"Vertex Pharmaceuticals Inc Common",218.4,93.15,0.85,47.000000,Healthcare,"Biotechnology & Medical Research",20.45,4.06,1,2.84,2017-05-11,115.36
 2,ATVI,"Activision Blizzard Inc Common",164.3,129.33,9.20,69.265000,Technology,"Online Services",18.88,6.55,1,0.85,2017-05-11,55.75
-3,IDXX,"IDEXX Laboratories Inc Common",144.3,126.08,78.38,102.230000,Healthcare,"Medical Equipment, Supplies & Distribution",13.25,6.39,1,2.55,2017-05-11,163.17
+3,IDXX,"IDEXX Laboratories Inc Common",144.3,126.08,78.38,102.230000,Healthcare,"Medical Equipment, Supplies & Distribution",13.25,6.39,-1,2.55,2017-05-11,163.17
 4,WYNN,"Wynn Resorts Ltd Common",143.6,68.32,4.65,36.485000,"Consumer Cyclicals","Casinos & Gaming",7.94,4.51,1,2.71,2017-05-11,122.23
 5,LRCX,"Lam Research Corp Common",125.4,99.76,71.46,85.610000,Technology,"Semiconductor Equipment & Testing",6.86,6.23,1,2.40,2017-05-11,149.92
 6,HPQ,"HP Inc Common",112.7,46.84,35.25,41.045000,Technology,"Computer Hardware",8.64,6.78,1,0.28,2017-05-11,19.26
@@ -9,7 +9,7 @@
 8,MU,"Micron Technology Inc Common",100.4,132.23,155.16,143.695000,Technology,Semiconductors,7.40,3.96,1,0.73,2017-05-11,29.03
 9,ADBE,"Adobe Systems Inc Common",98.7,87.56,32.65,60.105000,Technology,Software,3.81,10.33,1,1.32,2017-05-11,136.29
 10,AMT,"American Tower Common",95.4,49.40,0.65,25.025000,Financials,"Specialized REITs",2.84,8.63,1,1.46,2017-05-11,126.28
-11,KLAC,"KLA-Tencor Corp Common",94.9,78.16,34.01,56.085000,Technology,"Semiconductor Equipment & Testing",5.18,6.26,1,1.60,2017-05-11,100.26
+11,KLAC,"KLA-Tencor Corp Common",94.9,78.16,34.01,56.085000,Technology,"Semiconductor Equipment & Testing",5.18,6.26,-1,1.60,2017-05-11,100.26
 12,AMAT,"Applied Materials Inc Common",94.5,89.24,74.41,81.825000,Technology,"Semiconductor Equipment & Testing",3.15,6.19,1,0.70,2017-05-11,43.48
 13,CERN,"Cerner Corp Common",91.8,73.18,-0.23,36.475000,Healthcare,"Advanced Medical Equipment & Technology",7.81,5.96,1,1.08,2017-05-11,64.75
 14,AAPL,"Apple Inc Common",84.2,99.75,51.72,75.735000,Technology,"Computer Hardware",6.10,8.60,1,1.79,2017-05-11,153.95

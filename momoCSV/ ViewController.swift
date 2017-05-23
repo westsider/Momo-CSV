@@ -30,20 +30,27 @@
 /*
  Need to automate the weekly update becuase it is error prone if working / traveling
  
- I. func initialImport()                                                DONE
- * Only happens once on first run in VDL using NSUserdefaults           DONE
- * on subsequent runs load realm portfolio                              DONE
- * create a journal entry of actions in realm, text var object in realm DONE
- II. every weds                                                         DONE
- * manually add a new csv file, change "latestDownload"                 DONE
- * updateWeeklyPortfolio()                                              DONE
+ I. func initialImport()                                                    DONE
+ * Only happens once on first run in VDL using NSUserdefaults               DONE
+ * on subsequent runs load realm portfolio                                  DONE
+ * create a journal entry of actions in realm, text var object in realm     DONE
+ II. every weds                                                             DONE
+ * manually add a new csv file, change "latestDownload"                     DONE
+ * updateWeeklyPortfolio()                                                  DONE
+ * Show any buy / sell actions                                              DONE
+ * disable button until next weds                                           DONE
+ * enable "Replace Proftfolio" button                                       DONE
+ * delete sells in current portfolio                                        DONE
+ * get the available cash                                                   DONE
+  * add journal entry                                                       DONE
+ * show list of new buys                                                    DONE
+ * position size new buys in portfolio                                      DONE
+  * add journal entry                                                       DONE
+ 
+ re order buttoms
+ remove top row
  *** if 2nd weds
  * compareWeight()
- * Show any buy / sell actions                                          DONE
- * disable button until next weds
- * enable replace BaseProftfolio
- * then disables replace portfolio
- * update journal entry of actions in realm
  */
 //  Download the cvs directly to my own backend
 
@@ -58,6 +65,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var regTextField: UITextField!
     
     @IBOutlet weak var iraTextField: UITextField!
+    
+    @IBOutlet weak var weeklyImportButton: UIButton!
+    
+    @IBOutlet weak var replacePortfolioButton: UIButton!
     
     let csvParse = CSVParse()
     
@@ -77,23 +88,74 @@ class ViewController: UIViewController {
     
     let latestDownload = "Momentum rankings - 2017-05-11 - $spx"
     
+    let dayOfWeek = Date().dayNumberOfWeek()!
+    
     var messageText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         regTextField.text = "\(regAccount)"
         iraTextField.text = "\(iraAccount)"
+        
         //MARK: - Original file import - Only happens once and is then disabled
         textView.text = initialImport(origFile: portfolioDownload)
+        print("\nToday is the \(dayOfWeek) day of the week\n")
+        // MARK: - Weekly rebalance reminder
+//        if dayOfWeek == 4 {
+//            textView.text = "Today is wednesday have you updated the portfolio?"
+//            // enable weekly update button
+//            weeklyImportButton.isEnabled = true
+//        }
     }
     
     //MARK: - Weekly Rebalance
     @IBAction func weeklyImportAction(_ sender: Any) {
-        messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
-        textView.text = messageText
-        print("\nWEEKLY UPDATE\n")
-        print(FilteredSymbolsData().readObjctsFromRealm())
+        
+        // first run assign a name so we dont get nil
+        if  UserDefaults.standard.object(forKey: "FileName") == nil { UserDefaults.standard.set("noFile", forKey: "FileName") }
+        
+        let thisFIle = UserDefaults.standard.object(forKey: "FileName") as! String
+        
+        print("\nIn WeeklyImport got \(thisFIle) as file name\n")
+
+        // if not same fie then run update
+        if thisFIle != latestDownload {
+            print("\n\(thisFIle) is a new filename so running the rebalance\n")
+            messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
+            textView.text = messageText
+            JournalUpdate().addContent(lastEntry: messageText)
+            print("\nWEEKLY UPDATE\n")
+            print(FilteredSymbolsData().readObjctsFromRealm())
+            // update nsuserdefaults
+            UserDefaults.standard.set(latestDownload, forKey: "FileName")
+            weeklyImportButton.isEnabled = false
+            replacePortfolioButton.isEnabled = true
+        } else {
+            // send error pop up if file was alreeady imported
+            print("\n\(thisFIle) isn'T a new filename so show error message\n")
+            warningMessage(message: "You've aready imported the file \(thisFIle)")
+        }
+
+        print("\nCalling delete sells\n")
+        
+        let newPortfolioSum = portfolioActions.deleteSells()
+        
+        let cashAvailable = newPortfolioSum.ira + newPortfolioSum.reg
+        
+        let thisUpdate = "Sum of new Portfolio is \(newPortfolioSum) and available cash is \(cashAvailable)\n\(newPortfolioSum.reg) in Reg and \(newPortfolioSum.ira)in Ira"
+        
+        JournalUpdate().addContent(lastEntry: thisUpdate)
+        
+        portfolioActions.searchForNewBuys(account_One: regAccount, account_Two: iraAccount)
     }
+    
+     //MARK: - make new buys
+    @IBAction func newBuysAction(_ sender: Any) {
+        
+        // retrieve potential buys and allocate
+        portfolioActions.allocateNewBuys()
+    }
+    
     //MARK: - Show portfolio
     @IBAction func originalImportAction(_ sender: Any) {
         textView.text =  positionSize.getRealmPortfolio()
@@ -101,9 +163,13 @@ class ViewController: UIViewController {
     
     //MARK: - Show Journal
     @IBAction func showJournal(_ sender: Any) {
+        
         textView.text = JournalUpdate().readContent()
     }
     
+
+    
+    //MARK - Helper Functions 
     func initialImport(origFile: String)-> String {
         
         // check nsuserdefaults if 1strun
@@ -132,6 +198,27 @@ class ViewController: UIViewController {
         return messageText
     }
     
+    // MARK: - After weekly rebalance, replace realm portfolio and journal
+    func updatePortfolio(newFile: String)-> String {
+        
+        messageText = importAndParseCSV(file: newFile)
+        
+        messageText = filterTickersAndSaveRealm(file: newFile)
+        
+        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
+        
+        positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
+        
+        messageText =  positionSize.getRealmPortfolio()
+        
+        JournalUpdate().addContent(lastEntry: messageText)
+    
+        messageText =  positionSize.getRealmPortfolio()
+        
+        return messageText
+    }
+    
+    //MARK - Helper Functions Alert VC
     func warningMessage(message: String) {
         let alertController : UIAlertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         
@@ -142,31 +229,16 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
-    // read data from file and saves a string Data object
-    @IBAction func importAction(_ sender: Any) {
-        //textView.text = importAndParseCSV()
+    //MARK - Helper Functions  filter and save
+    func filterTickersAndSaveRealm(file: String) -> String {
+        //  Saves to realm Ticker Objects of top momentum symbols that fit portfolio
+        csvParse.filterTickers(file: file)
+        
+        // reads filtered symbols from realm
+        return filteredSymbolsData.readFromRealm()
     }
     
-    @IBAction func fiterAction(_ sender: Any) {
-        //textView.text = filterTickersAndSaveRealm()
-    }
-    
-    //MARK: - Load Realm array of Ticker Objects and assigns cash value to each symbol and save to realm
-    @IBAction func posSizeAction(_ sender: Any) {
-        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
-        textView.text  =  messageText
-        //print(FilteredSymbolsData().readObjctsFromRealm())
-    }
-    
-    //MARK: - Load Realm array of Ticker Objects and split into ira nad reg
-    @IBAction func splitPortfolio(_ sender: Any) {
-        positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
-        messageText =  positionSize.getRealmPortfolio()
-        textView.text = messageText
-        //print(FilteredSymbolsData().readObjctsFromRealm())
-    }
-    
+    //MARK - Helper Functions  import CSV
     func importAndParseCSV(file: String)-> String {
         guard let fileString = csvParse.readDataFromFile(file: file) else {
             textView.text =  "Warning csv file does not exist!"
@@ -177,25 +249,36 @@ class ViewController: UIViewController {
         return  csvParse.printData(of: fileString)
     }
     
-    func filterTickersAndSaveRealm(file: String) -> String {
-        //  Saves to realm Ticker Objects of top momentum symbols that fit portfolio
-        csvParse.filterTickers(file: file)
-        
-        // reads filtered symbols from realm
-        return filteredSymbolsData.readFromRealm()
+    
+    
+    
+    
+    
+    
+    
+    
+    // -------------------------- OLD IB ACTIONS ----------------------------------------------------------------------
+    
+    // read data from file and saves a string Data object
+    @IBAction func importAction(_ sender: Any) {
+        //textView.text = importAndParseCSV()
     }
     
-    //MARK: - Weekly Rebalance
-    @IBAction func weeklyRebalanceAction(_ sender: Any) {
-        messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
-        textView.text = messageText
-        print("\nWEEKLY UPDATE\n")
-        print(FilteredSymbolsData().readObjctsFromRealm())
+    @IBAction func fiterAction(_ sender: Any) {
+        //textView.text = filterTickersAndSaveRealm()
     }
-    
-    @IBAction func biWeeklyRebalance(_ sender: Any) {
-        messageText = portfolioActions.biWeeklyRebalance(newFile: latestDownload)
+  
+    @IBAction func posSizeAction(_ sender: Any) {
+        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
+        textView.text  =  messageText
+        //print(FilteredSymbolsData().readObjctsFromRealm())
+    }
+
+    @IBAction func splitPortfolio(_ sender: Any) {
+        positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
+        messageText =  positionSize.getRealmPortfolio()
         textView.text = messageText
+        //print(FilteredSymbolsData().readObjctsFromRealm())
     }
     
     @IBAction func shareAction(_ sender: Any) {

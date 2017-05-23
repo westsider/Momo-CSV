@@ -74,7 +74,7 @@
                                         <rect key="frame" x="0.0" y="36" width="728" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTB-Nb-z2w">
-                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Accts"/>
                                                 <connections>
@@ -82,29 +82,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-LS-4sx">
-                                                <rect key="frame" x="146.5" y="0.0" width="141.5" height="30"/>
+                                                <rect key="frame" x="244.5" y="0.0" width="239" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Weekly"/>
+                                                <state key="normal" title="Make New Buys"/>
                                                 <connections>
-                                                    <action selector="weeklyRebalanceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTJ-Jl-bKy"/>
+                                                    <action selector="newBuysAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4to-kV-rPH"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-eN-NZg">
-                                                <rect key="frame" x="293" y="0.0" width="142" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="2x Month"/>
-                                                <connections>
-                                                    <action selector="biWeeklyRebalance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSA-2D-xx4"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-mO-XB5">
-                                                <rect key="frame" x="440" y="0.0" width="141.5" height="30"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="nil"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-H0-372">
-                                                <rect key="frame" x="586.5" y="0.0" width="141.5" height="30"/>
+                                                <rect key="frame" x="488.5" y="0.0" width="239.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Share"/>
                                                 <connections>
@@ -218,7 +204,9 @@
                     <connections>
                         <outlet property="iraTextField" destination="hcl-JH-qhu" id="03V-pU-XUa"/>
                         <outlet property="regTextField" destination="ZV9-qk-Gi9" id="LxT-33-tJs"/>
+                        <outlet property="replacePortfolioButton" destination="Zra-LS-4sx" id="G3n-nt-47N"/>
                         <outlet property="textView" destination="bcU-HZ-yGe" id="DCF-fx-sF6"/>
+                        <outlet property="weeklyImportButton" destination="l6M-75-Vw8" id="7vd-6m-GaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
