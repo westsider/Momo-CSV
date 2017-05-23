@@ -120,16 +120,85 @@ class CSVParse: NSObject {
         return tableString
     }
     
+    func compareWeights(account_One: Int, account_Two: Int)-> String {
+        
+        var messageText = "Bi Monthly Rebalance\n\n"
+        
+        let totalCash = Double( account_One + account_Two )
+        
+        // make a tuple array of tickers in portfloio
+        let realm = try! Realm()
+        
+        let allObjects = FilteredSymbolsData().readObjctsFromRealm()
+        
+        var tupleArray: [(ticker: String, weight: Double)] = []
+        
+        // make an array of Tickers
+        for items in allObjects {
+            //theseTickers.append(items.ticker)
+            tupleArray.append((ticker: items.ticker, weight: items.weight))
+        }
+        
+        // loop rows in newest file
+        for row in data {
+                
+            guard let ticker = row["Ticker"] else {
+                print("Got nil in ticker")
+                continue
+            }
+
+            guard let close = Double(row["\"Close Price\""]!) else {
+                print("Got nil in Close Price")
+                continue
+            }
+            
+            guard let targetWeight = Double(row["\"Target Weight\""]!) else {
+                print("Got nil in targetWeight")
+                continue
+            }
+            
+            // if tickers match compare weight and alert if different
+            if tupleArray.contains(where: { $0.0 == ticker }) {
+                // get this specific ticker from realm
+                let thisTicker = realm.objects(TickersData.self).filter("ticker = '\(ticker)'")
+                
+                // if different
+                if targetWeight != thisTicker[0].weight {
+                    messageText +=  "\(ticker) : \(targetWeight) New Weight \(thisTicker[0].ticker) : \(thisTicker[0].weight)\n"
+                    
+                    // calc shares to buy or sell
+                    let thisAllocation =  totalCash * ( targetWeight * 0.01) // get cash in % of total portfolio
+                    
+                    let numShares = thisAllocation / close  // String(format: "%.0f", n))
+                    
+                    let diff = numShares - thisTicker[0].shares
+                    
+                    messageText += "Before: \(String(format: "%.0f", thisTicker[0].shares)) After: \(String(format: "%.0f", numShares)) Adjustment \(String(format: "%.0f", diff))\n\n"
+                    
+                    // replace weight in realm
+                    try! realm.write {
+                        thisTicker[0].shares = numShares
+                    }
+                }
+            }
+        }
+        
+        // make journal entry
+        JournalUpdate().addContent(lastEntry: messageText)
+        
+        let latestPortfolio = "Portfollio now is:\n \(FilteredSymbolsData().readFromRealm())"
+        
+        JournalUpdate().addContent(lastEntry: latestPortfolio)
+        
+        return messageText
+    }
+    
     //MARK: - Filter Tickers
     func filterTickers(file: String) {
         
         var totalPortfoio = 0.0
         
         var filteredResults = ""
-        
-        //let filteredSymbols = FilteredSymbols()
-        
-        //let filteredSymbolsData = List<TickersData>()
         
         //      Portfolio Rebalancing Every Wednesday
         //      1. Sell Stocks not in top 20% = get row number

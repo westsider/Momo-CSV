@@ -124,8 +124,6 @@ class JournalUpdate: Object {
         
         let allEntrys = realm.objects(JournalUpdate.self)
         
-       // print("\nJournal: All Entries count \(allEntrys.count)------------------------------->\n")
-        
         var message = "\(allEntrys.count) Journal Entries\n"
         
         for (index, thisEntry) in allEntrys.enumerated() {
@@ -135,4 +133,10 @@ class JournalUpdate: Object {
         return message
     }
 }
+
+/*
+ // get one ticker
+ let activeFilters = realm.objects(TickersData.self).filter("ticker = 'AAPL'")
+ let thisTicker = activeFilters.value(forKey: "ticker")
+ */
 

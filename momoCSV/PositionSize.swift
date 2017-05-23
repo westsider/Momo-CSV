@@ -170,7 +170,7 @@ class PositionSize: NSObject {
                 numsharesToString = "\(String(format: "%.0f", n))"
             }
             
-            result += "\(fullTicker)\t\(truncateDate(oldDates: items.updated))\t\(items.close)\t\(String(format: "%.1f", y))\t\t\(numsharesToString)\t$\(Int(items.cost))\t\t\(items.account)\n"
+            result += "\(fullTicker)\t\(truncateDate(oldDates: items.updated))\t\(items.close)\t\(String(format: "%.2f", x))\t\t\(numsharesToString)\t$\(Int(items.cost))\t\t\(items.account)\n"
             
         }
         

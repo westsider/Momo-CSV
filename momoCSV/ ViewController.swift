@@ -41,8 +41,12 @@
 //  position size new buys in portfolio
 //  task:  re order buttoms + remove top row
 //  task: added logo
+//  task: if 2nd weds    compareWeight()
 
-//  if 2nd weds    compareWeight()
+//  add 2nd Weds Part
+//  weights not lining up - check whick file used
+//  delete class NewBuys: Object when finished with it
+//  re order buttons
 //  Download the cvs directly to my own backend
 
 import UIKit
@@ -79,6 +83,8 @@ class ViewController: UIViewController {
     
     let latestDownload = "Momentum rankings - 2017-05-11 - $spx"
     
+    let biWeeklyDownload = "Momentum rankings - 2017-05-16 - $spx"
+    
     let dayOfWeek = Date().dayNumberOfWeek()!
     
     var messageText = ""
@@ -91,6 +97,7 @@ class ViewController: UIViewController {
         //MARK: - Original file import - Only happens once and is then disabled
         textView.text = initialImport(origFile: portfolioDownload)
         print("\nToday is the \(dayOfWeek) day of the week\n")
+//      weeklyImportButton.isEnabled = false
         // MARK: - Weekly rebalance reminder
 //        if dayOfWeek == 4 {
 //            textView.text = "Today is wednesday have you updated the portfolio?"
@@ -99,56 +106,20 @@ class ViewController: UIViewController {
 //        }
     }
     
-    //MARK: - Weekly Rebalance
+    //MARK: - Weekly Rebalance ### FIRST ACTION ###
     @IBAction func weeklyImportAction(_ sender: Any) {
-        
-        // first run assign a name so we dont get nil
-        if  UserDefaults.standard.object(forKey: "FileName") == nil { UserDefaults.standard.set("noFile", forKey: "FileName") }
-        
-        let thisFIle = UserDefaults.standard.object(forKey: "FileName") as! String
-        
-        print("\nIn WeeklyImport got \(thisFIle) as file name\n")
-
-        // if not same fie then run update
-        if thisFIle != latestDownload {
-            print("\n\(thisFIle) is a new filename so running the rebalance\n")
-            messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
-            textView.text = messageText
-            JournalUpdate().addContent(lastEntry: messageText)
-            print("\nWEEKLY UPDATE\n")
-            print(FilteredSymbolsData().readObjctsFromRealm())
-            // update nsuserdefaults
-            UserDefaults.standard.set(latestDownload, forKey: "FileName")
-            weeklyImportButton.isEnabled = false
-            replacePortfolioButton.isEnabled = true
-        } else {
-            // send error pop up if file was alreeady imported
-            print("\n\(thisFIle) isn'T a new filename so show error message\n")
-            warningMessage(message: "You've aready imported the file \(thisFIle)")
-        }
-
-        print("\nCalling delete sells\n")
-        
-        let newPortfolioSum = portfolioActions.deleteSells()
-        
-        let cashAvailable = newPortfolioSum.ira + newPortfolioSum.reg
-        
-        let thisUpdate = "Sum of new Portfolio is \(newPortfolioSum) and available cash is \(cashAvailable)\n\(newPortfolioSum.reg) in Reg and \(newPortfolioSum.ira)in Ira"
-        
-        JournalUpdate().addContent(lastEntry: thisUpdate)
-        
-        portfolioActions.searchForNewBuys(account_One: regAccount, account_Two: iraAccount)
+        // get new cvs and look for stocks I should sell
+        weeklyPortfolioUpdate()
     }
     
-     //MARK: - make new buys
+     //MARK: - make new buys ### SECOND ACTION ###
     @IBAction func newBuysAction(_ sender: Any) {
-        
         // retrieve potential buys and allocate
         portfolioActions.allocateNewBuys()
     }
     
     //MARK: - Show portfolio
-    @IBAction func originalImportAction(_ sender: Any) {
+    @IBAction func showPortfolio(_ sender: Any) {
         textView.text =  positionSize.getRealmPortfolio()
     }
     
@@ -158,9 +129,29 @@ class ViewController: UIViewController {
         textView.text = JournalUpdate().readContent()
     }
     
+    //MARK: - bi-weekly action  ### THIRD ACTION ###
+    @IBAction func biWeeklyAction(_ sender: Any) {
+        // get new cvs and look for stocks I should sell
+//weeklyPortfolioUpdate()
+        // then compare weight to prior portfolio
+        compareWeight(latestFile: biWeeklyDownload)
+        
+    }
 
     
-    //MARK - Helper Functions 
+    //MARK: - Helper Functions
+    
+    //MARK: - Bi Monthly compare new weight to current weight
+    func compareWeight(latestFile: String) {
+        
+        // check if 2nd or 4th weds?
+        
+        // load new cvs as Dictionary
+        messageText = importAndParseCSV(file: latestFile)
+        
+        textView.text = csvParse.compareWeights(account_One: regAccount, account_Two: iraAccount)
+    }
+    
     func initialImport(origFile: String)-> String {
         
         // check nsuserdefaults if 1strun
@@ -184,26 +175,6 @@ class ViewController: UIViewController {
             JournalUpdate().addContent(lastEntry: messageText)
         }
         
-        messageText =  positionSize.getRealmPortfolio()
-        
-        return messageText
-    }
-    
-    // MARK: - After weekly rebalance, replace realm portfolio and journal
-    func updatePortfolio(newFile: String)-> String {
-        
-        messageText = importAndParseCSV(file: newFile)
-        
-        messageText = filterTickersAndSaveRealm(file: newFile)
-        
-        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
-        
-        positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
-        
-        messageText =  positionSize.getRealmPortfolio()
-        
-        JournalUpdate().addContent(lastEntry: messageText)
-    
         messageText =  positionSize.getRealmPortfolio()
         
         return messageText
@@ -240,7 +211,45 @@ class ViewController: UIViewController {
         return  csvParse.printData(of: fileString)
     }
     
-    
+    func weeklyPortfolioUpdate() {
+        
+        // first run assign a name so we dont get nil
+        if  UserDefaults.standard.object(forKey: "FileName") == nil { UserDefaults.standard.set("noFile", forKey: "FileName") }
+        
+        let thisFIle = UserDefaults.standard.object(forKey: "FileName") as! String
+        
+        print("\nIn WeeklyImport got \(thisFIle) as file name\n")
+        
+        // if not same fie then run update
+        if thisFIle != latestDownload {
+            print("\n\(thisFIle) is a new filename so running the rebalance\n")
+            messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
+            textView.text = messageText
+            JournalUpdate().addContent(lastEntry: messageText)
+            print("\nWEEKLY UPDATE\n")
+            print(FilteredSymbolsData().readObjctsFromRealm())
+            // update nsuserdefaults
+            UserDefaults.standard.set(latestDownload, forKey: "FileName")
+            weeklyImportButton.isEnabled = false
+            replacePortfolioButton.isEnabled = true
+        } else {
+            // send error pop up if file was alreeady imported
+            print("\n\(thisFIle) isn'T a new filename so show error message\n")
+            warningMessage(message: "You've aready imported the file \(thisFIle)")
+        }
+        
+        print("\nCalling delete sells\n")
+        
+        let newPortfolioSum = portfolioActions.deleteSells()
+        
+        let cashAvailable = newPortfolioSum.ira + newPortfolioSum.reg
+        
+        let thisUpdate = "Sum of new Portfolio is \(newPortfolioSum) and available cash is \(cashAvailable)\n\(newPortfolioSum.reg) in Reg and \(newPortfolioSum.ira)in Ira"
+        
+        JournalUpdate().addContent(lastEntry: thisUpdate)
+        
+        portfolioActions.searchForNewBuys(account_One: regAccount, account_Two: iraAccount)
+    }
     
     
     

@@ -28,8 +28,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hlw-SU-CQb" userLabel="Top Row Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="728" height="30"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-M7-akX">
+                                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="30"/>
+                                                <state key="normal" title="Bi Weekly"/>
+                                                <connections>
+                                                    <action selector="biWeeklyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEG-qi-Sen"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTB-Nb-z2w">
-                                                <rect key="frame" x="0.0" y="0.0" width="239.5" height="30"/>
+                                                <rect key="frame" x="183.5" y="0.0" width="178" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Accts"/>
                                                 <connections>
@@ -37,7 +44,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-H0-372">
-                                                <rect key="frame" x="244.5" y="0.0" width="239" height="30"/>
+                                                <rect key="frame" x="366.5" y="0.0" width="178.5" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Share"/>
                                                 <connections>
@@ -45,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-i7-fDI">
-                                                <rect key="frame" x="488.5" y="0.0" width="239.5" height="30"/>
+                                                <rect key="frame" x="550" y="0.0" width="178" height="30"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Clr"/>
                                                 <connections>
@@ -78,7 +85,7 @@
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Portfollio"/>
                                                 <connections>
-                                                    <action selector="originalImportAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5T-gt-mzu"/>
+                                                    <action selector="showPortfolio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qul-2o-NBe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNw-tt-neG">
