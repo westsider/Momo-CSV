@@ -20,6 +20,10 @@
 		0DB952D01EBE8C240012F2EF /* PositionSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB952CF1EBE8C240012F2EF /* PositionSize.swift */; };
 		0DCBDB601EC7E2F7002CAE56 /* BestFitIRA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */; };
 		0DCFF6F71EBEBDE0000B534B /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */; };
+		0DE47D511ED6054300E2F69A /* Initial Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE47D501ED6054300E2F69A /* Initial Import.swift */; };
+		0DE47D531ED6058500E2F69A /* Weekly Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE47D521ED6058500E2F69A /* Weekly Adjustments.swift */; };
+		0DE47D551ED6059E00E2F69A /* Bi Weekly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE47D541ED6059E00E2F69A /* Bi Weekly.swift */; };
+		0DE47D571ED60C3F00E2F69A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE47D561ED60C3F00E2F69A /* Alerts.swift */; };
 		0DF991321EC8BC8F00EABB5B /* PortfolioRebalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */; };
 		B70824C3313B998A343C25CC /* Pods_momoCSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADFFB5D598EE99BB97C05F7 /* Pods_momoCSV.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +46,10 @@
 		0DB952CF1EBE8C240012F2EF /* PositionSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionSize.swift; sourceTree = "<group>"; };
 		0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestFitIRA.swift; sourceTree = "<group>"; };
 		0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
+		0DE47D501ED6054300E2F69A /* Initial Import.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Initial Import.swift"; sourceTree = "<group>"; };
+		0DE47D521ED6058500E2F69A /* Weekly Adjustments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Weekly Adjustments.swift"; sourceTree = "<group>"; };
+		0DE47D541ED6059E00E2F69A /* Bi Weekly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bi Weekly.swift"; sourceTree = "<group>"; };
+		0DE47D561ED60C3F00E2F69A /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioRebalance.swift; sourceTree = "<group>"; };
 		DADFFB5D598EE99BB97C05F7 /* Pods_momoCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momoCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,12 +79,16 @@
 		0D3D6ABD1EC6232900040D6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DE47D501ED6054300E2F69A /* Initial Import.swift */,
+				0DE47D521ED6058500E2F69A /* Weekly Adjustments.swift */,
+				0DE47D541ED6059E00E2F69A /* Bi Weekly.swift */,
 				0D560AC11EBD3001002A80D8 /* CSVParser.swift */,
 				0DB952CF1EBE8C240012F2EF /* PositionSize.swift */,
 				0DCBDB5F1EC7E2F7002CAE56 /* BestFitIRA.swift */,
 				0DF991311EC8BC8F00EABB5B /* PortfolioRebalance.swift */,
 				0DCFF6F61EBEBDE0000B534B /* RealmObjects.swift */,
 				0D2D98BC1ECCD2EF00EA1132 /* Date Helpers.swift */,
+				0DE47D561ED60C3F00E2F69A /* Alerts.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,9 +274,13 @@
 				0DB952D01EBE8C240012F2EF /* PositionSize.swift in Sources */,
 				0DCBDB601EC7E2F7002CAE56 /* BestFitIRA.swift in Sources */,
 				0DF991321EC8BC8F00EABB5B /* PortfolioRebalance.swift in Sources */,
+				0DE47D531ED6058500E2F69A /* Weekly Adjustments.swift in Sources */,
 				0D560AAC1EBD2952002A80D8 /* AppDelegate.swift in Sources */,
 				0D560AC21EBD3001002A80D8 /* CSVParser.swift in Sources */,
 				0D2D98BD1ECCD2EF00EA1132 /* Date Helpers.swift in Sources */,
+				0DE47D511ED6054300E2F69A /* Initial Import.swift in Sources */,
+				0DE47D551ED6059E00E2F69A /* Bi Weekly.swift in Sources */,
+				0DE47D571ED60C3F00E2F69A /* Alerts.swift in Sources */,
 				0DCFF6F71EBEBDE0000B534B /* RealmObjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

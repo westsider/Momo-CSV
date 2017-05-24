@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class DateFunctions {
+    
+    let dayOfWeek = Date().dayNumberOfWeek()!
 
     func dateToString() -> String {
         // todays date
@@ -30,6 +32,21 @@ class DateFunctions {
         let minutes = calendar.component(.minute, from: date)
         let seconds = calendar.component(.second, from: date)
         return "\(hour):\(minutes):\(seconds)"
+    }
+    
+    func enableDayOfWeekFilter(day: Int, on: Bool)-> Bool {
+        var state = true
+        // wednesday == 4
+        if on {
+            state = false
+            //MARK: - Weekly rebalance reminder
+            if dayOfWeek == day {
+                //textView.text = "Today is wednesday have you updated the portfolio?"
+                // enable weekly update button
+                state = true
+            }
+        }
+        return state
     }
 }
 

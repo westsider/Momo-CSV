@@ -83,8 +83,6 @@ class FilteredSymbolsData: Object {
         return allObjects
     }
     
-    
-    
     func truncateDate(oldDates: String)-> String {
         var oldDate = oldDates
         let lowBound = oldDates.index(oldDates.startIndex, offsetBy: 0)
@@ -92,6 +90,20 @@ class FilteredSymbolsData: Object {
         let midRange = lowBound ..< hiBound
         oldDate.removeSubrange(midRange)
         return oldDate
+    }
+    
+    func clearRealm() {
+        
+        let realm = try! Realm()
+        
+        //MARK: - Delete All
+        try! realm.write {
+            realm.deleteAll()
+        }
+        
+        UserDefaults.standard.set(nil, forKey: "FirstRun")
+        
+        UserDefaults.standard.set(nil, forKey: "FileName")
     }
 }
 
