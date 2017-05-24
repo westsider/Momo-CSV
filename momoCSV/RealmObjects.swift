@@ -127,7 +127,7 @@ class JournalUpdate: Object {
         var message = "\(allEntrys.count) Journal Entries\n"
         
         for (index, thisEntry) in allEntrys.enumerated() {
-            message += "Entry \(index)-------------------------------\n" + thisEntry.entry
+            message += "\n--------------------------- Entry \(index) -------------------------------\n" + thisEntry.entry
         }
         
         return message

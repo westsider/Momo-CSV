@@ -324,7 +324,7 @@ class PortfolioActions {
         print("Making Journal Entries\n")
         var latestPortfolio =  newAllocations + "\n"
         
-        latestPortfolio += "Portfollio now is:\n \(filteredSymbolsData.readFromRealm())"
+        latestPortfolio += "Portfollio now is:\n \(PositionSize().getRealmPortfolio())"
         
         JournalUpdate().addContent(lastEntry: latestPortfolio)
         

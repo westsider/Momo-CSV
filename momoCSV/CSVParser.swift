@@ -186,7 +186,7 @@ class CSVParse: NSObject {
         // make journal entry
         JournalUpdate().addContent(lastEntry: messageText)
         
-        let latestPortfolio = "Portfollio now is:\n \(FilteredSymbolsData().readFromRealm())"
+        let latestPortfolio = "Portfollio now is:\n \(PositionSize().getRealmPortfolio())"
         
         JournalUpdate().addContent(lastEntry: latestPortfolio)
         

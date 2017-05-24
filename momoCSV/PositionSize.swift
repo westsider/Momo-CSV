@@ -157,7 +157,6 @@ class PositionSize: NSObject {
             
             // tab evenly round weight to 2 deciamls
             let x = items.weight
-            let y = Double(round(1000*x)/1000)
             
             // tab evenly add spacece to shares < 100
             let n = items.shares

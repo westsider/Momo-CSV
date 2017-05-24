@@ -43,7 +43,7 @@
 //  task: added logo
 //  task: if 2nd weds    compareWeight()
 
-//  change Journal report of port folio to include eveything
+//  task: change Journal report of portfolio to include eveything
 //  insure week 3 does become base portfolio and week 2 never does
 //  delete class NewBuys: Object when finished with it
 //  make UI nicer
@@ -138,8 +138,6 @@ class ViewController: UIViewController {
 
     //MARK: - Bi Monthly compare new weight to current weight
     func compareWeight(latestFile: String) {
-        
-        // check if 2nd or 4th weds?
         
         // load new cvs as Dictionary
         messageText = importAndParseCSV(file: latestFile)
