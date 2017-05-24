@@ -84,6 +84,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-M7-akX">
                                                 <rect key="frame" x="366.5" y="0.0" width="178.5" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Bi Weekly"/>
                                                 <connections>
                                                     <action selector="biWeeklyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEG-qi-Sen"/>

@@ -43,11 +43,11 @@
 //  task: added logo
 //  task: if 2nd weds    compareWeight()
 
-//  add 2nd Weds Part
-//  weights not lining up - check whick file used
+//  change Journal report of port folio to include eveything
+//  insure week 3 does become base portfolio and week 2 never does
 //  delete class NewBuys: Object when finished with it
-//  re order buttons
-//  Download the cvs directly to my own backend
+//  make UI nicer
+//      latest is 5-22
 
 import UIKit
 import RealmSwift
@@ -79,11 +79,11 @@ class ViewController: UIViewController {
     
     let iraAccount = 71336
     
-    let portfolioDownload = "2017_05_04"
+    let origDownload    = "2017_05_04"
     
-    let latestDownload = "Momentum rankings - 2017-05-11 - $spx"
+    let secondDownload  = "Momentum rankings - 2017-05-11 - $spx"   // weekly download
     
-    let biWeeklyDownload = "Momentum rankings - 2017-05-16 - $spx"
+    let thirdDownload   = "Momentum rankings - 2017-05-16 - $spx"   // Bi Monthly Download
     
     let dayOfWeek = Date().dayNumberOfWeek()!
     
@@ -91,25 +91,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         regTextField.text = "\(regAccount)"
+        
         iraTextField.text = "\(iraAccount)"
         
         //MARK: - Original file import - Only happens once and is then disabled
-        textView.text = initialImport(origFile: portfolioDownload)
-        print("\nToday is the \(dayOfWeek) day of the week\n")
-//      weeklyImportButton.isEnabled = false
-        // MARK: - Weekly rebalance reminder
-//        if dayOfWeek == 4 {
-//            textView.text = "Today is wednesday have you updated the portfolio?"
-//            // enable weekly update button
-//            weeklyImportButton.isEnabled = true
-//        }
+        messageText = initialImport(origFile: origDownload)
+        
+        textView.text = messageText
+        
+        enableDayOfWeekFilter(day: 4, on: false)
     }
-    
+
     //MARK: - Weekly Rebalance ### FIRST ACTION ###
     @IBAction func weeklyImportAction(_ sender: Any) {
         // get new cvs and look for stocks I should sell
-        weeklyPortfolioUpdate()
+        weeklyPortfolioUpdate(file: secondDownload)
     }
     
      //MARK: - make new buys ### SECOND ACTION ###
@@ -132,15 +130,12 @@ class ViewController: UIViewController {
     //MARK: - bi-weekly action  ### THIRD ACTION ###
     @IBAction func biWeeklyAction(_ sender: Any) {
         // get new cvs and look for stocks I should sell
-//weeklyPortfolioUpdate()
+        //weeklyPortfolioUpdate()
         // then compare weight to prior portfolio
-        compareWeight(latestFile: biWeeklyDownload)
+        compareWeight(latestFile: thirdDownload)
         
     }
 
-    
-    //MARK: - Helper Functions
-    
     //MARK: - Bi Monthly compare new weight to current weight
     func compareWeight(latestFile: String) {
         
@@ -211,7 +206,7 @@ class ViewController: UIViewController {
         return  csvParse.printData(of: fileString)
     }
     
-    func weeklyPortfolioUpdate() {
+    func weeklyPortfolioUpdate(file: String) {
         
         // first run assign a name so we dont get nil
         if  UserDefaults.standard.object(forKey: "FileName") == nil { UserDefaults.standard.set("noFile", forKey: "FileName") }
@@ -221,21 +216,21 @@ class ViewController: UIViewController {
         print("\nIn WeeklyImport got \(thisFIle) as file name\n")
         
         // if not same fie then run update
-        if thisFIle != latestDownload {
+        if thisFIle != file {
             print("\n\(thisFIle) is a new filename so running the rebalance\n")
-            messageText = portfolioActions.weeklyRebalance(newFile: latestDownload)
+            messageText = portfolioActions.weeklyRebalance(newFile: file)
             textView.text = messageText
             JournalUpdate().addContent(lastEntry: messageText)
             print("\nWEEKLY UPDATE\n")
             print(FilteredSymbolsData().readObjctsFromRealm())
             // update nsuserdefaults
-            UserDefaults.standard.set(latestDownload, forKey: "FileName")
+            UserDefaults.standard.set(file, forKey: "FileName")
             weeklyImportButton.isEnabled = false
             replacePortfolioButton.isEnabled = true
         } else {
             // send error pop up if file was alreeady imported
-            print("\n\(thisFIle) isn'T a new filename so show error message\n")
-            warningMessage(message: "You've aready imported the file \(thisFIle)")
+            print("\n\(file) isn'T a new filename so show error message\n")
+            warningMessage(message: "You've aready imported the file \(file)")
         }
         
         print("\nCalling delete sells\n")
@@ -251,37 +246,21 @@ class ViewController: UIViewController {
         portfolioActions.searchForNewBuys(account_One: regAccount, account_Two: iraAccount)
     }
     
-    
-    
-    
-    
-    
-    
-    // -------------------------- OLD IB ACTIONS ----------------------------------------------------------------------
-    
-    // read data from file and saves a string Data object
-    @IBAction func importAction(_ sender: Any) {
-        //textView.text = importAndParseCSV()
-    }
-    
-    @IBAction func fiterAction(_ sender: Any) {
-        //textView.text = filterTickersAndSaveRealm()
-    }
-  
-    @IBAction func posSizeAction(_ sender: Any) {
-        messageText = positionSize.calcPositionSise(account_One: regAccount, account_Two: iraAccount)
-        textView.text  =  messageText
-        //print(FilteredSymbolsData().readObjctsFromRealm())
-    }
-
-    @IBAction func splitPortfolio(_ sender: Any) {
-        positionSize.splitRealmPortfolio(account_One: regAccount, account_Two: iraAccount)
-        messageText =  positionSize.getRealmPortfolio()
-        textView.text = messageText
-        //print(FilteredSymbolsData().readObjctsFromRealm())
+    func enableDayOfWeekFilter(day: Int, on: Bool) {
+        // wednesday == 4
+        if on {
+            weeklyImportButton.isEnabled = false
+            //MARK: - Weekly rebalance reminder
+            if dayOfWeek == day {
+                textView.text = "Today is wednesday have you updated the portfolio?"
+                // enable weekly update button
+                weeklyImportButton.isEnabled = true
+            }
+        }
     }
     
     @IBAction func shareAction(_ sender: Any) {
+        messageText = JournalUpdate().readContent()
         let activityVC = UIActivityViewController(activityItems: [messageText], applicationActivities: nil)
         activityVC.setValue("Portfolio Update", forKey: "Subject")
         // exclude sms from sharing with images
@@ -295,9 +274,11 @@ class ViewController: UIViewController {
             realm.deleteAll()
         }
         
-        UserDefaults.standard.set("nil", forKey: "FirstRun")
+        UserDefaults.standard.set(nil, forKey: "FirstRun")
         
-        UserDefaults.standard.set("nil", forKey: "FileName")
+        UserDefaults.standard.set(nil, forKey: "FileName")
+        
+        textView.text = initialImport(origFile: origDownload)
         
         textView.text =  "Realm Database Deleted"
     }
